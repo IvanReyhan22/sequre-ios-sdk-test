@@ -1,0 +1,70 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Hold Steady" : {
+      "comment" : "Hold Steady",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tahan Posisi"
+          }
+        }
+      }
+    },
+    "Hold tight while we process your QR" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mohon tunggu sebentar sementara kami memproses QR Anda."
+          }
+        }
+      }
+    },
+    "Object out of the area" : {
+      "comment" : "Object out of the area",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objek diluar area"
+          }
+        }
+      }
+    },
+    "Processing your QR..." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memproses QR Anda..."
+          }
+        }
+      }
+    },
+    "Too Close" : {
+      "comment" : "Too Close",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terlalu Dekat"
+          }
+        }
+      }
+    },
+    "Too Far" : {
+      "comment" : "Too Far",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terlalu Jauh"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

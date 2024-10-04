@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A0A36702CABD67D0024637E /* QRCameraFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */; };
+		7A1686E02CA69F4500EC97B4 /* DetectedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */; };
+		7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */; };
+		7A2C0E8D2CAA5B3F00267AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E8C2CAA5B3F00267AE8 /* ViewController.swift */; };
+		7A2C0E912CAA7B3100267AE8 /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E902CAA7B3100267AE8 /* BoundingBoxView.swift */; };
+		7A2C0E952CAA7E3C00267AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C0E942CAA7E3C00267AE8 /* Assets.xcassets */; };
+		7A3344472CAA84D200CF8DC3 /* sequre-v2-od.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 7A3344462CAA84D200CF8DC3 /* sequre-v2-od.tflite */; };
+		7A730E0A2CA655330039C966 /* SequreSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7A730E092CA655330039C966 /* SequreSDK.docc */; };
+		7A730E102CA655330039C966 /* SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A730E052CA655330039C966 /* SequreSDK.framework */; };
+		7A730E162CA655330039C966 /* SequreSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A730E082CA655330039C966 /* SequreSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A730E882CA669010039C966 /* SequreSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A730E872CA669010039C966 /* SequreSDK.swift */; };
+		7AE1E6222CAD00AE006F7207 /* ScanQROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6212CAD00AE006F7207 /* ScanQROverlay.swift */; };
+		7AE1E6262CAD2D7D006F7207 /* DistanceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6252CAD2D7D006F7207 /* DistanceDetector.swift */; };
+		7AE1E6282CAD37C9006F7207 /* QRResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6272CAD37C9006F7207 /* QRResult.swift */; };
+		7AE1E62A2CAD3854006F7207 /* DistanceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6292CAD3854006F7207 /* DistanceResult.swift */; };
+		7AE1E62C2CAD533D006F7207 /* LabelOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E62B2CAD533D006F7207 /* LabelOverlay.swift */; };
+		7AE403842CAE04850040ED59 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403832CAE04850040ED59 /* ScanModel.swift */; };
+		7AE403862CAE04910040ED59 /* ScanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403852CAE04910040ED59 /* ScanRepository.swift */; };
+		7AE403882CAE049A0040ED59 /* SDKScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403872CAE049A0040ED59 /* SDKScanViewModel.swift */; };
+		7AE4038C2CAE04EB0040ED59 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4038B2CAE04EB0040ED59 /* NetworkServices.swift */; };
+		7AE4038E2CAE05590040ED59 /* QRScannerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4038D2CAE05590040ED59 /* QRScannerPage.swift */; };
+		7AE403932CAE09040040ED59 /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403922CAE09040040ED59 /* ImageOperation.swift */; };
+		7AE403AC2CAE0AF50040ED59 /* ScanLoadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4039D2CAE0AF50040ED59 /* ScanLoadingComponent.swift */; };
+		7AE403B92CAE0B9A0040ED59 /* SpacingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */; };
+		7AE403BC2CAE0C170040ED59 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403BB2CAE0C170040ED59 /* CustomFont.swift */; };
+		7AE403BE2CAE0D380040ED59 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403BD2CAE0D380040ED59 /* GifImageView.swift */; };
+		7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */; };
+		840666D72CAE72D400AE4156 /* loadGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 840666D42CAE724B00AE4156 /* loadGif.gif */; };
+		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
+		CB14BB7EE85707C0F9DF11D5 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F527BE2A69E4B2E8617EB2 /* Pods_SequreSDK.framework */; };
+		D4020DE72E78BB514AFF8BF2 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6343420785D6EBBF4721D3A /* Pods_SequreSDK_SequreSDKTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A730E112CA655330039C966 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A730DFC2CA655330039C966 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A730E042CA655330039C966;
+			remoteInfo = SequreSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56FFD7EC049573B31733FBB2 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraFeedController.swift; sourceTree = "<group>"; };
+		7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObjectModel.swift; sourceTree = "<group>"; };
+		7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetectionHelper.swift; sourceTree = "<group>"; };
+		7A2C0E8C2CAA5B3F00267AE8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A2C0E902CAA7B3100267AE8 /* BoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
+		7A2C0E942CAA7E3C00267AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A3344462CAA84D200CF8DC3 /* sequre-v2-od.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-v2-od.tflite"; sourceTree = "<group>"; };
+		7A730E052CA655330039C966 /* SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A730E082CA655330039C966 /* SequreSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequreSDK.h; sourceTree = "<group>"; };
+		7A730E092CA655330039C966 /* SequreSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SequreSDK.docc; sourceTree = "<group>"; };
+		7A730E0F2CA655330039C966 /* SequreSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequreSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A730E872CA669010039C966 /* SequreSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequreSDK.swift; sourceTree = "<group>"; };
+		7AE1E61C2CACFAE2006F7207 /* TensorFlowLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TensorFlowLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE1E6212CAD00AE006F7207 /* ScanQROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQROverlay.swift; sourceTree = "<group>"; };
+		7AE1E6252CAD2D7D006F7207 /* DistanceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceDetector.swift; sourceTree = "<group>"; };
+		7AE1E6272CAD37C9006F7207 /* QRResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRResult.swift; sourceTree = "<group>"; };
+		7AE1E6292CAD3854006F7207 /* DistanceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceResult.swift; sourceTree = "<group>"; };
+		7AE1E62B2CAD533D006F7207 /* LabelOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelOverlay.swift; sourceTree = "<group>"; };
+		7AE403832CAE04850040ED59 /* ScanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
+		7AE403852CAE04910040ED59 /* ScanRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanRepository.swift; sourceTree = "<group>"; };
+		7AE403872CAE049A0040ED59 /* SDKScanViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKScanViewModel.swift; sourceTree = "<group>"; };
+		7AE4038B2CAE04EB0040ED59 /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		7AE4038D2CAE05590040ED59 /* QRScannerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPage.swift; sourceTree = "<group>"; };
+		7AE403922CAE09040040ED59 /* ImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
+		7AE4039D2CAE0AF50040ED59 /* ScanLoadingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanLoadingComponent.swift; sourceTree = "<group>"; };
+		7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacingExtension.swift; sourceTree = "<group>"; };
+		7AE403BB2CAE0C170040ED59 /* CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		7AE403BD2CAE0D380040ED59 /* GifImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
+		7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDialogScan.swift; sourceTree = "<group>"; };
+		7F060EA363B117754A3F9F69 /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
+		840666D42CAE724B00AE4156 /* loadGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadGif.gif; sourceTree = "<group>"; };
+		8406670B2CAE823F00AE4156 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		8406670C2CAE823F00AE4156 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		8406670D2CAE823F00AE4156 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		8406670E2CAE823F00AE4156 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		8406670F2CAE823F00AE4156 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		840667112CAE823F00AE4156 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		840667122CAE823F00AE4156 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		840667132CAE823F00AE4156 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		840667142CAE823F00AE4156 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		840667152CAE823F00AE4156 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		840667192CAE8D6900AE4156 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A5F527BE2A69E4B2E8617EB2 /* Pods_SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D50200F12477F245060CEB /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C112DE1EAE2838BC45870800 /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		E6343420785D6EBBF4721D3A /* Pods_SequreSDK_SequreSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A730E022CA655330039C966 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB14BB7EE85707C0F9DF11D5 /* Pods_SequreSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A730E0C2CA655330039C966 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A730E102CA655330039C966 /* SequreSDK.framework in Frameworks */,
+				D4020DE72E78BB514AFF8BF2 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72C6F3A39FF5D8D9288B86D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C112DE1EAE2838BC45870800 /* Pods-SequreSDK.debug.xcconfig */,
+				7F060EA363B117754A3F9F69 /* Pods-SequreSDK.release.xcconfig */,
+				A8D50200F12477F245060CEB /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
+				56FFD7EC049573B31733FBB2 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7A1686DE2CA69F3600EC97B4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403922CAE09040040ED59 /* ImageOperation.swift */,
+				7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */,
+				7AE1E6252CAD2D7D006F7207 /* DistanceDetector.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7A2C0E892CAA546100267AE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */,
+				7AE1E6272CAD37C9006F7207 /* QRResult.swift */,
+				7AE1E6292CAD3854006F7207 /* DistanceResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A2C0E8A2CAA596900267AE8 /* TFLite */ = {
+			isa = PBXGroup;
+			children = (
+				7A3344462CAA84D200CF8DC3 /* sequre-v2-od.tflite */,
+			);
+			path = TFLite;
+			sourceTree = "<group>";
+		};
+		7A2C0E8B2CAA5B2F00267AE8 /* CameraStream */ = {
+			isa = PBXGroup;
+			children = (
+				7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */,
+				7A2C0E8C2CAA5B3F00267AE8 /* ViewController.swift */,
+			);
+			path = CameraStream;
+			sourceTree = "<group>";
+		};
+		7A730DFB2CA655330039C966 = {
+			isa = PBXGroup;
+			children = (
+				7A730E072CA655330039C966 /* SequreSDK */,
+				7A730E062CA655330039C966 /* Products */,
+				72C6F3A39FF5D8D9288B86D5 /* Pods */,
+				840666D62CAE724B00AE4156 /* Gif-sdk-asset */,
+				840667172CAE823F00AE4156 /* Assets-Fonts */,
+				814610113BECE982E87A6511 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A730E062CA655330039C966 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A730E052CA655330039C966 /* SequreSDK.framework */,
+				7A730E0F2CA655330039C966 /* SequreSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A730E072CA655330039C966 /* SequreSDK */ = {
+			isa = PBXGroup;
+			children = (
+				840667182CAE8D5800AE4156 /* Localizations */,
+				7AE403BA2CAE0C050040ED59 /* Font */,
+				7AE403B32CAE0B2E0040ED59 /* Shared */,
+				7AE403892CAE04D40040ED59 /* Utils */,
+				7AE4037D2CAE04050040ED59 /* Features */,
+				7AE1E6202CAD0080006F7207 /* Overlay */,
+				7A2C0E8B2CAA5B2F00267AE8 /* CameraStream */,
+				7A2C0E8A2CAA596900267AE8 /* TFLite */,
+				7A2C0E892CAA546100267AE8 /* Models */,
+				7A1686DE2CA69F3600EC97B4 /* Helper */,
+				7A730E082CA655330039C966 /* SequreSDK.h */,
+				7A730E092CA655330039C966 /* SequreSDK.docc */,
+				7A730E872CA669010039C966 /* SequreSDK.swift */,
+				7A2C0E942CAA7E3C00267AE8 /* Assets.xcassets */,
+			);
+			path = SequreSDK;
+			sourceTree = "<group>";
+		};
+		7AE1E6202CAD0080006F7207 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				7A2C0E902CAA7B3100267AE8 /* BoundingBoxView.swift */,
+				7AE1E6212CAD00AE006F7207 /* ScanQROverlay.swift */,
+				7AE1E62B2CAD533D006F7207 /* LabelOverlay.swift */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		7AE4037D2CAE04050040ED59 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7AE4037E2CAE042E0040ED59 /* Scan */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7AE4037E2CAE042E0040ED59 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403822CAE04630040ED59 /* Models */,
+				7AE403812CAE04560040ED59 /* Repositories */,
+				7AE403802CAE044C0040ED59 /* View */,
+				7AE4037F2CAE04420040ED59 /* ViewModel */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		7AE4037F2CAE04420040ED59 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403872CAE049A0040ED59 /* SDKScanViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7AE403802CAE044C0040ED59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				840666D92CAE73BE00AE4156 /* Pages */,
+				7AE403942CAE0AEB0040ED59 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AE403812CAE04560040ED59 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403852CAE04910040ED59 /* ScanRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7AE403822CAE04630040ED59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403832CAE04850040ED59 /* ScanModel.swift */,
+				7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7AE403892CAE04D40040ED59 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403B72CAE0B720040ED59 /* Extensions */,
+				7AE4038A2CAE04DE0040ED59 /* Services */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7AE4038A2CAE04DE0040ED59 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7AE4038B2CAE04EB0040ED59 /* NetworkServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7AE403942CAE0AEB0040ED59 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7AE4039D2CAE0AF50040ED59 /* ScanLoadingComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7AE403B32CAE0B2E0040ED59 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403B42CAE0B470040ED59 /* Components */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7AE403B42CAE0B470040ED59 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403BD2CAE0D380040ED59 /* GifImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7AE403B72CAE0B720040ED59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7AE403BA2CAE0C050040ED59 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7AE403BB2CAE0C170040ED59 /* CustomFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		814610113BECE982E87A6511 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AE1E61C2CACFAE2006F7207 /* TensorFlowLite.framework */,
+				A5F527BE2A69E4B2E8617EB2 /* Pods_SequreSDK.framework */,
+				E6343420785D6EBBF4721D3A /* Pods_SequreSDK_SequreSDKTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840666D62CAE724B00AE4156 /* Gif-sdk-asset */ = {
+			isa = PBXGroup;
+			children = (
+				840666D42CAE724B00AE4156 /* loadGif.gif */,
+			);
+			path = "Gif-sdk-asset";
+			sourceTree = "<group>";
+		};
+		840666D92CAE73BE00AE4156 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				7AE4038D2CAE05590040ED59 /* QRScannerPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		840667102CAE823F00AE4156 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				8406670B2CAE823F00AE4156 /* Montserrat-Black.ttf */,
+				8406670C2CAE823F00AE4156 /* Montserrat-Bold.ttf */,
+				8406670D2CAE823F00AE4156 /* Montserrat-Light.ttf */,
+				8406670E2CAE823F00AE4156 /* Montserrat-Medium.ttf */,
+				8406670F2CAE823F00AE4156 /* Montserrat-Regular.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		840667162CAE823F00AE4156 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				840667112CAE823F00AE4156 /* Roboto-Black.ttf */,
+				840667122CAE823F00AE4156 /* Roboto-Bold.ttf */,
+				840667132CAE823F00AE4156 /* Roboto-Light.ttf */,
+				840667142CAE823F00AE4156 /* Roboto-Medium.ttf */,
+				840667152CAE823F00AE4156 /* Roboto-Regular.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		840667172CAE823F00AE4156 /* Assets-Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				840667102CAE823F00AE4156 /* Montserrat */,
+				840667162CAE823F00AE4156 /* Roboto */,
+			);
+			path = "Assets-Fonts";
+			sourceTree = "<group>";
+		};
+		840667182CAE8D5800AE4156 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				840667192CAE8D6900AE4156 /* Localizable.xcstrings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7A730E002CA655330039C966 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A730E162CA655330039C966 /* SequreSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7A730E042CA655330039C966 /* SequreSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A730E192CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDK" */;
+			buildPhases = (
+				AE5B47FF4132DDB0746210F9 /* [CP] Check Pods Manifest.lock */,
+				7A730E002CA655330039C966 /* Headers */,
+				7A730E012CA655330039C966 /* Sources */,
+				7A730E022CA655330039C966 /* Frameworks */,
+				7A730E032CA655330039C966 /* Resources */,
+				342BA18B9DF2D88B75432630 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SequreSDK;
+			productName = SequreSDK;
+			productReference = 7A730E052CA655330039C966 /* SequreSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7A730E0E2CA655330039C966 /* SequreSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A730E1C2CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDKTests" */;
+			buildPhases = (
+				D332E5BB0FA635D654BB8DBD /* [CP] Check Pods Manifest.lock */,
+				7A730E0B2CA655330039C966 /* Sources */,
+				7A730E0C2CA655330039C966 /* Frameworks */,
+				7A730E0D2CA655330039C966 /* Resources */,
+				1E5579A23B0D1F72CD1F85F4 /* [CP] Embed Pods Frameworks */,
+				7533649FD4236AD4CDC63B2E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A730E122CA655330039C966 /* PBXTargetDependency */,
+			);
+			name = SequreSDKTests;
+			productName = SequreSDKTests;
+			productReference = 7A730E0F2CA655330039C966 /* SequreSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A730DFC2CA655330039C966 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					7A730E042CA655330039C966 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					7A730E0E2CA655330039C966 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 7A730DFF2CA655330039C966 /* Build configuration list for PBXProject "SequreSDK" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				id,
+			);
+			mainGroup = 7A730DFB2CA655330039C966;
+			productRefGroup = 7A730E062CA655330039C966 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A730E042CA655330039C966 /* SequreSDK */,
+				7A730E0E2CA655330039C966 /* SequreSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A730E032CA655330039C966 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2C0E952CAA7E3C00267AE8 /* Assets.xcassets in Resources */,
+				8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */,
+				840666D72CAE72D400AE4156 /* loadGif.gif in Resources */,
+				7A3344472CAA84D200CF8DC3 /* sequre-v2-od.tflite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A730E0D2CA655330039C966 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E5579A23B0D1F72CD1F85F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		342BA18B9DF2D88B75432630 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK/Pods-SequreSDK-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK/Pods-SequreSDK-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SequreSDK/Pods-SequreSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7533649FD4236AD4CDC63B2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5B47FF4132DDB0746210F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SequreSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D332E5BB0FA635D654BB8DBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SequreSDK-SequreSDKTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A730E012CA655330039C966 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AE403932CAE09040040ED59 /* ImageOperation.swift in Sources */,
+				7AE403862CAE04910040ED59 /* ScanRepository.swift in Sources */,
+				7AE1E6222CAD00AE006F7207 /* ScanQROverlay.swift in Sources */,
+				7AE403B92CAE0B9A0040ED59 /* SpacingExtension.swift in Sources */,
+				7AE403BC2CAE0C170040ED59 /* CustomFont.swift in Sources */,
+				7AE1E62C2CAD533D006F7207 /* LabelOverlay.swift in Sources */,
+				7AE1E6262CAD2D7D006F7207 /* DistanceDetector.swift in Sources */,
+				7AE1E62A2CAD3854006F7207 /* DistanceResult.swift in Sources */,
+				7AE403BE2CAE0D380040ED59 /* GifImageView.swift in Sources */,
+				7A2C0E912CAA7B3100267AE8 /* BoundingBoxView.swift in Sources */,
+				7AE403AC2CAE0AF50040ED59 /* ScanLoadingComponent.swift in Sources */,
+				7A2C0E8D2CAA5B3F00267AE8 /* ViewController.swift in Sources */,
+				7AE403842CAE04850040ED59 /* ScanModel.swift in Sources */,
+				7A0A36702CABD67D0024637E /* QRCameraFeedController.swift in Sources */,
+				7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */,
+				7A730E0A2CA655330039C966 /* SequreSDK.docc in Sources */,
+				7AE1E6282CAD37C9006F7207 /* QRResult.swift in Sources */,
+				7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */,
+				7A1686E02CA69F4500EC97B4 /* DetectedObjectModel.swift in Sources */,
+				7AE403882CAE049A0040ED59 /* SDKScanViewModel.swift in Sources */,
+				7AE4038C2CAE04EB0040ED59 /* NetworkServices.swift in Sources */,
+				7AE4038E2CAE05590040ED59 /* QRScannerPage.swift in Sources */,
+				7A730E882CA669010039C966 /* SequreSDK.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A730E0B2CA655330039C966 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A730E122CA655330039C966 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A730E042CA655330039C966 /* SequreSDK */;
+			targetProxy = 7A730E112CA655330039C966 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7A730E172CA655330039C966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7A730E182CA655330039C966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A730E1A2CA655330039C966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C112DE1EAE2838BC45870800 /* Pods-SequreSDK.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RTJ97ZPCBQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App need to access camera to scan QR Code";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -no-verify-emitted-module-interface";
+				PRODUCT_BUNDLE_IDENTIFIER = "id.v-enturo.QTrustTensorFlowResearch.SequreSDK";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A730E1B2CA655330039C966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F060EA363B117754A3F9F69 /* Pods-SequreSDK.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RTJ97ZPCBQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App need to access camera to scan QR Code";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -no-verify-emitted-module-interface";
+				PRODUCT_BUNDLE_IDENTIFIER = "id.v-enturo.QTrustTensorFlowResearch.SequreSDK";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A730E1D2CA655330039C966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D50200F12477F245060CEB /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TXK7X2JZ9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.sequre.SequreSDK.SequreSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A730E1E2CA655330039C966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56FFD7EC049573B31733FBB2 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TXK7X2JZ9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.sequre.SequreSDK.SequreSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A730DFF2CA655330039C966 /* Build configuration list for PBXProject "SequreSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A730E172CA655330039C966 /* Debug */,
+				7A730E182CA655330039C966 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A730E192CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A730E1A2CA655330039C966 /* Debug */,
+				7A730E1B2CA655330039C966 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A730E1C2CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A730E1D2CA655330039C966 /* Debug */,
+				7A730E1E2CA655330039C966 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A730DFC2CA655330039C966 /* Project object */;
+}
