@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SequreSDKTest"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "Sequre Scanner SDK framework."
   spec.description  = "Sequre Scanner SDK framework for Sequre app to detect qr code"
 
@@ -17,14 +17,15 @@ Pod::Spec.new do |spec|
   spec.resource_bundles = {
     "SequreSDK" => ['SequreSDK/Assets.xcassets']
   }
-  # spec.resources = ['Assets.xcassets']
+  spec.resources = ['SequreSDK/Assets.xcassets']
 
   spec.dependency 'TensorFlowLiteTaskVision'
   spec.dependency 'TensorFlowLiteSwift'
   spec.dependency 'Alamofire', '~> 5.5'
 
   spec.pod_target_xcconfig = {
-    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
+    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 
   spec.static_framework = true
