@@ -20,7 +20,8 @@ struct ScanLoadingComponent: View {
             12.verticalSpace
             Text("Hold tight while we process your QR")
                 .customFont(.regular, 16)
-                .foregroundColor(.color808095)
+//                .foregroundColor(.color808095)
+                .foregroundColor(Color("Color808095"))
                 .multilineTextAlignment(.center)
             Spacer()
         }
