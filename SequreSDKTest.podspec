@@ -12,11 +12,11 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "15.0"
   spec.source       = { :git => "https://github.com/IvanReyhan22/sequre-ios-sdk-test.git", :tag => spec.version.to_s } 
 
-  spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
+  # spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
 
-  spec.resource_bundles = {
-    "SequreSDK" => ['SequreSDK/Assets.xcassets']
-  }
+  # spec.resource_bundles = {
+  #   "SequreSDK" => ['SequreSDK/Assets.xcassets']
+  # }
   # spec.resources = ['Assets.xcassets']
 
   spec.dependency 'TensorFlowLiteTaskVision'
@@ -28,7 +28,8 @@ Pod::Spec.new do |spec|
   }
 
   spec.static_framework = true
-
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.swift_versions = "5.0"
 
 end
