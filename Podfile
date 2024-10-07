@@ -3,12 +3,12 @@
 
 target 'SequreSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  use_frameworks! :linkage => :static
 
   # Pods for SequreSDK
-  pod 'TensorFlowLiteSwift'
   pod 'TensorFlowLiteTaskVision'
-   pod 'Alamofire', '~> 5.5'
+  pod 'TensorFlowLiteSwift'
+  pod 'Alamofire', '~> 5.5'
 
   target 'SequreSDKTests' do
     # Pods for testing
