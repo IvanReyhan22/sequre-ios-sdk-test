@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SequreSDKTest"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.2"
   spec.summary      = "Sequre Scanner SDK framework."
   spec.description  = "Sequre Scanner SDK framework for Sequre app to detect qr code"
 
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
 
   spec.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 x86_64'
   }
 
   spec.static_framework = true
