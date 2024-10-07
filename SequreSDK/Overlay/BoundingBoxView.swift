@@ -115,7 +115,9 @@ class BoundingBoxView: UIView {
         // Corner line length and thickness
         let cornerLength: CGFloat = 31.0
         let cornerThickness: CGFloat = 5.0
-        let cornerColor = isCapturing ? UIColor.quarternary : UIColor.color3E405F
+//        let cornerColor = isCapturing ? UIColor.quarternary : UIColor.color3E405F
+//        let cornerColor = isCapturing ? UIColor(named: "Quarternary")! : UIColor(named:"Color3E405F")!
+        let cornerColor = UIColor.red
 
         let offset: CGFloat = 10.0 // Adjust for better alignment of corners
         let topLeft = CGPoint(x: overlayRect.minX - offset, y: overlayRect.minY - offset)
