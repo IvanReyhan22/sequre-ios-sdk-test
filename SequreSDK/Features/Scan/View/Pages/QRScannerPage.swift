@@ -83,20 +83,9 @@ public struct QRScannerPage: View {
                             Button {
                                 isFlashActive.toggle()
                             } label: {
-//                                Image(isFlashActive ?.icFlashActive : .icFlashInactive)
-//                                Image("icFlashActive")
-//                                    .frame(width: 82)
-//                                if let image = UIImage(named: "icFlashActive", in: Bundle(for: type(of: self)), compatibleWith: nil) {
-//                                    Image(uiImage: image)
-//                                        .resizable()
-//                                        .frame(width: 82)
-//                                } else {
-//                                    Text("Image not found")
-//                                }
-                                Image(systemName: "bolt")
-//                                    .resizable()
+                                Image(isFlashActive ? "icFlashActive" : "icFlashInactive", bundle: bundle)
                                     .frame(width: 82)
-
+                                
                             }
                         }
                     }
@@ -122,7 +111,7 @@ public struct QRScannerPage: View {
             }
         }
     }
-
+    
     /// detect qr based on position
     /// if condition is true upload qr on cloud
     private func submitDetection() {
@@ -133,7 +122,7 @@ public struct QRScannerPage: View {
             detectedObjects: detectedObjectData.detectedObjects,
             capturing: capturing
         )
-            
+        
         if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
@@ -142,7 +131,7 @@ public struct QRScannerPage: View {
             }
             return
         }
-     
+        
         if distanceResult == DistanceResult.optimal {
             capturing = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

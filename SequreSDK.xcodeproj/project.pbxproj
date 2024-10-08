@@ -17,6 +17,7 @@
 		7A730E102CA655330039C966 /* SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A730E052CA655330039C966 /* SequreSDK.framework */; };
 		7A730E162CA655330039C966 /* SequreSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A730E082CA655330039C966 /* SequreSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A730E882CA669010039C966 /* SequreSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A730E872CA669010039C966 /* SequreSDK.swift */; };
+		7A74F3C42CB542050028C5F6 /* BundleReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74F3C32CB542050028C5F6 /* BundleReference.swift */; };
 		7AE1E6222CAD00AE006F7207 /* ScanQROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6212CAD00AE006F7207 /* ScanQROverlay.swift */; };
 		7AE1E6262CAD2D7D006F7207 /* DistanceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6252CAD2D7D006F7207 /* DistanceDetector.swift */; };
 		7AE1E6282CAD37C9006F7207 /* QRResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1E6272CAD37C9006F7207 /* QRResult.swift */; };
@@ -60,6 +61,7 @@
 		7A730E082CA655330039C966 /* SequreSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequreSDK.h; sourceTree = "<group>"; };
 		7A730E092CA655330039C966 /* SequreSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SequreSDK.docc; sourceTree = "<group>"; };
 		7A730E872CA669010039C966 /* SequreSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequreSDK.swift; sourceTree = "<group>"; };
+		7A74F3C32CB542050028C5F6 /* BundleReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleReference.swift; sourceTree = "<group>"; };
 		7AE1E6212CAD00AE006F7207 /* ScanQROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQROverlay.swift; sourceTree = "<group>"; };
 		7AE1E6252CAD2D7D006F7207 /* DistanceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceDetector.swift; sourceTree = "<group>"; };
 		7AE1E6272CAD37C9006F7207 /* QRResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRResult.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				7AE403922CAE09040040ED59 /* ImageOperation.swift */,
 				7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */,
 				7AE1E6252CAD2D7D006F7207 /* DistanceDetector.swift */,
+				7A74F3C32CB542050028C5F6 /* BundleReference.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				7AE1E6222CAD00AE006F7207 /* ScanQROverlay.swift in Sources */,
 				7AE403B92CAE0B9A0040ED59 /* SpacingExtension.swift in Sources */,
 				7AE403BC2CAE0C170040ED59 /* CustomFont.swift in Sources */,
+				7A74F3C42CB542050028C5F6 /* BundleReference.swift in Sources */,
 				7AE1E62C2CAD533D006F7207 /* LabelOverlay.swift in Sources */,
 				7AE1E6262CAD2D7D006F7207 /* DistanceDetector.swift in Sources */,
 				7AE1E62A2CAD3854006F7207 /* DistanceResult.swift in Sources */,

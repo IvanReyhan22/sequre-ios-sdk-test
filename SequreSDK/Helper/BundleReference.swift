@@ -6,3 +6,4 @@
 //
 
 import Foundation
+let bundle = Bundle(for: SequreSDK.self)

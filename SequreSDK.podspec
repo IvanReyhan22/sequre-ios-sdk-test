@@ -8,27 +8,16 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/IvanReyhan22/sequre-ios-sdk-test"
   spec.license      = ""
   spec.author       = { "Ahmad Ivan Reyhan" => "ivanreyhan2002@gmail.com" }
-  spec.platform     = :ios
   spec.platform     = :ios, "15.0"
-  # spec.source       = { :git => "https://github.com/IvanReyhan22/sequre-ios-sdk-test.git", :tag => spec.version.to_s } 
-  spec.source = { :path => "." }
+  spec.source       = { :git => "https://github.com/IvanReyhan22/sequre-ios-sdk-test.git", :tag => spec.version.to_s } 
+  # spec.source = { :path => "." }
 
   spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
-  
-  spec.resource_bundles = {
-    "SequreSDK" => ['SequreSDK/Assets.xcassets/**']
-  }
-  spec.resources = ['SequreSDK/**/*.tflite','SequreSDK/Assets.xcassets/**']
+  spec.resources = ['SequreSDK/**/*.tflite']
 
   spec.dependency 'TensorFlowLiteTaskVision'
   spec.dependency 'TensorFlowLiteSwift'
   spec.dependency 'Alamofire', '~> 5.5'
-
-  # spec.pod_target_xcconfig = {
-  #   'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
-  #   # 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  # }
-
   spec.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
     'VALID_ARCHS' => 'x86_64'

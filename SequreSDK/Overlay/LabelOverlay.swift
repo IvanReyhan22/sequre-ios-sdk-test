@@ -69,8 +69,7 @@ class LabelOverlay: UIView {
         let backgroundPath = UIBezierPath(roundedRect: backgroundRect, cornerRadius: cornerRadius)
         
         /// Draw the rounded background
-        UIColor(named: "PrimaryApp")?.setFill()
-//        UIColor.primaryApp.setFill()
+        UIColor(named: "PrimaryApp",in: bundle,compatibleWith: nil)?.setFill()
         backgroundPath.fill()
         
         /// Draw the text on top of the background
