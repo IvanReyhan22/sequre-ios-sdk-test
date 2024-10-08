@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
-  spec.name         = "SequreSDKTest"
-  spec.version      = "1.0.9"
+  spec.name         = "SequreSDK"
+  spec.version      = "1.1.0"
   spec.summary      = "Sequre Scanner SDK framework."
   spec.description  = "Sequre Scanner SDK framework for Sequre app to detect qr code"
 
@@ -10,8 +10,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "Ahmad Ivan Reyhan" => "ivanreyhan2002@gmail.com" }
   spec.platform     = :ios
   spec.platform     = :ios, "15.0"
-  # spec.source       = { :git => "https://github.com/IvanReyhan22/sequre-ios-sdk-test.git", :tag => spec.version.to_s } 
-  spec.source       = { :path => "."} 
+  spec.source       = { :git => "https://github.com/IvanReyhan22/sequre-ios-sdk-test.git", :tag => spec.version.to_s } 
 
   spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
   
