@@ -83,7 +83,8 @@ public struct QRScannerPage: View {
                             Button {
                                 isFlashActive.toggle()
                             } label: {
-                                Image(isFlashActive ?.icFlashActive : .icFlashInactive)
+//                                Image(isFlashActive ?.icFlashActive : .icFlashInactive)
+                                Image(isFlashActive ? "IcFlashActive" : "IcFlashInactive")
                                     .frame(width: 82)
                             }
                         }
