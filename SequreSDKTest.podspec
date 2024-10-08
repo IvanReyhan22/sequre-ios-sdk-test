@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.resource_bundles = {
     "SequreSDK" => ['SequreSDK/Assets.xcassets']
   }
-  spec.resources = ['SequreSDK/Assets.xcassets']
+  # spec.resources = ['SequreSDK/Assets.xcassets']
 
   spec.dependency 'TensorFlowLiteTaskVision'
   spec.dependency 'TensorFlowLiteSwift'
