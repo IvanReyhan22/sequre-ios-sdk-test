@@ -1,31 +1,71 @@
+
 //
-//  NetworkServices.swift
-//  Sequre
+//  NetworkSevices.swift
+//  NetworkWithOutPackages
 //
-//  Created by admin on 18/09/24.
+//  Created by admin on 08/10/24.
 //
 
-import Alamofire
 import Foundation
 
 class NetworkingService {
     static let shared = NetworkingService()
 
-    /// File upload function using responseDecodable
+    /// File upload function using URLSession
     func uploadFile<T: Decodable>(
         url: String, fileURL: URL, fileName: String, mimeType: String, responseType: T.Type, completion: @escaping (T?, Error?) -> Void
     ) {
-        AF.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(fileURL, withName: fileName, fileName: "\(fileURL.lastPathComponent).\(fileURL.pathExtension)", mimeType: mimeType)
-        }, to: url)
-            .validate()
-            .responseDecodable(of: responseType) { response in
-                switch response.result {
-                case .success(let data):
-                    completion(data, nil)
-                case .failure(let error):
-                    completion(nil, error)
-                }
+        // Create the URL object
+        guard let uploadURL = URL(string: url) else {
+            completion(nil, NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"]))
+            return
+        }
+
+        // Create a URLRequest object
+        var request = URLRequest(url: uploadURL)
+        request.httpMethod = "POST"
+        let boundary = UUID().uuidString
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+        // Create the multipart form body
+        var body = Data()
+
+        // Add the file to the multipart form body
+        let fileData = try? Data(contentsOf: fileURL)
+        body.append("--\(boundary)\r\n".data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"\(fileName)\"; filename=\"\(fileURL.lastPathComponent)\"\r\n".data(using: .utf8)!)
+        body.append("Content-Type: \(mimeType)\r\n\r\n".data(using: .utf8)!)
+        if let fileData = fileData {
+            body.append(fileData)
+        }
+        body.append("\r\n".data(using: .utf8)!)
+        body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+
+        // Set the body to the request
+        request.httpBody = body
+
+        // Create the upload task
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(nil, error)
+                return
             }
+
+            guard let data = data else {
+                completion(nil, NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
+                return
+            }
+
+            // Decode the response using the provided type
+            do {
+                let decodedResponse = try JSONDecoder().decode(responseType, from: data)
+                completion(decodedResponse, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+
+        // Start the upload task
+        task.resume()
     }
 }

@@ -8,7 +8,6 @@ target 'SequreSDK' do
   # Pods for SequreSDK
   pod 'TensorFlowLiteSwift'
   pod 'TensorFlowLiteTaskVision'
-  pod 'Alamofire', '~> 5.5'
 
   target 'SequreSDKTests' do
     # Pods for testing

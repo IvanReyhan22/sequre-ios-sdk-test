@@ -14,7 +14,7 @@
 				EF0F3C060DF24F255B082E70A9B8D5C0 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				A09B946006914D14884957E48082676D /* PBXTargetDependency */,
+				4D7496F223EFD58FA44A5E9C16A319CC /* PBXTargetDependency */,
 			);
 			name = TensorFlowLiteC;
 		};
@@ -30,155 +30,86 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0464CAAA5133B5D665EA5B58CA652C6F /* Pods-SequreSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2759364AEFB6534458BA63D8E71F3D3 /* Pods-SequreSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DB04B09F9E47F0D6331722767965E1 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 980342373F5410BB058905F6D1BE807E /* PrivacyInfo.xcprivacy */; };
-		0F1D68554CA1AC595168E8FB4E1A6E63 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D08F6699FDC5F9AD888B95A7BD3A95 /* CachedResponseHandler.swift */; };
-		12796114E1CFB0079D1EA61B9AAE1147 /* QuantizationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89351C263EA4E272CCD871FD63BED37 /* QuantizationParameters.swift */; };
-		14C71EEB7DEEA863FF6D0AEFB429EC49 /* Pods-SequreSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3F6A6898060A6ED1ACB316E3634696 /* Pods-SequreSDK-dummy.m */; };
-		20B3E90CE296123C39917256DB6604D4 /* Pods-SequreSDK-SequreSDKTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6977C781301E574484F45DC129703B /* Pods-SequreSDK-SequreSDKTests-dummy.m */; };
-		22FAFA41450EC40132CF4B0EEE7E6788 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96735702644956A0502F89F5B2042928 /* ParameterEncoder.swift */; };
-		2B230B24827053BA3E9DA0C78A796BC2 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580465110A6C485C34730D3246D1934 /* ResponseSerialization.swift */; };
-		2B42D035AFF52D62722161A7772C6C08 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F044D9C2A66F267A73FB034ED1EE93C /* HTTPHeaders.swift */; };
-		2C4C08BB733A2101D945E8C37256F78F /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22A20451D23D2E21435BB578F972FA /* UploadRequest.swift */; };
-		36C78069A72BECAEB66B31FF794A09ED /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6D350968C6B1D58E73770FE290957 /* Request.swift */; };
-		3A34B60FF75F4CFA5385E655F265E0BC /* TensorFlowLiteSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 121D0CC0AFBCBEDB9F5FE74A75447CAB /* TensorFlowLiteSwift-dummy.m */; };
-		3B901DF82C6576019330391D0F470B31 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */; };
-		3CE3556126C9EAAB6AC242CF1F588DD8 /* SignatureRunnerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F117D1900E17265D8B42CFF8467482 /* SignatureRunnerError.swift */; };
-		4337931D8B8E3F3BA03C77C1B496BEAD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A5BA3F3C92479870A8318F1FBD4988 /* HTTPMethod.swift */; };
-		4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire-Alamofire in Resources */ = {isa = PBXBuildFile; fileRef = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */; };
-		5075DC82A63A9807DFC390B4CE8046CD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C243F565692269F5F229FC9B6079BF /* Session.swift */; };
-		571142A2747CD90165F631A8AE980A0A /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 641DE54B724149D604EC5E2E6EE7FF94 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		581584D717DE9B5A8F68211F4ADFF339 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA492CFF967EDD838B685C7CD3E1E21 /* Model.swift */; };
-		5830C6260CA2B7CD6DC74054FB29CDD1 /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C7073DCD8DDBCEB5F777E4EC85B80 /* DownloadRequest.swift */; };
-		58E936B1E7E42C0BFC119D428B70F1D8 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2674F34FF1A0880B0F61B6E6DFD868 /* Alamofire.swift */; };
-		5AD4E5B4118A1DC7D639F611044B4159 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4720F259155ECC9EC5692D82C817BF /* DataRequest.swift */; };
-		612AE0ABB9BCD3AF0E1D29B4C063CA62 /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181E1DCEE89041A75F3847C8DE75242 /* StringEncoding+Alamofire.swift */; };
-		68238227D42B2511FA6A26BF71E92520 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA447C0BC6BC2EEAE81BA3F39F0C692 /* Alamofire-dummy.m */; };
-		68995B28EE5B539CEA5A1133E4623927 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD46D1EDE4E10367ACE108225F2F62 /* MultipartFormData.swift */; };
-		68A74F13F8FEBAA7E0EA9344DED0458B /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1225313E2FA22CA48CE21D7C94BA4C /* OperationQueue+Alamofire.swift */; };
-		69261B5D3B53EBF7109D5E1DA3768CAC /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF833D6ACE5170CD165D460DEB4C271 /* AuthenticationInterceptor.swift */; };
-		6BBF144A71EE0C5DF2C4CCA24AB51A41 /* SignatureRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2E9FE1D0C0DADF1A483418008DB061 /* SignatureRunner.swift */; };
-		6CC7E7C00730B1BF42A28B2E23CA01D6 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BBF0239ED3947BFF0D32A573172A60 /* URLSessionConfiguration+Alamofire.swift */; };
-		6F2E0DC7D8598283D088A989FDB8E5F6 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EAF76B41E017B22F2F2E8AFE300D28 /* ParameterEncoding.swift */; };
-		6F679F3A8047A33139F64DDBBFB1C59E /* Pods-SequreSDK-SequreSDKTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0698BADB6C75066AE2A89607244C60 /* Pods-SequreSDK-SequreSDKTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72C19C762FADC82517C344E9F47D7E50 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047AB5DC10D5ED7563239027695402D /* AlamofireExtended.swift */; };
-		794FC38D15336AB502B73B012005E9BD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51902B42B086789BD60E68D945E4F953 /* Validation.swift */; };
-		795681285B4E2B121B5CD420131168F8 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6F58855D11A58A7B58D155B106527 /* MultipartUpload.swift */; };
-		7AE2E0B382A14D58BE7DAA0C852DCD02 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94640A4BD578480155A5F1105AAA42 /* ServerTrustEvaluation.swift */; };
-		84BEB9E439780B1E0DEF56459E3D3352 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
-		881E59434C26CB320B6C5F794E75ABEF /* TensorFlowLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1314B2F0A3BAFC8C44E17C7B0D47F /* TensorFlowLite.swift */; };
-		887DB52C63E52FBD3B88F42DD8CFB421 /* RequestCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9729F464AAF3B066B1B26FD11905C4BF /* RequestCompression.swift */; };
-		8DD46EE7FB9503E7634E929DDE1CBA31 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BCD2ED7C50C276D4ECA7923581EA0D /* Notifications.swift */; };
-		90D847B19214926EDE5210D44A08F3C7 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A731488AEDBF1EDF27994A4CEEE60CC1 /* RequestTaskMap.swift */; };
-		91C0B27AE20F57BB598819CFBB7D1868 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
-		92138A77DFEB4F76FCB582E97633896D /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DC19C140D307851C15FEC37EBADC19 /* URLRequest+Alamofire.swift */; };
-		9378157945D7B405C862A05B0D6B971B /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CA8DC363C7D642856B4F708A42B868 /* Result+Alamofire.swift */; };
-		97D7D91FC818805D8344C373CC098C32 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB67DC00A32DE89EDD7AF1D68214B9 /* SessionDelegate.swift */; };
-		9C7D314BE45AB79E96B260656C36BAEC /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD5663FDED3CEB5274FA99BA80CE3C /* RedirectHandler.swift */; };
-		9D8BED7F3F86BB39E7C0923D92E73F8B /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AED0A66E99966C364CB19D467E7BCB3 /* Combine.swift */; };
-		A1506893FF52AA466B130E8B05FBE868 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0000C18585DF0FE01007CFD0A3ECDE /* NetworkReachabilityManager.swift */; };
-		A22A2ACF53FDC243AAAFB009005A710F /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37CC73615242714AF4240C1BA8172D /* Concurrency.swift */; };
-		A3FD52DF5584364FFD56965394C36CF2 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03817731EE20305E5A4479401527C810 /* URLConvertible+URLRequestConvertible.swift */; };
-		AA602A49B1DC7FDED565CAD8BB89EAC1 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F65CD936F490EE6FC44320268F1FF /* AFError.swift */; };
-		B2C5C5ADF9F407FE21DA664B61B9D16F /* TensorFlowLiteSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 878EF9FB42490E3058A16A8379A993DB /* TensorFlowLiteSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5C66B48EB624FEC4D2F64A50F143716 /* DataStreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6279B49D7A6E7FDA0F3F5D9420FEA4 /* DataStreamRequest.swift */; };
-		B7C929632DBA2A62B5B15A139F5F4385 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D311DC4CB10E2C9D402C31BCA8859 /* Delegate.swift */; };
-		BC0A0C473B63B817926F4D58611281BB /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE175BA205C71D40617363D7DC527606 /* URLEncodedFormEncoder.swift */; };
-		C3457E6D90AB5DCE74C3F0440D1FC1A8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CC84BAFCFA5BDC06DA006FC71C73F1E8 /* PrivacyInfo.xcprivacy */; };
-		CDCA01B605A086576DBB75F8C3A24337 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F30A2D5BA9D9D5D3B6A751127E0DA /* RetryPolicy.swift */; };
-		DE3D9C8AEC9C42F4B9AAA6152414C7CB /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3DE31FF11DDE4F7505E636B439FFB /* Interpreter.swift */; };
-		DE896085DFDD686BDBDEFB776F0D683A /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C80436E3781682C794F0545D04D0AD /* DispatchQueue+Alamofire.swift */; };
-		DE8F5B68839128A005EE3549A1149B09 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B42E069FE8A9DCF8574BC2EE7D3B28 /* RequestInterceptor.swift */; };
-		E6ED06AC318A34F7744B32CEC759CDA9 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BCAFE600F510CBD9D7E07DC9C03104 /* Response.swift */; };
-		E9FBF72F0F223B0E2AB225ABFCF4F208 /* Tensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B31C9803891E3ACF30AF670BBEA93F /* Tensor.swift */; };
-		EAFC1D12B1CFA5F3C09FDCF743E210AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
-		F0D6D64E3484ECAA98C267A0B03BFA3E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = BD60FF5E895BCBD1F4CB36D09BA8EA68 /* PrivacyInfo.xcprivacy */; };
-		F4DD0AD58DDD5641BDEAEA6CF44FF0ED /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B4A8A0D62B40A8A8C1057F34FDD9C /* Protected.swift */; };
-		F630425700A244B12D1CB24CB4B82205 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
-		F7E576E007A81E0EFD2E0849CB17878D /* WebSocketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDC83F2C3173B383ADA8005D9153912 /* WebSocketRequest.swift */; };
-		FCE62086E1AB54A4F61EBCDBA15C1510 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2EAC79C9D978B61778C37A41F04DC1 /* EventMonitor.swift */; };
-		FD969B9CFD0CA2C11F426422511D347F /* InterpreterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1107EC45F224DC930EAD32CDD3532B /* InterpreterError.swift */; };
+		04C882EFF066802186CF3B082A8DEEDB /* Pods-SequreSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D613359F4D59377EB02CBE8D5713F4EF /* Pods-SequreSDK-dummy.m */; };
+		0C9FAA785BC6C75A6C995F9976703C62 /* Pods-SequreSDK-SequreSDKTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B8785F3FC45EADA3CB2BE6309B68D1 /* Pods-SequreSDK-SequreSDKTests-dummy.m */; };
+		12796114E1CFB0079D1EA61B9AAE1147 /* QuantizationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB52E2B476B9AAEEB760FFD26646E3 /* QuantizationParameters.swift */; };
+		3A34B60FF75F4CFA5385E655F265E0BC /* TensorFlowLiteSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA33AA5F4F64D4A1B84ACE678DAB5A4 /* TensorFlowLiteSwift-dummy.m */; };
+		3CE3556126C9EAAB6AC242CF1F588DD8 /* SignatureRunnerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB99EFA5F0924F08D77967710C47E3C8 /* SignatureRunnerError.swift */; };
+		581584D717DE9B5A8F68211F4ADFF339 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1F328BA8D196001437970EC3686EE /* Model.swift */; };
+		6BBF144A71EE0C5DF2C4CCA24AB51A41 /* SignatureRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE66D2D4027BB6655386D2B636A2773 /* SignatureRunner.swift */; };
+		881E59434C26CB320B6C5F794E75ABEF /* TensorFlowLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51853F8BA7770AF755B8E3D682769329 /* TensorFlowLite.swift */; };
+		9266E86E8DD5FA798185EA98B66FE0EE /* Pods-SequreSDK-SequreSDKTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEF2C48825EBBF67DED5CCCAA93BDE4 /* Pods-SequreSDK-SequreSDKTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9498B82D4517066E046D90A24D22D923 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C5D7B4B104DAD181B910DD8344E9A582 /* PrivacyInfo.xcprivacy */; };
+		A8FFC7B57E7FC747138C4EBDC96B49F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B2C5C5ADF9F407FE21DA664B61B9D16F /* TensorFlowLiteSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F9ED98CC58E5A51F8E3120C575CBBD /* TensorFlowLiteSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7C929632DBA2A62B5B15A139F5F4385 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA238FEB2718EC87E91A49087B659D /* Delegate.swift */; };
+		BF8F3C85261B69A659E6CB42A02837BF /* Pods-SequreSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE9C9F2589C4D7AE75DF2C0F4378C93 /* Pods-SequreSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE3D9C8AEC9C42F4B9AAA6152414C7CB /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7562FF9761DF26274C97502D3D1D593 /* Interpreter.swift */; };
+		E9C97F2EB204A87D935A6FE74C19ED2C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 531D7EE2566282696AC47A6C4E0C53B5 /* PrivacyInfo.xcprivacy */; };
+		E9FBF72F0F223B0E2AB225ABFCF4F208 /* Tensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAD23485F764BA5E9BAA9C16C9F44D1 /* Tensor.swift */; };
+		EAFC1D12B1CFA5F3C09FDCF743E210AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F8EFD4DAB1C782C9CD87A24BDE72331F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FD969B9CFD0CA2C11F426422511D347F /* InterpreterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E76ED34F3A260FB66691F9B07F9DAC /* InterpreterError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		19F5FDB3FCFE91976B06D07AD80FAF6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10418167F619D6DA72BADAD10F9EC02B;
-			remoteInfo = TensorFlowLiteSwift;
-		};
-		1B2A31734E6485B440A71740CFAD4FD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
-			remoteInfo = TensorFlowLiteC;
-		};
-		55985DA027B507A926262CD94E8ED699 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10418167F619D6DA72BADAD10F9EC02B;
-			remoteInfo = TensorFlowLiteSwift;
-		};
-		69BF4B723EB69C7ABCAA02FB1E260DCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6E02334B34978796A45D1BAFBF86A66;
-			remoteInfo = TensorFlowLiteTaskVision;
-		};
-		6A89A6A51CB794DED18C968781E75697 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
-			remoteInfo = TensorFlowLiteC;
-		};
-		72CCA0E3AE8C68C65DE85ACC4F439D6A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E30F2EFBF0085562A1B5F3CE337DBC4;
-			remoteInfo = "TensorFlowLiteSwift-TensorFlowLite";
-		};
-		7D67BC062DB2180C0138495D402162BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
-			remoteInfo = TensorFlowLiteC;
-		};
-		8FABCB88A3FF6A977A5EDA2607BEA413 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		9C09F38606CF0CD4BF3894B6F2250596 /* PBXContainerItemProxy */ = {
+		198A3CCAD54B1827DB456BDA5E12A8F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E84A5C2B777F1A7DFA141FF65E7EF5F8;
 			remoteInfo = "TensorFlowLiteC-TensorFlowLiteC";
 		};
-		AA807C04DB29D84D0A2ADFA7D5D2F39F /* PBXContainerItemProxy */ = {
+		35F703A7D9D680EAF5ACCE7BE650F5DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 976126A1CE06DC6E162563800E1BDF14;
-			remoteInfo = "Alamofire-Alamofire";
+			remoteGlobalIDString = 10418167F619D6DA72BADAD10F9EC02B;
+			remoteInfo = TensorFlowLiteSwift;
 		};
-		BDDFD7BDD681DBCB8FBB0645D5BD1428 /* PBXContainerItemProxy */ = {
+		3A57A1301517DD0B3830A6AFDD3D3835 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = C6E02334B34978796A45D1BAFBF86A66;
+			remoteInfo = TensorFlowLiteTaskVision;
 		};
-		E272D1B8D60F2789DCF91C866E159F7B /* PBXContainerItemProxy */ = {
+		762EB64D2A6DB579732B039081AD0858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
+			remoteInfo = TensorFlowLiteC;
+		};
+		917C10C091158483C2AC9307C77F5BC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E30F2EFBF0085562A1B5F3CE337DBC4;
+			remoteInfo = "TensorFlowLiteSwift-TensorFlowLite";
+		};
+		A3B8E95009C5A8C6BAF6DC30331FEFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10418167F619D6DA72BADAD10F9EC02B;
+			remoteInfo = TensorFlowLiteSwift;
+		};
+		ADF3560CC25DF6AE17ECBC2115A21E9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
+			remoteInfo = TensorFlowLiteC;
+		};
+		DE918BA236F6A9CB2B996648A3AC4C17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC559E53E13B6FBEF4F5CC310A73AFE6;
+			remoteInfo = TensorFlowLiteC;
+		};
+		E4DF46CF79F56C7CE57CDB61E2EC6E38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -189,134 +120,80 @@
 
 /* Begin PBXFileReference section */
 		0001E3DE74A2D685B29F81E7E6E77202 /* Pods-SequreSDK-SequreSDKTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SequreSDK-SequreSDKTests"; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		00BAAFBF76381D2C76D205E5D9F3D7F1 /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
-		0181E1DCEE89041A75F3847C8DE75242 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/Extensions/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
-		03817731EE20305E5A4479401527C810 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/Core/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
-		03C243F565692269F5F229FC9B6079BF /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Core/Session.swift; sourceTree = "<group>"; };
-		05CC4D632BE6282E678020F98AF9C047 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		066C7073DCD8DDBCEB5F777E4EC85B80 /* DownloadRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownloadRequest.swift; path = Source/Core/DownloadRequest.swift; sourceTree = "<group>"; };
-		069C3E9EB67CC45993D545FC2FEF7614 /* Pods-SequreSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-acknowledgements.plist"; sourceTree = "<group>"; };
-		07F6CB8DC2D53E80ECFB7DD8CC308561 /* TensorFlowLiteC.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TensorFlowLiteC.xcframework; path = Frameworks/TensorFlowLiteC.xcframework; sourceTree = "<group>"; };
-		085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Alamofire-Alamofire"; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		08F2540F522FD2F70D03D1B4A25D369B /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
-		121D0CC0AFBCBEDB9F5FE74A75447CAB /* TensorFlowLiteSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TensorFlowLiteSwift-dummy.m"; sourceTree = "<group>"; };
-		16B5B3101F41D4C11DA2E8A9D59D48BC /* Pods-SequreSDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SequreSDK-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1B6977C781301E574484F45DC129703B /* Pods-SequreSDK-SequreSDKTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SequreSDK-SequreSDKTests-dummy.m"; sourceTree = "<group>"; };
+		004EFA29652C345A75A968109048D792 /* TensorFlowLiteC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteC.release.xcconfig; sourceTree = "<group>"; };
+		07A443B0D702C69D89BAAE405DDEA3BE /* Pods-SequreSDK-SequreSDKTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-SequreSDKTests-Info.plist"; sourceTree = "<group>"; };
+		096625881B36980344257FEB110ED5C3 /* TensorFlowLiteSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TensorFlowLiteSwift.modulemap; sourceTree = "<group>"; };
+		09F5F1E2B6DF6CCFEE7F838D573DB88A /* TensorFlowLiteTaskVision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TensorFlowLiteTaskVision.framework; path = Frameworks/TensorFlowLiteTaskVision.framework; sourceTree = "<group>"; };
+		0AE9C9F2589C4D7AE75DF2C0F4378C93 /* Pods-SequreSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SequreSDK-umbrella.h"; sourceTree = "<group>"; };
+		103819D4C040288BA8D6CFC8EFD2EBA9 /* TensorFlowLiteC-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "TensorFlowLiteC-xcframeworks.sh"; sourceTree = "<group>"; };
+		18696DA87932D237EA0B38989220AFE5 /* Pods-SequreSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-acknowledgements.plist"; sourceTree = "<group>"; };
 		1D5601775997FD3F96D4BBB895A282FB /* TensorFlowLiteSwift-TensorFlowLite */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TensorFlowLiteSwift-TensorFlowLite"; path = TensorFlowLite.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EFDB61712F735A98B0B7E9D9A4191EF /* TensorFlowLiteTaskVision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TensorFlowLiteTaskVision.framework; path = Frameworks/TensorFlowLiteTaskVision.framework; sourceTree = "<group>"; };
-		21C80436E3781682C794F0545D04D0AD /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/Extensions/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		26DC19C140D307851C15FEC37EBADC19 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/Extensions/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
-		281C5D95B330CA2265A9F46A62156176 /* TensorFlowLiteTaskVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteTaskVision.debug.xcconfig; sourceTree = "<group>"; };
-		28F313E5443392956A44ACFCFEF4EE51 /* Pods-SequreSDK-SequreSDKTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SequreSDK-SequreSDKTests.modulemap"; sourceTree = "<group>"; };
-		2E0597D162B067FBCE740E7BD8E82D71 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
-		304F65CD936F490EE6FC44320268F1FF /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/Core/AFError.swift; sourceTree = "<group>"; };
-		32D08F6699FDC5F9AD888B95A7BD3A95 /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/Features/CachedResponseHandler.swift; sourceTree = "<group>"; };
-		35BCAFE600F510CBD9D7E07DC9C03104 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Core/Response.swift; sourceTree = "<group>"; };
-		3D5D97FFF7843385A66AA86066A3D5C3 /* ResourceBundle-Alamofire-Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Alamofire-Alamofire-Info.plist"; sourceTree = "<group>"; };
-		3EDC83F2C3173B383ADA8005D9153912 /* WebSocketRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketRequest.swift; path = Source/Core/WebSocketRequest.swift; sourceTree = "<group>"; };
-		459E04906C3B8707E78C6B92CC6435B7 /* Pods-SequreSDK-SequreSDKTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-SequreSDKTests-Info.plist"; sourceTree = "<group>"; };
-		46F3DE31FF11DDE4F7505E636B439FFB /* Interpreter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpreter.swift; path = tensorflow/lite/swift/Sources/Interpreter.swift; sourceTree = "<group>"; };
-		49DD46D1EDE4E10367ACE108225F2F62 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/Features/MultipartFormData.swift; sourceTree = "<group>"; };
-		4A2674F34FF1A0880B0F61B6E6DFD868 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		4AED0A66E99966C364CB19D467E7BCB3 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Features/Combine.swift; sourceTree = "<group>"; };
-		4B2E9FE1D0C0DADF1A483418008DB061 /* SignatureRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureRunner.swift; path = tensorflow/lite/swift/Sources/SignatureRunner.swift; sourceTree = "<group>"; };
-		4BF7D7E5ABF448ABC2A3BAEF1C2CD0D3 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
-		51902B42B086789BD60E68D945E4F953 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Features/Validation.swift; sourceTree = "<group>"; };
-		51E1314B2F0A3BAFC8C44E17C7B0D47F /* TensorFlowLite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TensorFlowLite.swift; path = tensorflow/lite/swift/Sources/TensorFlowLite.swift; sourceTree = "<group>"; };
-		5786EBB06E0362D1CB3DE61EB8C588D3 /* ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist"; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E29A0BCB81EAD6D29B6557B5C7ED2E4 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		5F044D9C2A66F267A73FB034ED1EE93C /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/Core/HTTPHeaders.swift; sourceTree = "<group>"; };
-		5F22A20451D23D2E21435BB578F972FA /* UploadRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UploadRequest.swift; path = Source/Core/UploadRequest.swift; sourceTree = "<group>"; };
-		5F6279B49D7A6E7FDA0F3F5D9420FEA4 /* DataStreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStreamRequest.swift; path = Source/Core/DataStreamRequest.swift; sourceTree = "<group>"; };
-		60D94F5DB3BC6125C3A38B944C365D0F /* TensorFlowLiteC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteC.debug.xcconfig; sourceTree = "<group>"; };
-		61A5BA3F3C92479870A8318F1FBD4988 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/Core/HTTPMethod.swift; sourceTree = "<group>"; };
-		627E3CF81384FE949BC4D238C7756199 /* TensorFlowLiteSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteSwift.debug.xcconfig; sourceTree = "<group>"; };
-		63BBF0239ED3947BFF0D32A573172A60 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/Extensions/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
-		63F117D1900E17265D8B42CFF8467482 /* SignatureRunnerError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureRunnerError.swift; path = tensorflow/lite/swift/Sources/SignatureRunnerError.swift; sourceTree = "<group>"; };
-		641DE54B724149D604EC5E2E6EE7FF94 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		6447F0511B9DA035CB02A668A9D5F0CC /* TensorFlowLiteC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteC.release.xcconfig; sourceTree = "<group>"; };
-		64A531D2EC3A7DAEE6105DDEBE23EFF4 /* TensorFlowLiteSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TensorFlowLiteSwift-prefix.pch"; sourceTree = "<group>"; };
-		65B34848B591858C3911908ECA54971B /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
-		70B31C9803891E3ACF30AF670BBEA93F /* Tensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tensor.swift; path = tensorflow/lite/swift/Sources/Tensor.swift; sourceTree = "<group>"; };
-		7A9D84C0CEDA2A73907A0CCBFD924F3C /* Pods-SequreSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SequreSDK-resources.sh"; sourceTree = "<group>"; };
-		7B771F98C4D436EB77CF9CF1A186112D /* TensorFlowLiteSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TensorFlowLiteSwift-Info.plist"; sourceTree = "<group>"; };
-		7E01AFB8DFE2012A68C84B0E20F4FD72 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F37CC73615242714AF4240C1BA8172D /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Features/Concurrency.swift; sourceTree = "<group>"; };
-		80C6F58855D11A58A7B58D155B106527 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/Features/MultipartUpload.swift; sourceTree = "<group>"; };
-		81B42E069FE8A9DCF8574BC2EE7D3B28 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/Features/RequestInterceptor.swift; sourceTree = "<group>"; };
-		837F30A2D5BA9D9D5D3B6A751127E0DA /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/Features/RetryPolicy.swift; sourceTree = "<group>"; };
-		878EF9FB42490E3058A16A8379A993DB /* TensorFlowLiteSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TensorFlowLiteSwift-umbrella.h"; sourceTree = "<group>"; };
-		8938B030838094E6448440C380EB3BF4 /* ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist"; sourceTree = "<group>"; };
-		8BF833D6ACE5170CD165D460DEB4C271 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/Features/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
-		8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		8F0000C18585DF0FE01007CFD0A3ECDE /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/Features/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		90CA8DC363C7D642856B4F708A42B868 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Extensions/Result+Alamofire.swift"; sourceTree = "<group>"; };
-		96735702644956A0502F89F5B2042928 /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/Core/ParameterEncoder.swift; sourceTree = "<group>"; };
-		9729F464AAF3B066B1B26FD11905C4BF /* RequestCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCompression.swift; path = Source/Features/RequestCompression.swift; sourceTree = "<group>"; };
-		980342373F5410BB058905F6D1BE807E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		349B78406638070BDBC3678237E76A8C /* Pods-SequreSDK-SequreSDKTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SequreSDK-SequreSDKTests-resources.sh"; sourceTree = "<group>"; };
+		428637412E1A7002E9D0E88624C693E5 /* TensorFlowLiteC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteC.debug.xcconfig; sourceTree = "<group>"; };
+		45E0DD7040114BA0A0BBA15A178D5C91 /* TensorFlowLiteSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteSwift.debug.xcconfig; sourceTree = "<group>"; };
+		46AA097D11C5D7F7590CC5DFE5CF22F0 /* Pods-SequreSDK-SequreSDKTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SequreSDK-SequreSDKTests.modulemap"; sourceTree = "<group>"; };
+		47A9F1244ADE93B7050BB300AA037D47 /* Pods-SequreSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SequreSDK.modulemap"; sourceTree = "<group>"; };
+		4FF8EB0887529F8C5BDA3992CAC2E340 /* TensorFlowLiteSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteSwift.release.xcconfig; sourceTree = "<group>"; };
+		51853F8BA7770AF755B8E3D682769329 /* TensorFlowLite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TensorFlowLite.swift; path = tensorflow/lite/swift/Sources/TensorFlowLite.swift; sourceTree = "<group>"; };
+		531D7EE2566282696AC47A6C4E0C53B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Frameworks/TensorFlowLiteC.xcframework/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		5D0EE51B48D2FCCD8AD32E77AD875B69 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D8E8FFE10BE07F3605929EC2686A80A /* TensorFlowLiteC.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TensorFlowLiteC.xcframework; path = Frameworks/TensorFlowLiteC.xcframework; sourceTree = "<group>"; };
+		5F3E9B71BB4A4DBD881CD0670F8DEF5A /* Pods-SequreSDK-SequreSDKTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SequreSDK-SequreSDKTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		621CA7F15165C44A2BF6786F8C75BE1C /* TensorFlowLiteSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TensorFlowLiteSwift-prefix.pch"; sourceTree = "<group>"; };
+		6896B7A5469A1A37B67EAEE1E232E589 /* Pods-SequreSDK-SequreSDKTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-SequreSDKTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		76D84B0E0B9F3FD7EFE90ACCC23DDDBF /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		7DE66D2D4027BB6655386D2B636A2773 /* SignatureRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureRunner.swift; path = tensorflow/lite/swift/Sources/SignatureRunner.swift; sourceTree = "<group>"; };
+		83FA238FEB2718EC87E91A49087B659D /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = tensorflow/lite/swift/Sources/Delegate.swift; sourceTree = "<group>"; };
+		8484CE63C2468CB8B67156F07A7C247C /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BCB52E2B476B9AAEEB760FFD26646E3 /* QuantizationParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuantizationParameters.swift; path = tensorflow/lite/swift/Sources/QuantizationParameters.swift; sourceTree = "<group>"; };
+		8DEF2C48825EBBF67DED5CCCAA93BDE4 /* Pods-SequreSDK-SequreSDKTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SequreSDK-SequreSDKTests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E2EAC79C9D978B61778C37A41F04DC1 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/Features/EventMonitor.swift; sourceTree = "<group>"; };
-		A580465110A6C485C34730D3246D1934 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/Features/ResponseSerialization.swift; sourceTree = "<group>"; };
-		A6449CB5C3BCAC61A2E57EEB29F968AF /* TensorFlowLiteC-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "TensorFlowLiteC-xcframeworks.sh"; sourceTree = "<group>"; };
-		A731488AEDBF1EDF27994A4CEEE60CC1 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/Core/RequestTaskMap.swift; sourceTree = "<group>"; };
-		A9B6D350968C6B1D58E73770FE290957 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Core/Request.swift; sourceTree = "<group>"; };
-		AA6DA2175EF4A752BFC03B1C7DD37155 /* Pods-SequreSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SequreSDK.modulemap"; sourceTree = "<group>"; };
-		ADA447C0BC6BC2EEAE81BA3F39F0C692 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		B1E621F25531E4E2E7F1CA81C081B292 /* TensorFlowLiteSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteSwift.release.xcconfig; sourceTree = "<group>"; };
-		B24CAED4992E66A8F2DD2F70C4181B28 /* Pods-SequreSDK-SequreSDKTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SequreSDK-SequreSDKTests-resources.sh"; sourceTree = "<group>"; };
-		B42D311DC4CB10E2C9D402C31BCA8859 /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = tensorflow/lite/swift/Sources/Delegate.swift; sourceTree = "<group>"; };
-		B98B4A8A0D62B40A8A8C1057F34FDD9C /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Core/Protected.swift; sourceTree = "<group>"; };
-		BA1225313E2FA22CA48CE21D7C94BA4C /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/Extensions/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		BCFE8A53C2C06E74E2BA38DEADC77F6C /* TensorFlowLiteSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TensorFlowLiteSwift.modulemap; sourceTree = "<group>"; };
-		BD60FF5E895BCBD1F4CB36D09BA8EA68 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = tensorflow/lite/swift/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		BEA492CFF967EDD838B685C7CD3E1E21 /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Model.swift; path = tensorflow/lite/swift/Sources/Model.swift; sourceTree = "<group>"; };
-		C044C8EC264432384B925553633922A0 /* Pods-SequreSDK-SequreSDKTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SequreSDK-SequreSDKTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C6CDFD0152D3A0DE61C0FA6B84726312 /* Pods-SequreSDK-SequreSDKTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SequreSDK-SequreSDKTests-frameworks.sh"; sourceTree = "<group>"; };
-		C7BB67DC00A32DE89EDD7AF1D68214B9 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/Core/SessionDelegate.swift; sourceTree = "<group>"; };
-		CA4720F259155ECC9EC5692D82C817BF /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = Source/Core/DataRequest.swift; sourceTree = "<group>"; };
-		CB0698BADB6C75066AE2A89607244C60 /* Pods-SequreSDK-SequreSDKTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SequreSDK-SequreSDKTests-umbrella.h"; sourceTree = "<group>"; };
-		CC84BAFCFA5BDC06DA006FC71C73F1E8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Frameworks/TensorFlowLiteC.xcframework/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		CECD5663FDED3CEB5274FA99BA80CE3C /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/Features/RedirectHandler.swift; sourceTree = "<group>"; };
-		D047AB5DC10D5ED7563239027695402D /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/Features/AlamofireExtended.swift; sourceTree = "<group>"; };
-		DC1107EC45F224DC930EAD32CDD3532B /* InterpreterError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpreterError.swift; path = tensorflow/lite/swift/Sources/InterpreterError.swift; sourceTree = "<group>"; };
-		DE6927F675743D5E9761EF47F4DDF6F0 /* Pods-SequreSDK-SequreSDKTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-SequreSDKTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		DF9EBC2C983B53704188FE31A1F72A5F /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
+		A47C1981117D5C7AA21A4C0E013BDC37 /* Pods-SequreSDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SequreSDK-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A5CB7EDC4FC80FBF773C4196EDAC6454 /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
+		A9B8785F3FC45EADA3CB2BE6309B68D1 /* Pods-SequreSDK-SequreSDKTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SequreSDK-SequreSDKTests-dummy.m"; sourceTree = "<group>"; };
+		B9F9ED98CC58E5A51F8E3120C575CBBD /* TensorFlowLiteSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TensorFlowLiteSwift-umbrella.h"; sourceTree = "<group>"; };
+		BCAD23485F764BA5E9BAA9C16C9F44D1 /* Tensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tensor.swift; path = tensorflow/lite/swift/Sources/Tensor.swift; sourceTree = "<group>"; };
+		C0B834FA1EADD00A13C120C37A74CB8A /* ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist"; sourceTree = "<group>"; };
+		C2E7939FB31686B04D4A082BDBE20BDD /* ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist"; sourceTree = "<group>"; };
+		C5D7B4B104DAD181B910DD8344E9A582 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = tensorflow/lite/swift/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		CB47D436A05F5713FEC47F6886017382 /* TensorFlowLiteSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TensorFlowLiteSwift-Info.plist"; sourceTree = "<group>"; };
+		CDC1F328BA8D196001437970EC3686EE /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Model.swift; path = tensorflow/lite/swift/Sources/Model.swift; sourceTree = "<group>"; };
+		CEA33AA5F4F64D4A1B84ACE678DAB5A4 /* TensorFlowLiteSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TensorFlowLiteSwift-dummy.m"; sourceTree = "<group>"; };
+		D613359F4D59377EB02CBE8D5713F4EF /* Pods-SequreSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SequreSDK-dummy.m"; sourceTree = "<group>"; };
+		DB99EFA5F0924F08D77967710C47E3C8 /* SignatureRunnerError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureRunnerError.swift; path = tensorflow/lite/swift/Sources/SignatureRunnerError.swift; sourceTree = "<group>"; };
+		DFC21D56FEF2392AC812C8DA4AF6F5E1 /* TensorFlowLiteTaskVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteTaskVision.debug.xcconfig; sourceTree = "<group>"; };
 		E0B71FE13AA6B05010059EB4B8D87919 /* TensorFlowLiteSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TensorFlowLiteSwift; path = TensorFlowLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2759364AEFB6534458BA63D8E71F3D3 /* Pods-SequreSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SequreSDK-umbrella.h"; sourceTree = "<group>"; };
-		E49B58CC29E4EA6AAE3E8C3DCEA2B1A4 /* TensorFlowLiteTaskVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteTaskVision.release.xcconfig; sourceTree = "<group>"; };
-		E89351C263EA4E272CCD871FD63BED37 /* QuantizationParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuantizationParameters.swift; path = tensorflow/lite/swift/Sources/QuantizationParameters.swift; sourceTree = "<group>"; };
-		EE175BA205C71D40617363D7DC527606 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/Features/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
-		EE94640A4BD578480155A5F1105AAA42 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/Features/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		E2E76ED34F3A260FB66691F9B07F9DAC /* InterpreterError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpreterError.swift; path = tensorflow/lite/swift/Sources/InterpreterError.swift; sourceTree = "<group>"; };
+		E7562FF9761DF26274C97502D3D1D593 /* Interpreter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpreter.swift; path = tensorflow/lite/swift/Sources/Interpreter.swift; sourceTree = "<group>"; };
+		EBCD8F269700B2B056BE9DF8D0F187F4 /* Pods-SequreSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-Info.plist"; sourceTree = "<group>"; };
 		F6CA8BFC88290AB33297A7C778E05B12 /* TensorFlowLiteC-TensorFlowLiteC */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TensorFlowLiteC-TensorFlowLiteC"; path = TensorFlowLiteC.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93B75B3E01E915810670C05A869787D /* Pods-SequreSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SequreSDK"; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9BCD2ED7C50C276D4ECA7923581EA0D /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Core/Notifications.swift; sourceTree = "<group>"; };
-		F9EAF76B41E017B22F2F2E8AFE300D28 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/Core/ParameterEncoding.swift; sourceTree = "<group>"; };
-		FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		FE74A1BD642B93030D95F2D971C4574E /* Pods-SequreSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SequreSDK-Info.plist"; sourceTree = "<group>"; };
-		FF3F6A6898060A6ED1ACB316E3634696 /* Pods-SequreSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SequreSDK-dummy.m"; sourceTree = "<group>"; };
+		F97F8CCEA7135D5515AB9DF75C189CD7 /* TensorFlowLiteTaskVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TensorFlowLiteTaskVision.release.xcconfig; sourceTree = "<group>"; };
+		FB398C44EC8EA9865AF4F75FDBE231E9 /* Pods-SequreSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SequreSDK-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		057DC7049AD0312546579C84578011B8 /* Frameworks */ = {
+		194FBFEF73AC0202306E916BF9A25C92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8EFD4DAB1C782C9CD87A24BDE72331F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		273406083BF8866604A4C0A27E208656 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08410837DF99006378532EFB987A8B34 /* Frameworks */ = {
+		41DC5DC33910784186CE75BE205B941C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A79F4E097DF1A505DB9E2A24EB6235E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C0B27AE20F57BB598819CFBB7D1868 /* Foundation.framework in Frameworks */,
+				A8FFC7B57E7FC747138C4EBDC96B49F6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,217 +205,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		707D107C3A6720DB3CD28376FA6F6B43 /* Frameworks */ = {
+		557B7BD4CA1171AE1EB06EF991014D0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9536BB83F44B3E7E40A57602EDE7646D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F630425700A244B12D1CB24CB4B82205 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A5C342523C3577E7122B4B43929BA8F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B901DF82C6576019330391D0F470B31 /* CFNetwork.framework in Frameworks */,
-				84BEB9E439780B1E0DEF56459E3D3352 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10069A4A3CF2FAEED9D40F9938856543 /* Frameworks */ = {
+		04666231CF2FBF4085B0B5527A3F18D0 /* TensorFlowLiteSwift */ = {
 			isa = PBXGroup;
 			children = (
-				1EFDB61712F735A98B0B7E9D9A4191EF /* TensorFlowLiteTaskVision.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1362576D441DFC5689A858E47773B75C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FDDD09921DB75F7365263249405944F7 /* Pods-SequreSDK */,
-				93A80D586344DC78B4FD9AE7373E58C6 /* Pods-SequreSDK-SequreSDKTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		15591AE8E3B3533A36EB219A300EF454 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				9DA98BC9FBACA981738A4681259739B0 /* Frameworks */,
-				BD304C146179127573759BD1B90D2D28 /* Resources */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		166A07ECAB8AD986AC44A5B0B36AE577 /* TensorFlowLiteSwift */ = {
-			isa = PBXGroup;
-			children = (
-				33F969B03B2FBE61E8A476BD075BE6C1 /* Core */,
-				16B94F92056C54C254A2645B419DF348 /* Privacy */,
-				D82DAE61F76DF80418A9FADA2764598B /* Support Files */,
+				52326D8202799EFB5A4C2D55181E10A2 /* Core */,
+				E74687D0063B8963C720B3C6E6E7F235 /* Privacy */,
+				E8A8DB229251A02B7E3C5CF8E33AD7DE /* Support Files */,
 			);
 			name = TensorFlowLiteSwift;
 			path = TensorFlowLiteSwift;
 			sourceTree = "<group>";
 		};
-		169E4E046D179DF56C0475373A05E77D /* Resources */ = {
+		11F1C55F19168643EBFDCE8C1A5FBFEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				980342373F5410BB058905F6D1BE807E /* PrivacyInfo.xcprivacy */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		16B94F92056C54C254A2645B419DF348 /* Privacy */ = {
-			isa = PBXGroup;
-			children = (
-				371D058628495AD8D396791D0E425C9F /* Resources */,
-			);
-			name = Privacy;
-			sourceTree = "<group>";
-		};
-		33F969B03B2FBE61E8A476BD075BE6C1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				B42D311DC4CB10E2C9D402C31BCA8859 /* Delegate.swift */,
-				46F3DE31FF11DDE4F7505E636B439FFB /* Interpreter.swift */,
-				DC1107EC45F224DC930EAD32CDD3532B /* InterpreterError.swift */,
-				BEA492CFF967EDD838B685C7CD3E1E21 /* Model.swift */,
-				E89351C263EA4E272CCD871FD63BED37 /* QuantizationParameters.swift */,
-				4B2E9FE1D0C0DADF1A483418008DB061 /* SignatureRunner.swift */,
-				63F117D1900E17265D8B42CFF8467482 /* SignatureRunnerError.swift */,
-				70B31C9803891E3ACF30AF670BBEA93F /* Tensor.swift */,
-				51E1314B2F0A3BAFC8C44E17C7B0D47F /* TensorFlowLite.swift */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		371D058628495AD8D396791D0E425C9F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BD60FF5E895BCBD1F4CB36D09BA8EA68 /* PrivacyInfo.xcprivacy */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		51B21367A9B300BFF749FE9025083DC3 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				304F65CD936F490EE6FC44320268F1FF /* AFError.swift */,
-				4A2674F34FF1A0880B0F61B6E6DFD868 /* Alamofire.swift */,
-				D047AB5DC10D5ED7563239027695402D /* AlamofireExtended.swift */,
-				8BF833D6ACE5170CD165D460DEB4C271 /* AuthenticationInterceptor.swift */,
-				32D08F6699FDC5F9AD888B95A7BD3A95 /* CachedResponseHandler.swift */,
-				4AED0A66E99966C364CB19D467E7BCB3 /* Combine.swift */,
-				7F37CC73615242714AF4240C1BA8172D /* Concurrency.swift */,
-				CA4720F259155ECC9EC5692D82C817BF /* DataRequest.swift */,
-				5F6279B49D7A6E7FDA0F3F5D9420FEA4 /* DataStreamRequest.swift */,
-				21C80436E3781682C794F0545D04D0AD /* DispatchQueue+Alamofire.swift */,
-				066C7073DCD8DDBCEB5F777E4EC85B80 /* DownloadRequest.swift */,
-				9E2EAC79C9D978B61778C37A41F04DC1 /* EventMonitor.swift */,
-				5F044D9C2A66F267A73FB034ED1EE93C /* HTTPHeaders.swift */,
-				61A5BA3F3C92479870A8318F1FBD4988 /* HTTPMethod.swift */,
-				49DD46D1EDE4E10367ACE108225F2F62 /* MultipartFormData.swift */,
-				80C6F58855D11A58A7B58D155B106527 /* MultipartUpload.swift */,
-				8F0000C18585DF0FE01007CFD0A3ECDE /* NetworkReachabilityManager.swift */,
-				F9BCD2ED7C50C276D4ECA7923581EA0D /* Notifications.swift */,
-				BA1225313E2FA22CA48CE21D7C94BA4C /* OperationQueue+Alamofire.swift */,
-				96735702644956A0502F89F5B2042928 /* ParameterEncoder.swift */,
-				F9EAF76B41E017B22F2F2E8AFE300D28 /* ParameterEncoding.swift */,
-				B98B4A8A0D62B40A8A8C1057F34FDD9C /* Protected.swift */,
-				CECD5663FDED3CEB5274FA99BA80CE3C /* RedirectHandler.swift */,
-				A9B6D350968C6B1D58E73770FE290957 /* Request.swift */,
-				9729F464AAF3B066B1B26FD11905C4BF /* RequestCompression.swift */,
-				81B42E069FE8A9DCF8574BC2EE7D3B28 /* RequestInterceptor.swift */,
-				A731488AEDBF1EDF27994A4CEEE60CC1 /* RequestTaskMap.swift */,
-				35BCAFE600F510CBD9D7E07DC9C03104 /* Response.swift */,
-				A580465110A6C485C34730D3246D1934 /* ResponseSerialization.swift */,
-				90CA8DC363C7D642856B4F708A42B868 /* Result+Alamofire.swift */,
-				837F30A2D5BA9D9D5D3B6A751127E0DA /* RetryPolicy.swift */,
-				EE94640A4BD578480155A5F1105AAA42 /* ServerTrustEvaluation.swift */,
-				03C243F565692269F5F229FC9B6079BF /* Session.swift */,
-				C7BB67DC00A32DE89EDD7AF1D68214B9 /* SessionDelegate.swift */,
-				0181E1DCEE89041A75F3847C8DE75242 /* StringEncoding+Alamofire.swift */,
-				5F22A20451D23D2E21435BB578F972FA /* UploadRequest.swift */,
-				03817731EE20305E5A4479401527C810 /* URLConvertible+URLRequestConvertible.swift */,
-				EE175BA205C71D40617363D7DC527606 /* URLEncodedFormEncoder.swift */,
-				26DC19C140D307851C15FEC37EBADC19 /* URLRequest+Alamofire.swift */,
-				63BBF0239ED3947BFF0D32A573172A60 /* URLSessionConfiguration+Alamofire.swift */,
-				51902B42B086789BD60E68D945E4F953 /* Validation.swift */,
-				3EDC83F2C3173B383ADA8005D9153912 /* WebSocketRequest.swift */,
-				169E4E046D179DF56C0475373A05E77D /* Resources */,
-				D95B41902013FD6772D2868109E1DE52 /* Support Files */,
-			);
-			name = Alamofire;
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */,
-				FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		66428D8A2CF1F3FE45F180BF5D2D60A0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				281C5D95B330CA2265A9F46A62156176 /* TensorFlowLiteTaskVision.debug.xcconfig */,
-				E49B58CC29E4EA6AAE3E8C3DCEA2B1A4 /* TensorFlowLiteTaskVision.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TensorFlowLiteTaskVision";
-			sourceTree = "<group>";
-		};
-		74A9CFAA81CD1E31C9B42F985CBCFB5E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8938B030838094E6448440C380EB3BF4 /* ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist */,
-				A6449CB5C3BCAC61A2E57EEB29F968AF /* TensorFlowLiteC-xcframeworks.sh */,
-				60D94F5DB3BC6125C3A38B944C365D0F /* TensorFlowLiteC.debug.xcconfig */,
-				6447F0511B9DA035CB02A668A9D5F0CC /* TensorFlowLiteC.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TensorFlowLiteC";
-			sourceTree = "<group>";
-		};
-		78102ACCC9F8E102402670D063FA7736 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				51B21367A9B300BFF749FE9025083DC3 /* Alamofire */,
-				A162E1A255A50C12C12EF0B36A8A9AD0 /* TensorFlowLiteC */,
-				166A07ECAB8AD986AC44A5B0B36AE577 /* TensorFlowLiteSwift */,
-				D57DDE849DBD64349B9FF8CFB9A0979E /* TensorFlowLiteTaskVision */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7CB91471D4141F4BD751B6D74472731E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */,
 				F93B75B3E01E915810670C05A869787D /* Pods-SequreSDK */,
 				0001E3DE74A2D685B29F81E7E6E77202 /* Pods-SequreSDK-SequreSDKTests */,
 				F6CA8BFC88290AB33297A7C778E05B12 /* TensorFlowLiteC-TensorFlowLiteC */,
@@ -548,144 +238,225 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93A80D586344DC78B4FD9AE7373E58C6 /* Pods-SequreSDK-SequreSDKTests */ = {
+		12CAAFA3060F57E9A31294141183267C /* Pods-SequreSDK-SequreSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				28F313E5443392956A44ACFCFEF4EE51 /* Pods-SequreSDK-SequreSDKTests.modulemap */,
-				C044C8EC264432384B925553633922A0 /* Pods-SequreSDK-SequreSDKTests-acknowledgements.markdown */,
-				DE6927F675743D5E9761EF47F4DDF6F0 /* Pods-SequreSDK-SequreSDKTests-acknowledgements.plist */,
-				1B6977C781301E574484F45DC129703B /* Pods-SequreSDK-SequreSDKTests-dummy.m */,
-				C6CDFD0152D3A0DE61C0FA6B84726312 /* Pods-SequreSDK-SequreSDKTests-frameworks.sh */,
-				459E04906C3B8707E78C6B92CC6435B7 /* Pods-SequreSDK-SequreSDKTests-Info.plist */,
-				B24CAED4992E66A8F2DD2F70C4181B28 /* Pods-SequreSDK-SequreSDKTests-resources.sh */,
-				CB0698BADB6C75066AE2A89607244C60 /* Pods-SequreSDK-SequreSDKTests-umbrella.h */,
-				7E01AFB8DFE2012A68C84B0E20F4FD72 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
-				08F2540F522FD2F70D03D1B4A25D369B /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
+				46AA097D11C5D7F7590CC5DFE5CF22F0 /* Pods-SequreSDK-SequreSDKTests.modulemap */,
+				5F3E9B71BB4A4DBD881CD0670F8DEF5A /* Pods-SequreSDK-SequreSDKTests-acknowledgements.markdown */,
+				6896B7A5469A1A37B67EAEE1E232E589 /* Pods-SequreSDK-SequreSDKTests-acknowledgements.plist */,
+				A9B8785F3FC45EADA3CB2BE6309B68D1 /* Pods-SequreSDK-SequreSDKTests-dummy.m */,
+				07A443B0D702C69D89BAAE405DDEA3BE /* Pods-SequreSDK-SequreSDKTests-Info.plist */,
+				349B78406638070BDBC3678237E76A8C /* Pods-SequreSDK-SequreSDKTests-resources.sh */,
+				8DEF2C48825EBBF67DED5CCCAA93BDE4 /* Pods-SequreSDK-SequreSDKTests-umbrella.h */,
+				8484CE63C2468CB8B67156F07A7C247C /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
+				5D0EE51B48D2FCCD8AD32E77AD875B69 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
 			);
 			name = "Pods-SequreSDK-SequreSDKTests";
 			path = "Target Support Files/Pods-SequreSDK-SequreSDKTests";
 			sourceTree = "<group>";
 		};
-		9DA98BC9FBACA981738A4681259739B0 /* Frameworks */ = {
+		468086FFCC5055DD46C405EA4A026B56 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				07F6CB8DC2D53E80ECFB7DD8CC308561 /* TensorFlowLiteC.xcframework */,
+				580A428EFB92FDEB1C8D412A601B6051 /* Frameworks */,
+				8B1BF9636919D4DEAE49C46A279C0A27 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		52326D8202799EFB5A4C2D55181E10A2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				83FA238FEB2718EC87E91A49087B659D /* Delegate.swift */,
+				E7562FF9761DF26274C97502D3D1D593 /* Interpreter.swift */,
+				E2E76ED34F3A260FB66691F9B07F9DAC /* InterpreterError.swift */,
+				CDC1F328BA8D196001437970EC3686EE /* Model.swift */,
+				8BCB52E2B476B9AAEEB760FFD26646E3 /* QuantizationParameters.swift */,
+				7DE66D2D4027BB6655386D2B636A2773 /* SignatureRunner.swift */,
+				DB99EFA5F0924F08D77967710C47E3C8 /* SignatureRunnerError.swift */,
+				BCAD23485F764BA5E9BAA9C16C9F44D1 /* Tensor.swift */,
+				51853F8BA7770AF755B8E3D682769329 /* TensorFlowLite.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		550E96D3D8DA6CA061E981C06A4665FC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8AEFF513B98CC646AB9F5F2C981A762 /* Pods-SequreSDK */,
+				12CAAFA3060F57E9A31294141183267C /* Pods-SequreSDK-SequreSDKTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		580A428EFB92FDEB1C8D412A601B6051 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D8E8FFE10BE07F3605929EC2686A80A /* TensorFlowLiteC.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A162E1A255A50C12C12EF0B36A8A9AD0 /* TensorFlowLiteC */ = {
+		734CC9E8F2A5B9BB7F57AB18F0D55E5B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				15591AE8E3B3533A36EB219A300EF454 /* Core */,
-				74A9CFAA81CD1E31C9B42F985CBCFB5E /* Support Files */,
+				DFC21D56FEF2392AC812C8DA4AF6F5E1 /* TensorFlowLiteTaskVision.debug.xcconfig */,
+				F97F8CCEA7135D5515AB9DF75C189CD7 /* TensorFlowLiteTaskVision.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TensorFlowLiteTaskVision";
+			sourceTree = "<group>";
+		};
+		8426473D9EB58B34D6CCB21325D9856A /* TensorFlowLiteC */ = {
+			isa = PBXGroup;
+			children = (
+				468086FFCC5055DD46C405EA4A026B56 /* Core */,
+				AF0469DE29CAA4B72EE77F5B976C3FEC /* Support Files */,
 			);
 			name = TensorFlowLiteC;
 			path = TensorFlowLiteC;
 			sourceTree = "<group>";
 		};
-		BD304C146179127573759BD1B90D2D28 /* Resources */ = {
+		8B1BF9636919D4DEAE49C46A279C0A27 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CC84BAFCFA5BDC06DA006FC71C73F1E8 /* PrivacyInfo.xcprivacy */,
+				531D7EE2566282696AC47A6C4E0C53B5 /* PrivacyInfo.xcprivacy */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A8AEFF513B98CC646AB9F5F2C981A762 /* Pods-SequreSDK */ = {
+			isa = PBXGroup;
+			children = (
+				47A9F1244ADE93B7050BB300AA037D47 /* Pods-SequreSDK.modulemap */,
+				A47C1981117D5C7AA21A4C0E013BDC37 /* Pods-SequreSDK-acknowledgements.markdown */,
+				18696DA87932D237EA0B38989220AFE5 /* Pods-SequreSDK-acknowledgements.plist */,
+				D613359F4D59377EB02CBE8D5713F4EF /* Pods-SequreSDK-dummy.m */,
+				EBCD8F269700B2B056BE9DF8D0F187F4 /* Pods-SequreSDK-Info.plist */,
+				FB398C44EC8EA9865AF4F75FDBE231E9 /* Pods-SequreSDK-resources.sh */,
+				0AE9C9F2589C4D7AE75DF2C0F4378C93 /* Pods-SequreSDK-umbrella.h */,
+				76D84B0E0B9F3FD7EFE90ACCC23DDDBF /* Pods-SequreSDK.debug.xcconfig */,
+				A5CB7EDC4FC80FBF773C4196EDAC6454 /* Pods-SequreSDK.release.xcconfig */,
+			);
+			name = "Pods-SequreSDK";
+			path = "Target Support Files/Pods-SequreSDK";
+			sourceTree = "<group>";
+		};
+		A972795A65A778B7C16A8B01705286C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5D7B4B104DAD181B910DD8344E9A582 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AF0469DE29CAA4B72EE77F5B976C3FEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0B834FA1EADD00A13C120C37A74CB8A /* ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist */,
+				103819D4C040288BA8D6CFC8EFD2EBA9 /* TensorFlowLiteC-xcframeworks.sh */,
+				428637412E1A7002E9D0E88624C693E5 /* TensorFlowLiteC.debug.xcconfig */,
+				004EFA29652C345A75A968109048D792 /* TensorFlowLiteC.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TensorFlowLiteC";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				78102ACCC9F8E102402670D063FA7736 /* Pods */,
-				7CB91471D4141F4BD751B6D74472731E /* Products */,
-				1362576D441DFC5689A858E47773B75C /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				E84FFCEEEA5D60FDD58ED5FB5828CE90 /* Pods */,
+				11F1C55F19168643EBFDCE8C1A5FBFEE /* Products */,
+				550E96D3D8DA6CA061E981C06A4665FC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D57DDE849DBD64349B9FF8CFB9A0979E /* TensorFlowLiteTaskVision */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10069A4A3CF2FAEED9D40F9938856543 /* Frameworks */,
-				66428D8A2CF1F3FE45F180BF5D2D60A0 /* Support Files */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3C121C69F1913B42D7B3EA86BD88E6C /* TensorFlowLiteTaskVision */ = {
+			isa = PBXGroup;
+			children = (
+				F55FE125313D0BD0606A7A6C9D0638E2 /* Frameworks */,
+				734CC9E8F2A5B9BB7F57AB18F0D55E5B /* Support Files */,
 			);
 			name = TensorFlowLiteTaskVision;
 			path = TensorFlowLiteTaskVision;
 			sourceTree = "<group>";
 		};
-		D82DAE61F76DF80418A9FADA2764598B /* Support Files */ = {
+		E74687D0063B8963C720B3C6E6E7F235 /* Privacy */ = {
 			isa = PBXGroup;
 			children = (
-				5786EBB06E0362D1CB3DE61EB8C588D3 /* ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist */,
-				BCFE8A53C2C06E74E2BA38DEADC77F6C /* TensorFlowLiteSwift.modulemap */,
-				121D0CC0AFBCBEDB9F5FE74A75447CAB /* TensorFlowLiteSwift-dummy.m */,
-				7B771F98C4D436EB77CF9CF1A186112D /* TensorFlowLiteSwift-Info.plist */,
-				64A531D2EC3A7DAEE6105DDEBE23EFF4 /* TensorFlowLiteSwift-prefix.pch */,
-				878EF9FB42490E3058A16A8379A993DB /* TensorFlowLiteSwift-umbrella.h */,
-				627E3CF81384FE949BC4D238C7756199 /* TensorFlowLiteSwift.debug.xcconfig */,
-				B1E621F25531E4E2E7F1CA81C081B292 /* TensorFlowLiteSwift.release.xcconfig */,
+				A972795A65A778B7C16A8B01705286C0 /* Resources */,
+			);
+			name = Privacy;
+			sourceTree = "<group>";
+		};
+		E84FFCEEEA5D60FDD58ED5FB5828CE90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8426473D9EB58B34D6CCB21325D9856A /* TensorFlowLiteC */,
+				04666231CF2FBF4085B0B5527A3F18D0 /* TensorFlowLiteSwift */,
+				E3C121C69F1913B42D7B3EA86BD88E6C /* TensorFlowLiteTaskVision */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E8A8DB229251A02B7E3C5CF8E33AD7DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7939FB31686B04D4A082BDBE20BDD /* ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist */,
+				096625881B36980344257FEB110ED5C3 /* TensorFlowLiteSwift.modulemap */,
+				CEA33AA5F4F64D4A1B84ACE678DAB5A4 /* TensorFlowLiteSwift-dummy.m */,
+				CB47D436A05F5713FEC47F6886017382 /* TensorFlowLiteSwift-Info.plist */,
+				621CA7F15165C44A2BF6786F8C75BE1C /* TensorFlowLiteSwift-prefix.pch */,
+				B9F9ED98CC58E5A51F8E3120C575CBBD /* TensorFlowLiteSwift-umbrella.h */,
+				45E0DD7040114BA0A0BBA15A178D5C91 /* TensorFlowLiteSwift.debug.xcconfig */,
+				4FF8EB0887529F8C5BDA3992CAC2E340 /* TensorFlowLiteSwift.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/TensorFlowLiteSwift";
 			sourceTree = "<group>";
 		};
-		D95B41902013FD6772D2868109E1DE52 /* Support Files */ = {
+		F55FE125313D0BD0606A7A6C9D0638E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E29A0BCB81EAD6D29B6557B5C7ED2E4 /* Alamofire.modulemap */,
-				ADA447C0BC6BC2EEAE81BA3F39F0C692 /* Alamofire-dummy.m */,
-				65B34848B591858C3911908ECA54971B /* Alamofire-Info.plist */,
-				05CC4D632BE6282E678020F98AF9C047 /* Alamofire-prefix.pch */,
-				641DE54B724149D604EC5E2E6EE7FF94 /* Alamofire-umbrella.h */,
-				2E0597D162B067FBCE740E7BD8E82D71 /* Alamofire.debug.xcconfig */,
-				4BF7D7E5ABF448ABC2A3BAEF1C2CD0D3 /* Alamofire.release.xcconfig */,
-				3D5D97FFF7843385A66AA86066A3D5C3 /* ResourceBundle-Alamofire-Alamofire-Info.plist */,
+				09F5F1E2B6DF6CCFEE7F838D573DB88A /* TensorFlowLiteTaskVision.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
-			sourceTree = "<group>";
-		};
-		FDDD09921DB75F7365263249405944F7 /* Pods-SequreSDK */ = {
-			isa = PBXGroup;
-			children = (
-				AA6DA2175EF4A752BFC03B1C7DD37155 /* Pods-SequreSDK.modulemap */,
-				16B5B3101F41D4C11DA2E8A9D59D48BC /* Pods-SequreSDK-acknowledgements.markdown */,
-				069C3E9EB67CC45993D545FC2FEF7614 /* Pods-SequreSDK-acknowledgements.plist */,
-				FF3F6A6898060A6ED1ACB316E3634696 /* Pods-SequreSDK-dummy.m */,
-				FE74A1BD642B93030D95F2D971C4574E /* Pods-SequreSDK-Info.plist */,
-				7A9D84C0CEDA2A73907A0CCBFD924F3C /* Pods-SequreSDK-resources.sh */,
-				E2759364AEFB6534458BA63D8E71F3D3 /* Pods-SequreSDK-umbrella.h */,
-				00BAAFBF76381D2C76D205E5D9F3D7F1 /* Pods-SequreSDK.debug.xcconfig */,
-				DF9EBC2C983B53704188FE31A1F72A5F /* Pods-SequreSDK.release.xcconfig */,
-			);
-			name = "Pods-SequreSDK";
-			path = "Target Support Files/Pods-SequreSDK";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		02706464BAFD6AF85E8E129F689DA5EC /* Headers */ = {
+		B98C9F558326776AA3A105E3C3711169 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0464CAAA5133B5D665EA5B58CA652C6F /* Pods-SequreSDK-umbrella.h in Headers */,
+				BF8F3C85261B69A659E6CB42A02837BF /* Pods-SequreSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A271E3AFFD20227B500E65B3CB5FFFD4 /* Headers */ = {
+		D22060E3968ED2B832AF1983DE57919C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F679F3A8047A33139F64DDBBFB1C59E /* Pods-SequreSDK-SequreSDKTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB3F5EA19841D5A3486C9C9A020AA313 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				571142A2747CD90165F631A8AE980A0A /* Alamofire-umbrella.h in Headers */,
+				9266E86E8DD5FA798185EA98B66FE0EE /* Pods-SequreSDK-SequreSDKTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,20 +473,19 @@
 /* Begin PBXNativeTarget section */
 		015041E19AE73877BC6E09B9E3103F45 /* Pods-SequreSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 126BF076507EC4162D843081B151495A /* Build configuration list for PBXNativeTarget "Pods-SequreSDK" */;
+			buildConfigurationList = 8E1FC3B2431EC4576E6B172E8FC8AD48 /* Build configuration list for PBXNativeTarget "Pods-SequreSDK" */;
 			buildPhases = (
-				02706464BAFD6AF85E8E129F689DA5EC /* Headers */,
-				36B85DC5EDE7787B0727BFA7C98CB6C7 /* Sources */,
-				9536BB83F44B3E7E40A57602EDE7646D /* Frameworks */,
-				27B987894DAB11D39D2773DFD23658BC /* Resources */,
+				B98C9F558326776AA3A105E3C3711169 /* Headers */,
+				B02431F6D77C0BF2C97013A1E9F4FCFD /* Sources */,
+				194FBFEF73AC0202306E916BF9A25C92 /* Frameworks */,
+				E9DE3CB0F588449B0D8F8CBE58D1AAAE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1AC101C17F6C6EF74861BDB48F21BEA6 /* PBXTargetDependency */,
-				8EDF147F0F51CB11388AB40006AD4C49 /* PBXTargetDependency */,
-				D1D8CE4E1C9DDDE44135C0B7887C4903 /* PBXTargetDependency */,
-				C023CFB53DC5CD760A93073E044825CD /* PBXTargetDependency */,
+				D3D546C3C96B70059A8CA04F337DA09D /* PBXTargetDependency */,
+				83510A9316EF4D2EE28374488EE166E5 /* PBXTargetDependency */,
+				C617E92E9FD4DCACF19BE9D7B8C840F8 /* PBXTargetDependency */,
 			);
 			name = "Pods-SequreSDK";
 			productName = Pods_SequreSDK;
@@ -724,11 +494,11 @@
 		};
 		0E30F2EFBF0085562A1B5F3CE337DBC4 /* TensorFlowLiteSwift-TensorFlowLite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CC9CD970E4DD68A531FACAB03EDA11E /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift-TensorFlowLite" */;
+			buildConfigurationList = 004882C62CB15E97A927920986CF623E /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift-TensorFlowLite" */;
 			buildPhases = (
-				720A64F0F4ECD273F167C7BE8D0F6C06 /* Sources */,
-				707D107C3A6720DB3CD28376FA6F6B43 /* Frameworks */,
-				B3438619BD18664910B1D8D826ABBA0D /* Resources */,
+				AACA81893DD876E5F35F51440391C1A5 /* Sources */,
+				557B7BD4CA1171AE1EB06EF991014D0C /* Frameworks */,
+				E30614103335ABA3249523FF86B7842A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -751,47 +521,29 @@
 			buildRules = (
 			);
 			dependencies = (
-				EEC036224786ABA60B37513776260C78 /* PBXTargetDependency */,
-				EC215E9B6E09C95C23A31434B110AF42 /* PBXTargetDependency */,
+				5DCF1C29742316E89DC3E7EF5D10CEA4 /* PBXTargetDependency */,
+				F2207FDAD3B009849AE134B5F5004D07 /* PBXTargetDependency */,
 			);
 			name = TensorFlowLiteSwift;
 			productName = TensorFlowLite;
 			productReference = E0B71FE13AA6B05010059EB4B8D87919 /* TensorFlowLiteSwift */;
 			productType = "com.apple.product-type.framework";
 		};
-		976126A1CE06DC6E162563800E1BDF14 /* Alamofire-Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE31865D77331F10EF3DA4225E3C465C /* Build configuration list for PBXNativeTarget "Alamofire-Alamofire" */;
-			buildPhases = (
-				1910CD73CE8A435E11284DF20780A3A5 /* Sources */,
-				057DC7049AD0312546579C84578011B8 /* Frameworks */,
-				2CC49F399878E64688D0E050E1C76796 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Alamofire-Alamofire";
-			productName = Alamofire;
-			productReference = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */;
-			productType = "com.apple.product-type.bundle";
-		};
 		C940E1A7C6D989A74771C8CB5C4973FA /* Pods-SequreSDK-SequreSDKTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76F513DAFB6DF52FFF8F5B2B39F1D5EB /* Build configuration list for PBXNativeTarget "Pods-SequreSDK-SequreSDKTests" */;
+			buildConfigurationList = AAD9726C4436B18E7684F86609F66934 /* Build configuration list for PBXNativeTarget "Pods-SequreSDK-SequreSDKTests" */;
 			buildPhases = (
-				A271E3AFFD20227B500E65B3CB5FFFD4 /* Headers */,
-				4A6254613904C47561593E42531ECADC /* Sources */,
-				3A79F4E097DF1A505DB9E2A24EB6235E /* Frameworks */,
-				B154391CA5373FB8DFA1CB2267095984 /* Resources */,
+				D22060E3968ED2B832AF1983DE57919C /* Headers */,
+				011BCA320C9F38922CC33F0A2F0FB077 /* Sources */,
+				41DC5DC33910784186CE75BE205B941C /* Frameworks */,
+				D65F9F136B9DF994F253FBBCFB9C529D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				524A13B6FCAD5DC63E0C8ED5E1C9E515 /* PBXTargetDependency */,
-				D2E5F945C518175B100E13F171521755 /* PBXTargetDependency */,
-				CD59478065E4DAD105A5A089BB658D2B /* PBXTargetDependency */,
-				AE1043DAD54B39D04685275333D2AFC5 /* PBXTargetDependency */,
+				9F0A0C82AF41FEAE1128F76FD688DDB9 /* PBXTargetDependency */,
+				9B97F91012E089A94D023E12A031120B /* PBXTargetDependency */,
+				856FA2CB5C68DC461A738A82CD084D3C /* PBXTargetDependency */,
 			);
 			name = "Pods-SequreSDK-SequreSDKTests";
 			productName = Pods_SequreSDK_SequreSDKTests;
@@ -800,11 +552,11 @@
 		};
 		E84A5C2B777F1A7DFA141FF65E7EF5F8 /* TensorFlowLiteC-TensorFlowLiteC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C13771C50087E52C2E2994DF417D95EE /* Build configuration list for PBXNativeTarget "TensorFlowLiteC-TensorFlowLiteC" */;
+			buildConfigurationList = F35BEFD439EF2AD7ECCB80AC862FCA29 /* Build configuration list for PBXNativeTarget "TensorFlowLiteC-TensorFlowLiteC" */;
 			buildPhases = (
-				C4670F3D3E0FF77C049759D7CF1936D7 /* Sources */,
-				08410837DF99006378532EFB987A8B34 /* Frameworks */,
-				82DE255239E5DEEE624F8730FCFD8B35 /* Resources */,
+				2E885CF621EAB6C4905C519B022F4ED4 /* Sources */,
+				273406083BF8866604A4C0A27E208656 /* Frameworks */,
+				C9BD02E66E7C25812538EB15032B5028 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -814,25 +566,6 @@
 			productName = TensorFlowLiteC;
 			productReference = F6CA8BFC88290AB33297A7C778E05B12 /* TensorFlowLiteC-TensorFlowLiteC */;
 			productType = "com.apple.product-type.bundle";
-		};
-		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA92BF783257A026FB1E05B4B536DD6E /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				DB3F5EA19841D5A3486C9C9A020AA313 /* Headers */,
-				E0C6F893D34CB935A73FBD4BD75299E5 /* Sources */,
-				A5C342523C3577E7122B4B43929BA8F3 /* Frameworks */,
-				5CEFF03EE9A7B5D7514E35F3AD2A314D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7BB84DDBF25460AE89825CF31B9EFEB /* PBXTargetDependency */,
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -852,12 +585,10 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7CB91471D4141F4BD751B6D74472731E /* Products */;
+			productRefGroup = 11F1C55F19168643EBFDCE8C1A5FBFEE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
-				976126A1CE06DC6E162563800E1BDF14 /* Alamofire-Alamofire */,
 				015041E19AE73877BC6E09B9E3103F45 /* Pods-SequreSDK */,
 				C940E1A7C6D989A74771C8CB5C4973FA /* Pods-SequreSDK-SequreSDKTests */,
 				AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */,
@@ -870,21 +601,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27B987894DAB11D39D2773DFD23658BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CC49F399878E64688D0E050E1C76796 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05DB04B09F9E47F0D6331722767965E1 /* PrivacyInfo.xcprivacy in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		42A70ACABD51626FCAD080A2FE19D099 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -892,34 +608,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CEFF03EE9A7B5D7514E35F3AD2A314D /* Resources */ = {
+		C9BD02E66E7C25812538EB15032B5028 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire-Alamofire in Resources */,
+				E9C97F2EB204A87D935A6FE74C19ED2C /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82DE255239E5DEEE624F8730FCFD8B35 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3457E6D90AB5DCE74C3F0440D1FC1A8 /* PrivacyInfo.xcprivacy in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B154391CA5373FB8DFA1CB2267095984 /* Resources */ = {
+		D65F9F136B9DF994F253FBBCFB9C529D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3438619BD18664910B1D8D826ABBA0D /* Resources */ = {
+		E30614103335ABA3249523FF86B7842A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0D6D64E3484ECAA98C267A0B03BFA3E /* PrivacyInfo.xcprivacy in Resources */,
+				9498B82D4517066E046D90A24D22D923 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9DE3CB0F588449B0D8F8CBE58D1AAAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,30 +661,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1910CD73CE8A435E11284DF20780A3A5 /* Sources */ = {
+		011BCA320C9F38922CC33F0A2F0FB077 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9FAA785BC6C75A6C995F9976703C62 /* Pods-SequreSDK-SequreSDKTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36B85DC5EDE7787B0727BFA7C98CB6C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14C71EEB7DEEA863FF6D0AEFB429EC49 /* Pods-SequreSDK-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A6254613904C47561593E42531ECADC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20B3E90CE296123C39917256DB6604D4 /* Pods-SequreSDK-SequreSDKTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		720A64F0F4ECD273F167C7BE8D0F6C06 /* Sources */ = {
+		2E885CF621EAB6C4905C519B022F4ED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -993,161 +693,101 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4670F3D3E0FF77C049759D7CF1936D7 /* Sources */ = {
+		AACA81893DD876E5F35F51440391C1A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0C6F893D34CB935A73FBD4BD75299E5 /* Sources */ = {
+		B02431F6D77C0BF2C97013A1E9F4FCFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA602A49B1DC7FDED565CAD8BB89EAC1 /* AFError.swift in Sources */,
-				58E936B1E7E42C0BFC119D428B70F1D8 /* Alamofire.swift in Sources */,
-				68238227D42B2511FA6A26BF71E92520 /* Alamofire-dummy.m in Sources */,
-				72C19C762FADC82517C344E9F47D7E50 /* AlamofireExtended.swift in Sources */,
-				69261B5D3B53EBF7109D5E1DA3768CAC /* AuthenticationInterceptor.swift in Sources */,
-				0F1D68554CA1AC595168E8FB4E1A6E63 /* CachedResponseHandler.swift in Sources */,
-				9D8BED7F3F86BB39E7C0923D92E73F8B /* Combine.swift in Sources */,
-				A22A2ACF53FDC243AAAFB009005A710F /* Concurrency.swift in Sources */,
-				5AD4E5B4118A1DC7D639F611044B4159 /* DataRequest.swift in Sources */,
-				B5C66B48EB624FEC4D2F64A50F143716 /* DataStreamRequest.swift in Sources */,
-				DE896085DFDD686BDBDEFB776F0D683A /* DispatchQueue+Alamofire.swift in Sources */,
-				5830C6260CA2B7CD6DC74054FB29CDD1 /* DownloadRequest.swift in Sources */,
-				FCE62086E1AB54A4F61EBCDBA15C1510 /* EventMonitor.swift in Sources */,
-				2B42D035AFF52D62722161A7772C6C08 /* HTTPHeaders.swift in Sources */,
-				4337931D8B8E3F3BA03C77C1B496BEAD /* HTTPMethod.swift in Sources */,
-				68995B28EE5B539CEA5A1133E4623927 /* MultipartFormData.swift in Sources */,
-				795681285B4E2B121B5CD420131168F8 /* MultipartUpload.swift in Sources */,
-				A1506893FF52AA466B130E8B05FBE868 /* NetworkReachabilityManager.swift in Sources */,
-				8DD46EE7FB9503E7634E929DDE1CBA31 /* Notifications.swift in Sources */,
-				68A74F13F8FEBAA7E0EA9344DED0458B /* OperationQueue+Alamofire.swift in Sources */,
-				22FAFA41450EC40132CF4B0EEE7E6788 /* ParameterEncoder.swift in Sources */,
-				6F2E0DC7D8598283D088A989FDB8E5F6 /* ParameterEncoding.swift in Sources */,
-				F4DD0AD58DDD5641BDEAEA6CF44FF0ED /* Protected.swift in Sources */,
-				9C7D314BE45AB79E96B260656C36BAEC /* RedirectHandler.swift in Sources */,
-				36C78069A72BECAEB66B31FF794A09ED /* Request.swift in Sources */,
-				887DB52C63E52FBD3B88F42DD8CFB421 /* RequestCompression.swift in Sources */,
-				DE8F5B68839128A005EE3549A1149B09 /* RequestInterceptor.swift in Sources */,
-				90D847B19214926EDE5210D44A08F3C7 /* RequestTaskMap.swift in Sources */,
-				E6ED06AC318A34F7744B32CEC759CDA9 /* Response.swift in Sources */,
-				2B230B24827053BA3E9DA0C78A796BC2 /* ResponseSerialization.swift in Sources */,
-				9378157945D7B405C862A05B0D6B971B /* Result+Alamofire.swift in Sources */,
-				CDCA01B605A086576DBB75F8C3A24337 /* RetryPolicy.swift in Sources */,
-				7AE2E0B382A14D58BE7DAA0C852DCD02 /* ServerTrustEvaluation.swift in Sources */,
-				5075DC82A63A9807DFC390B4CE8046CD /* Session.swift in Sources */,
-				97D7D91FC818805D8344C373CC098C32 /* SessionDelegate.swift in Sources */,
-				612AE0ABB9BCD3AF0E1D29B4C063CA62 /* StringEncoding+Alamofire.swift in Sources */,
-				2C4C08BB733A2101D945E8C37256F78F /* UploadRequest.swift in Sources */,
-				A3FD52DF5584364FFD56965394C36CF2 /* URLConvertible+URLRequestConvertible.swift in Sources */,
-				BC0A0C473B63B817926F4D58611281BB /* URLEncodedFormEncoder.swift in Sources */,
-				92138A77DFEB4F76FCB582E97633896D /* URLRequest+Alamofire.swift in Sources */,
-				6CC7E7C00730B1BF42A28B2E23CA01D6 /* URLSessionConfiguration+Alamofire.swift in Sources */,
-				794FC38D15336AB502B73B012005E9BD /* Validation.swift in Sources */,
-				F7E576E007A81E0EFD2E0849CB17878D /* WebSocketRequest.swift in Sources */,
+				04C882EFF066802186CF3B082A8DEEDB /* Pods-SequreSDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1AC101C17F6C6EF74861BDB48F21BEA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 8FABCB88A3FF6A977A5EDA2607BEA413 /* PBXContainerItemProxy */;
-		};
-		524A13B6FCAD5DC63E0C8ED5E1C9E515 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = BDDFD7BDD681DBCB8FBB0645D5BD1428 /* PBXContainerItemProxy */;
-		};
-		8EDF147F0F51CB11388AB40006AD4C49 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TensorFlowLiteC;
-			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
-			targetProxy = 6A89A6A51CB794DED18C968781E75697 /* PBXContainerItemProxy */;
-		};
-		A09B946006914D14884957E48082676D /* PBXTargetDependency */ = {
+		4D7496F223EFD58FA44A5E9C16A319CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TensorFlowLiteC-TensorFlowLiteC";
 			target = E84A5C2B777F1A7DFA141FF65E7EF5F8 /* TensorFlowLiteC-TensorFlowLiteC */;
-			targetProxy = 9C09F38606CF0CD4BF3894B6F2250596 /* PBXContainerItemProxy */;
+			targetProxy = 198A3CCAD54B1827DB456BDA5E12A8F9 /* PBXContainerItemProxy */;
 		};
-		AE1043DAD54B39D04685275333D2AFC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TensorFlowLiteTaskVision;
-			target = C6E02334B34978796A45D1BAFBF86A66 /* TensorFlowLiteTaskVision */;
-			targetProxy = E272D1B8D60F2789DCF91C866E159F7B /* PBXContainerItemProxy */;
-		};
-		C023CFB53DC5CD760A93073E044825CD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TensorFlowLiteTaskVision;
-			target = C6E02334B34978796A45D1BAFBF86A66 /* TensorFlowLiteTaskVision */;
-			targetProxy = 69BF4B723EB69C7ABCAA02FB1E260DCE /* PBXContainerItemProxy */;
-		};
-		CD59478065E4DAD105A5A089BB658D2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TensorFlowLiteSwift;
-			target = 10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */;
-			targetProxy = 19F5FDB3FCFE91976B06D07AD80FAF6E /* PBXContainerItemProxy */;
-		};
-		D1D8CE4E1C9DDDE44135C0B7887C4903 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TensorFlowLiteSwift;
-			target = 10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */;
-			targetProxy = 55985DA027B507A926262CD94E8ED699 /* PBXContainerItemProxy */;
-		};
-		D2E5F945C518175B100E13F171521755 /* PBXTargetDependency */ = {
+		5DCF1C29742316E89DC3E7EF5D10CEA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TensorFlowLiteC;
 			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
-			targetProxy = 7D67BC062DB2180C0138495D402162BA /* PBXContainerItemProxy */;
+			targetProxy = ADF3560CC25DF6AE17ECBC2115A21E9F /* PBXContainerItemProxy */;
 		};
-		D7BB84DDBF25460AE89825CF31B9EFEB /* PBXTargetDependency */ = {
+		83510A9316EF4D2EE28374488EE166E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Alamofire-Alamofire";
-			target = 976126A1CE06DC6E162563800E1BDF14 /* Alamofire-Alamofire */;
-			targetProxy = AA807C04DB29D84D0A2ADFA7D5D2F39F /* PBXContainerItemProxy */;
+			name = TensorFlowLiteSwift;
+			target = 10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */;
+			targetProxy = A3B8E95009C5A8C6BAF6DC30331FEFFC /* PBXContainerItemProxy */;
 		};
-		EC215E9B6E09C95C23A31434B110AF42 /* PBXTargetDependency */ = {
+		856FA2CB5C68DC461A738A82CD084D3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteTaskVision;
+			target = C6E02334B34978796A45D1BAFBF86A66 /* TensorFlowLiteTaskVision */;
+			targetProxy = 3A57A1301517DD0B3830A6AFDD3D3835 /* PBXContainerItemProxy */;
+		};
+		9B97F91012E089A94D023E12A031120B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteSwift;
+			target = 10418167F619D6DA72BADAD10F9EC02B /* TensorFlowLiteSwift */;
+			targetProxy = 35F703A7D9D680EAF5ACCE7BE650F5DC /* PBXContainerItemProxy */;
+		};
+		9F0A0C82AF41FEAE1128F76FD688DDB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteC;
+			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
+			targetProxy = 762EB64D2A6DB579732B039081AD0858 /* PBXContainerItemProxy */;
+		};
+		C617E92E9FD4DCACF19BE9D7B8C840F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteTaskVision;
+			target = C6E02334B34978796A45D1BAFBF86A66 /* TensorFlowLiteTaskVision */;
+			targetProxy = E4DF46CF79F56C7CE57CDB61E2EC6E38 /* PBXContainerItemProxy */;
+		};
+		D3D546C3C96B70059A8CA04F337DA09D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TensorFlowLiteC;
+			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
+			targetProxy = DE918BA236F6A9CB2B996648A3AC4C17 /* PBXContainerItemProxy */;
+		};
+		F2207FDAD3B009849AE134B5F5004D07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TensorFlowLiteSwift-TensorFlowLite";
 			target = 0E30F2EFBF0085562A1B5F3CE337DBC4 /* TensorFlowLiteSwift-TensorFlowLite */;
-			targetProxy = 72CCA0E3AE8C68C65DE85ACC4F439D6A /* PBXContainerItemProxy */;
-		};
-		EEC036224786ABA60B37513776260C78 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TensorFlowLiteC;
-			target = AC559E53E13B6FBEF4F5CC310A73AFE6 /* TensorFlowLiteC */;
-			targetProxy = 1B2A31734E6485B440A71740CFAD4FD9 /* PBXContainerItemProxy */;
+			targetProxy = 917C10C091158483C2AC9307C77F5BC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		082797B3B741DCC33150BF72C364C375 /* Debug */ = {
+		1F8E37003125E7E165367B7732623404 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60D94F5DB3BC6125C3A38B944C365D0F /* TensorFlowLiteC.debug.xcconfig */;
+			baseConfigurationReference = 4FF8EB0887529F8C5BDA3992CAC2E340 /* TensorFlowLiteSwift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteC";
-				IBSC_MODULE = TensorFlowLiteC;
-				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteC/ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteSwift";
+				IBSC_MODULE = TensorFlowLite;
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = TensorFlowLiteC;
+				PRODUCT_NAME = TensorFlowLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		39A33F73DBC0ABA87A0E1A81C895F46F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1E621F25531E4E2E7F1CA81C081B292 /* TensorFlowLiteSwift.release.xcconfig */;
+			baseConfigurationReference = 4FF8EB0887529F8C5BDA3992CAC2E340 /* TensorFlowLiteSwift.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1184,7 +824,7 @@
 		};
 		3AE91D25D807275E809FB3A994F74EA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 281C5D95B330CA2265A9F46A62156176 /* TensorFlowLiteTaskVision.debug.xcconfig */;
+			baseConfigurationReference = DFC21D56FEF2392AC812C8DA4AF6F5E1 /* TensorFlowLiteTaskVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1199,9 +839,26 @@
 			};
 			name = Debug;
 		};
+		44E348C1500288A29336078465B65FE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428637412E1A7002E9D0E88624C693E5 /* TensorFlowLiteC.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteC";
+				IBSC_MODULE = TensorFlowLiteC;
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteC/ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = TensorFlowLiteC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		4F936BFDC938A507419E442B93F8DABB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6447F0511B9DA035CB02A668A9D5F0CC /* TensorFlowLiteC.release.xcconfig */;
+			baseConfigurationReference = 004EFA29652C345A75A968109048D792 /* TensorFlowLiteC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1219,7 +876,7 @@
 		};
 		602C900BF9D4CCE910C7391FDF385B79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60D94F5DB3BC6125C3A38B944C365D0F /* TensorFlowLiteC.debug.xcconfig */;
+			baseConfigurationReference = 428637412E1A7002E9D0E88624C693E5 /* TensorFlowLiteC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1234,9 +891,9 @@
 			};
 			name = Debug;
 		};
-		6ABE79C81A7913370D342C13F814A2E7 /* Debug */ = {
+		6AA5B678E151CFAEFCC126915468ACD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E01AFB8DFE2012A68C84B0E20F4FD72 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
+			baseConfigurationReference = 8484CE63C2468CB8B67156F07A7C247C /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1271,44 +928,9 @@
 			};
 			name = Debug;
 		};
-		714A038955EDD712335B7293B4D7DAB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E0597D162B067FBCE740E7BD8E82D71 /* Alamofire.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		7D950416FECDAF8D7511564D4091144F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 627E3CF81384FE949BC4D238C7756199 /* TensorFlowLiteSwift.debug.xcconfig */;
+			baseConfigurationReference = 45E0DD7040114BA0A0BBA15A178D5C91 /* TensorFlowLiteSwift.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1341,44 +963,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		8F5869A00DB1FDE66387720FF9EBB283 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF9EBC2C983B53704188FE31A1F72A5F /* Pods-SequreSDK.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1446,6 +1030,23 @@
 			};
 			name = Debug;
 		};
+		94D7234A34B7F948766F1717AF5F7D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E0DD7040114BA0A0BBA15A178D5C91 /* TensorFlowLiteSwift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteSwift";
+				IBSC_MODULE = TensorFlowLite;
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = TensorFlowLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1508,60 +1109,9 @@
 			};
 			name = Release;
 		};
-		A34A4B5794849DFE5D2DF11583D1264F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E0597D162B067FBCE740E7BD8E82D71 /* Alamofire.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
-				IBSC_MODULE = Alamofire;
-				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		A8477A8AD66E35E0A7C5D745949685ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1E621F25531E4E2E7F1CA81C081B292 /* TensorFlowLiteSwift.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteSwift";
-				IBSC_MODULE = TensorFlowLite;
-				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = TensorFlowLite;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		B0F98FFCB5778A28F7446E0CC72614A9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BF7D7E5ABF448ABC2A3BAEF1C2CD0D3 /* Alamofire.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
-				IBSC_MODULE = Alamofire;
-				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		B264E0899AB32984D4274C44AE4A44D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E49B58CC29E4EA6AAE3E8C3DCEA2B1A4 /* TensorFlowLiteTaskVision.release.xcconfig */;
+			baseConfigurationReference = F97F8CCEA7135D5515AB9DF75C189CD7 /* TensorFlowLiteTaskVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1577,26 +1127,9 @@
 			};
 			name = Release;
 		};
-		BE90B1B35F3D9AC1E0A33EFB8863BBFD /* Release */ = {
+		CC70F2201007C0150AE90E9ECAEF1339 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6447F0511B9DA035CB02A668A9D5F0CC /* TensorFlowLiteC.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteC";
-				IBSC_MODULE = TensorFlowLiteC;
-				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteC/ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = TensorFlowLiteC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		BF96CE5A8013127D16DA9C2702409F57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08F2540F522FD2F70D03D1B4A25D369B /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
+			baseConfigurationReference = 5D0EE51B48D2FCCD8AD32E77AD875B69 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1632,10 +1165,11 @@
 			};
 			name = Release;
 		};
-		CA60CF70D0AF64CB6C7F697460FBE2FE /* Release */ = {
+		D41B8E176D8BB9DBD80AB3F0EA51981F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BF7D7E5ABF448ABC2A3BAEF1C2CD0D3 /* Alamofire.release.xcconfig */;
+			baseConfigurationReference = A5CB7EDC4FC80FBF773C4196EDAC6454 /* Pods-SequreSDK.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1645,22 +1179,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1668,9 +1203,26 @@
 			};
 			name = Release;
 		};
-		CC1A84369F7D984FA034335246929E49 /* Debug */ = {
+		DFB295EE90FC41D0E0284744A69B70AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00BAAFBF76381D2C76D205E5D9F3D7F1 /* Pods-SequreSDK.debug.xcconfig */;
+			baseConfigurationReference = 004EFA29652C345A75A968109048D792 /* TensorFlowLiteC.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteC";
+				IBSC_MODULE = TensorFlowLiteC;
+				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteC/ResourceBundle-TensorFlowLiteC-TensorFlowLiteC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = TensorFlowLiteC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		FFA0685A89AB887A5CA4202D4686B43C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76D84B0E0B9F3FD7EFE90ACCC23DDDBF /* Pods-SequreSDK.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1705,40 +1257,23 @@
 			};
 			name = Debug;
 		};
-		DC62FEEAE9D201F103E92C75B744F354 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 627E3CF81384FE949BC4D238C7756199 /* TensorFlowLiteSwift.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TensorFlowLiteSwift";
-				IBSC_MODULE = TensorFlowLite;
-				INFOPLIST_FILE = "Target Support Files/TensorFlowLiteSwift/ResourceBundle-TensorFlowLite-TensorFlowLiteSwift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = TensorFlowLite;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		004882C62CB15E97A927920986CF623E /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift-TensorFlowLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D7234A34B7F948766F1717AF5F7D8A /* Debug */,
+				1F8E37003125E7E165367B7732623404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		047945FC4BE4FA0E82199C05669799B6 /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D950416FECDAF8D7511564D4091144F /* Debug */,
 				39A33F73DBC0ABA87A0E1A81C895F46F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		126BF076507EC4162D843081B151495A /* Build configuration list for PBXNativeTarget "Pods-SequreSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC1A84369F7D984FA034335246929E49 /* Debug */,
-				8F5869A00DB1FDE66387720FF9EBB283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1770,47 +1305,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76F513DAFB6DF52FFF8F5B2B39F1D5EB /* Build configuration list for PBXNativeTarget "Pods-SequreSDK-SequreSDKTests" */ = {
+		8E1FC3B2431EC4576E6B172E8FC8AD48 /* Build configuration list for PBXNativeTarget "Pods-SequreSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6ABE79C81A7913370D342C13F814A2E7 /* Debug */,
-				BF96CE5A8013127D16DA9C2702409F57 /* Release */,
+				FFA0685A89AB887A5CA4202D4686B43C /* Debug */,
+				D41B8E176D8BB9DBD80AB3F0EA51981F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CC9CD970E4DD68A531FACAB03EDA11E /* Build configuration list for PBXNativeTarget "TensorFlowLiteSwift-TensorFlowLite" */ = {
+		AAD9726C4436B18E7684F86609F66934 /* Build configuration list for PBXNativeTarget "Pods-SequreSDK-SequreSDKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC62FEEAE9D201F103E92C75B744F354 /* Debug */,
-				A8477A8AD66E35E0A7C5D745949685ED /* Release */,
+				6AA5B678E151CFAEFCC126915468ACD9 /* Debug */,
+				CC70F2201007C0150AE90E9ECAEF1339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C13771C50087E52C2E2994DF417D95EE /* Build configuration list for PBXNativeTarget "TensorFlowLiteC-TensorFlowLiteC" */ = {
+		F35BEFD439EF2AD7ECCB80AC862FCA29 /* Build configuration list for PBXNativeTarget "TensorFlowLiteC-TensorFlowLiteC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				082797B3B741DCC33150BF72C364C375 /* Debug */,
-				BE90B1B35F3D9AC1E0A33EFB8863BBFD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EE31865D77331F10EF3DA4225E3C465C /* Build configuration list for PBXNativeTarget "Alamofire-Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A34A4B5794849DFE5D2DF11583D1264F /* Debug */,
-				B0F98FFCB5778A28F7446E0CC72614A9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA92BF783257A026FB1E05B4B536DD6E /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				714A038955EDD712335B7293B4D7DAB3 /* Debug */,
-				CA60CF70D0AF64CB6C7F697460FBE2FE /* Release */,
+				44E348C1500288A29336078465B65FE0 /* Debug */,
+				DFB295EE90FC41D0E0284744A69B70AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
