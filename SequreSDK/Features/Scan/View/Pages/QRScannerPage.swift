@@ -84,8 +84,19 @@ public struct QRScannerPage: View {
                                 isFlashActive.toggle()
                             } label: {
 //                                Image(isFlashActive ?.icFlashActive : .icFlashInactive)
-                                Image(isFlashActive ? "IcFlashActive" : "IcFlashInactive")
+//                                Image("icFlashActive")
+//                                    .frame(width: 82)
+//                                if let image = UIImage(named: "icFlashActive", in: Bundle(for: type(of: self)), compatibleWith: nil) {
+//                                    Image(uiImage: image)
+//                                        .resizable()
+//                                        .frame(width: 82)
+//                                } else {
+//                                    Text("Image not found")
+//                                }
+                                Image(systemName: "bolt")
+//                                    .resizable()
                                     .frame(width: 82)
+
                             }
                         }
                     }

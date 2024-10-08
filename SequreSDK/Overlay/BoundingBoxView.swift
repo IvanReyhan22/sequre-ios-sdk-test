@@ -30,6 +30,9 @@ class BoundingBoxView: UIView {
         width: UIScreen.main.bounds.width / 1.8,
         height: UIScreen.main.bounds.height / 2.0
     )
+    
+    private let colorSuccess = UIColor(named: "Quarternary") ?? UIColor.white
+    
 
     override func draw(_ rect: CGRect) {
         /// draw corner indicator
@@ -116,7 +119,9 @@ class BoundingBoxView: UIView {
         let cornerLength: CGFloat = 31.0
         let cornerThickness: CGFloat = 5.0
 //        let cornerColor = isCapturing ? UIColor.quarternary : UIColor.color3E405F
-        let cornerColor = isCapturing ?  UIColor(named:"Quarternary")! : UIColor(named:"Color3E405F")!
+//        let cornerColor:UIColor = isCapturing ? UIColor(named: "Quarternary")!.withAlphaComponent(1) : UIColor(named: "Color3E405F")!.withAlphaComponent(1)
+        let cornerColor = colorSuccess
+
 
         let offset: CGFloat = 10.0 // Adjust for better alignment of corners
         let topLeft = CGPoint(x: overlayRect.minX - offset, y: overlayRect.minY - offset)

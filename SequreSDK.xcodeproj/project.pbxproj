@@ -34,7 +34,6 @@
 		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
 		842134A12CB3C03600838A82 /* sequre-v2-od.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 842134A02CB3C03600838A82 /* sequre-v2-od.tflite */; };
 		876B55639C4D73C4E640C8EC /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D153A52457ABACCDD5324429 /* Pods_SequreSDK_SequreSDKTests.framework */; };
-		F257A192A46E4A6314E20562 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF83A1850F6CD14DF5E23E5 /* Pods_SequreSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F257A192A46E4A6314E20562 /* Pods_SequreSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
