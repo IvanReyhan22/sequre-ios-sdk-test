@@ -20,20 +20,24 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'TensorFlowLiteTaskVision'
   spec.dependency 'TensorFlowLiteSwift'
-  # spec.dependency 'Alamofire', '~> 5.5'
 
-  # spec.pod_target_xcconfig = {
-  #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-  #   'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64e i386'
-  # }
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'ONLY_ACTIVE_ARCH' => 'NO',
+    'VALID_ARCHS' => 'arm64 x86_64 armv7 armv7s arm64e'
+    # 'VALID_ARCHS[sdk=iphoneos*]' => 'x86_64 armv7 armv7s arm64e i386'
+    # 'VALID_ARCHS[sdk=iphoneos*]' => 'arm 64 x86_64 armv7 armv7s arm64e i386'
+  }
 
-  # spec.user_target_xcconfig = {
-  #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-  #   'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64e i386'
-  # }
+  spec.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'ONLY_ACTIVE_ARCH' => 'NO',
+    'VALID_ARCHS' => 'arm64 x86_64 armv7 armv7s arm64e'
+    # 'VALID_ARCHS[sdk=iphoneos*]' => 'x86_64 armv7 armv7s arm64e i386'
+    # 'VALID_ARCHS[sdk=iphoneos*]' => 'arm64 x86_64 armv7 armv7s arm64e i386'
+  }
 
   spec.static_framework = true
 
   spec.swift_versions = "5.0"
-
 end
