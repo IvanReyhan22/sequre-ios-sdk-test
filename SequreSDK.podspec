@@ -21,6 +21,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'TensorFlowLiteTaskVision'
   spec.dependency 'TensorFlowLiteSwift'
   spec.dependency 'Alamofire', '~> 5.5'
+  
   # spec.pod_target_xcconfig = {
   #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
   #   'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64e i386'
