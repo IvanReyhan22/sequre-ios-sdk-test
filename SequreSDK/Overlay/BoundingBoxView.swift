@@ -119,9 +119,25 @@ class BoundingBoxView: UIView {
         let cornerLength: CGFloat = 31.0
         let cornerThickness: CGFloat = 5.0
         
-        let cornerColor: UIColor = UIColor(named:"PrimaryApp") ?? .white
-//        let cornerColor:UIColor = isCapturing ?
-//        UIColor(named: "Quarternary", in: bundle, compatibleWith: nil)! :UIColor(named: "Color3E405F", in: bundle, compatibleWith: nil)!
+        var cornerColor: UIColor = UIColor(named:"PrimaryApp") ?? .white
+        //        let cornerColor:UIColor = isCapturing ?
+        //        UIColor(named: "Quarternary", in: bundle, compatibleWith: nil)! :UIColor(named: "Color3E405F", in: bundle, compatibleWith: nil)!
+        
+        if let bundleURL = Bundle(for: SequreSDK.self).url(forResource: "SequreSDKAssets", withExtension: "bundle"),
+           let bundle = Bundle(url: bundleURL) {
+            
+            let quarternaryColor = UIColor(named: "Quarternary", in: bundle, compatibleWith: nil)
+            let color3E405F = UIColor(named: "Color3E405F", in: bundle, compatibleWith: nil)
+            
+            // Use the colors if found
+            if let quarternaryColor = quarternaryColor, let color3E405F = color3E405F {
+                // Apply the colors as needed
+                cornerColor = isCapturing ?  quarternaryColor : color3E405F
+            } else {
+                print("One or more colors not found in the bundle")
+            }
+            
+        }
 
 
         let offset: CGFloat = 10.0 // Adjust for better alignment of corners
