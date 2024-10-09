@@ -5,11 +5,6 @@
 //  Created by admin on 18/09/24.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let scanModel = try? JSONDecoder().decode(ScanModel.self, from: jsonData)
-
 import Foundation
 
 public struct ScanModel: Codable {

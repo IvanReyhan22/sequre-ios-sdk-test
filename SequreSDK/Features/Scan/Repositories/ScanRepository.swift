@@ -17,8 +17,9 @@ public class ScanUploadRepository {
     func uploadImage(imageFile: URL, completion: @escaping (ScanModel?, Error?) -> Void) {
         let url = "https://image-validation-484903075772.asia-southeast2.run.app"
 
-        // Menggunakan networkingService yang diubah dengan URLSession
-        networkingService.uploadFile(url: url, fileURL: imageFile, fileName: "imagefile", mimeType: "image/jpeg", responseType: ScanModel.self) { response, error in
+        networkingService.uploadFile(
+            url: url, fileURL: imageFile, fileName: "imagefile", mimeType: "image/jpeg", responseType: ScanModel.self
+        ) { response, error in
             if let response = response {
                 completion(response, nil)
             } else {
