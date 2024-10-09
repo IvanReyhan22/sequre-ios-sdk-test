@@ -9,6 +9,9 @@ import Foundation
 
 public enum StatusDialogScan {
     case loading
+    case qrUndetected
     case qrUnrecognized
+    case qrUnreadable
     case authenticated
+    case qrUnmatch
 }
