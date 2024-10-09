@@ -13,7 +13,10 @@ Pod::Spec.new do |spec|
   spec.source = { :path => "." }
 
   spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
-  spec.resources = ['SequreSDK/**/*.tflite','SequreSDK/**/*.xcassets']
+  spec.resource_bundles = {
+    ['SequreSDK/**/*.xcassets']
+  }
+  spec.resources = ['SequreSDK/**/*.tflite']
 
   spec.dependency 'TensorFlowLiteTaskVision'
   spec.dependency 'TensorFlowLiteSwift'
