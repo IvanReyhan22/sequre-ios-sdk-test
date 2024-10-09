@@ -18,17 +18,15 @@ public class QRDetectionHelper: NSObject {
     override public init() {
         super.init()
         
-        let frameworkBundle = Bundle(for: QRDetectionHelper.self)
-        
-        guard let modelPath = frameworkBundle.path(forResource: "sequre-v2-od", ofType: "tflite") else {
-//      guard let modelPath = frameworkBundle.path(forResource: "sequre-combine", ofType: "tflite") else {
-            fatalError("Failed to load the model file")
-        }
-        
-        let option = ObjectDetectorOptions(modelPath: modelPath)
-        
         do {
-            objectDetector = try ObjectDetector.detector(options: option)
+            let frameworkBundle = Bundle(for: QRDetectionHelper.self)
+            
+            // guard let modelPath = frameworkBundle.path(forResource: "sequre-v2-od", ofType: "tflite") else {
+            if let modelPath = frameworkBundle.path(forResource: "sequre-combine", ofType: "tflite") {
+                let option = ObjectDetectorOptions(modelPath: modelPath)
+        
+                objectDetector = try ObjectDetector.detector(options: option)
+            }
         } catch {
             print("Failed to run interfence \(error.localizedDescription)")
         }
