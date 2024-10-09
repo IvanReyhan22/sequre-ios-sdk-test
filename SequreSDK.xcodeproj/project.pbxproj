@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1B8052606803C26105B39E1D /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CEA7B08F26CA19C77AF10B /* Pods_SequreSDK_SequreSDKTests.framework */; };
-		2465711711947E26DEEB7459 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9436272A4D18DFFA9DF84276 /* Pods_SequreSDK.framework */; };
 		7A0A36702CABD67D0024637E /* QRCameraFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */; };
 		7A1686E02CA69F4500EC97B4 /* DetectedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */; };
 		7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */; };
@@ -95,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2465711711947E26DEEB7459 /* Pods_SequreSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
