@@ -83,8 +83,23 @@ public struct QRScannerPage: View {
                             Button {
                                 isFlashActive.toggle()
                             } label: {
-                                Image(isFlashActive ? "icFlashActive" : "icFlashInactive", bundle: bundle)
-                                    .frame(width: 82)
+                                if let bundleURL = Bundle(for: SequreSDK.self).url(forResource: "SequreSDKAssets", withExtension: "bundle"),
+                                   let bundle = Bundle(url: bundleURL) {
+                                    // Bundle found, now try to load the image
+                                    if let image = UIImage(named: isFlashActive ? "icFlashActive" : "icFlashInactive", in: bundle, compatibleWith: nil) {
+                                        Image(uiImage: image)
+                                            .frame(width: 82)
+                                    } else {
+                                        Text("Image not found in SequreSDKAssets bundle")
+//                                        print("Image not found in SequreSDKAssets bundle")
+                                    }
+                                } else {
+                                    Text("SequreSDKAssets bundle not found")
+//                                    print("SequreSDKAssets bundle not found")
+                                }
+
+//                                Image(isFlashActive ? "icFlashActive" : "icFlashInactive", bundle: bundle)
+//                                    .frame(width: 82)
                                 
                             }
                         }
