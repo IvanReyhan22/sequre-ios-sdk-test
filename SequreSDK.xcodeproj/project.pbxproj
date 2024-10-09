@@ -13,7 +13,7 @@
 		7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */; };
 		7A2C0E8D2CAA5B3F00267AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E8C2CAA5B3F00267AE8 /* ViewController.swift */; };
 		7A2C0E912CAA7B3100267AE8 /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E902CAA7B3100267AE8 /* BoundingBoxView.swift */; };
-		7A2C0E952CAA7E3C00267AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C0E942CAA7E3C00267AE8 /* Assets.xcassets */; };
+		7A2C0E952CAA7E3C00267AE8 /* SDKAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C0E942CAA7E3C00267AE8 /* SDKAssets.xcassets */; };
 		7A730E0A2CA655330039C966 /* SequreSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7A730E092CA655330039C966 /* SequreSDK.docc */; };
 		7A730E102CA655330039C966 /* SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A730E052CA655330039C966 /* SequreSDK.framework */; };
 		7A730E162CA655330039C966 /* SequreSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A730E082CA655330039C966 /* SequreSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,7 +57,7 @@
 		7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetectionHelper.swift; sourceTree = "<group>"; };
 		7A2C0E8C2CAA5B3F00267AE8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A2C0E902CAA7B3100267AE8 /* BoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
-		7A2C0E942CAA7E3C00267AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A2C0E942CAA7E3C00267AE8 /* SDKAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SDKAssets.xcassets; sourceTree = "<group>"; };
 		7A730E052CA655330039C966 /* SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A730E082CA655330039C966 /* SequreSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequreSDK.h; sourceTree = "<group>"; };
 		7A730E092CA655330039C966 /* SequreSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SequreSDK.docc; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 				7A730E082CA655330039C966 /* SequreSDK.h */,
 				7A730E092CA655330039C966 /* SequreSDK.docc */,
 				7A730E872CA669010039C966 /* SequreSDK.swift */,
-				7A2C0E942CAA7E3C00267AE8 /* Assets.xcassets */,
+				7A2C0E942CAA7E3C00267AE8 /* SDKAssets.xcassets */,
 			);
 			path = SequreSDK;
 			sourceTree = "<group>";
@@ -435,7 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2C0E952CAA7E3C00267AE8 /* Assets.xcassets in Resources */,
+				7A2C0E952CAA7E3C00267AE8 /* SDKAssets.xcassets in Resources */,
 				8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */,
 				842134A12CB3C03600838A82 /* sequre-v2-od.tflite in Resources */,
 			);
