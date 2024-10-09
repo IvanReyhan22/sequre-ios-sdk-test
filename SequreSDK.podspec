@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
   spec.resource_bundles = {
-    ['SequreSDK/**/*.xcassets']
+    'SequreSDKAssets' => ['SequreSDK/**/*.xcassets']
   }
   spec.resources = ['SequreSDK/**/*.tflite']
 
