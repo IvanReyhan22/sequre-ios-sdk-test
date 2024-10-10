@@ -21,7 +21,6 @@ public class QRDetectionHelper: NSObject {
         do {
             let frameworkBundle = Bundle(for: QRDetectionHelper.self)
             
-            // guard let modelPath = frameworkBundle.path(forResource: "sequre-v2-od", ofType: "tflite") else {
             if let modelPath = frameworkBundle.path(forResource: "sequre-combine", ofType: "tflite") {
                 let option = ObjectDetectorOptions(modelPath: modelPath)
         

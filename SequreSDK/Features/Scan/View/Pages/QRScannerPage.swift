@@ -90,11 +90,11 @@ public struct QRScannerPage: View {
                                         Image(uiImage: image)
                                             .frame(width: 82)
                                     } else {
-                                        Text("Image not found in SequreSDKAssets bundle")
+                                        Text("Image not found in SequreSDKAssets bundle").foregroundColor(.white)
 //                                        print("Image not found in SequreSDKAssets bundle")
                                     }
                                 } else {
-                                    Text("SequreSDKAssets bundle not found")
+                                    Text("SequreSDKAssets bundle not found").foregroundColor(.white)
 //                                    print("SequreSDKAssets bundle not found")
                                 }
 
@@ -149,9 +149,10 @@ public struct QRScannerPage: View {
         
         if distanceResult == DistanceResult.optimal {
             capturing = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 guard let boundingBox = self.detectedObjectData.detectedObjects.first?.boundingBox else {
                     distanceResult = .notDetected
+                    zoomLevel = 4
                     capturing = false
                     return
                 }
@@ -171,6 +172,9 @@ public struct QRScannerPage: View {
                                     isFlashActive = false
                                 }
                             ) { dialogStatus in
+                                if dialogStatus == .qrUndetected {
+                                    zoomLevel = 4
+                                }
                                 isImageCropped = false
                                 isLoading = false
                                 onQRResult(dialogStatus)
