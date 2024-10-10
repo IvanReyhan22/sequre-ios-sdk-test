@@ -314,9 +314,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
             
             // Check if the current state matches the desired state
-            if (on && device.torchMode == .on) || (!on && device.torchMode == .off) {
-                return
-            }
+//            if (on && device.torchMode == .on) || (!on && device.torchMode == .off) {
+//                return
+//            }
             
             do {
                 /// prevent other part of app or system to make changes
