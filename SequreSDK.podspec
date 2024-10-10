@@ -10,7 +10,6 @@ Pod::Spec.new do |spec|
   spec.author       = { "Ahmad Ivan Reyhan" => "ivanreyhan2002@gmail.com" }
   spec.platform     = :ios, "15.0"
   spec.source       = { :git => "https://github.com/IvanReyhan22/sequre-ios-sdk-test.git", :tag => spec.version.to_s } 
-  # spec.source = { :path => "." }
 
   spec.source_files  = "SequreSDK/**/*.{swift}", "Classes/**/*.{h,m}", "SequreSDK/**/*.{colorset}"
   spec.resource_bundles = {
@@ -25,17 +24,13 @@ Pod::Spec.new do |spec|
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
     'ONLY_ACTIVE_ARCH' => 'NO',
     'VALID_ARCHS' => 'arm64 x86_64 armv7 armv7s arm64e'
-    # 'VALID_ARCHS[sdk=iphoneos*]' => 'x86_64 armv7 armv7s arm64e i386'
-    # 'VALID_ARCHS[sdk=iphoneos*]' => 'arm 64 x86_64 armv7 armv7s arm64e i386'
   }
 
-  spec.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'ONLY_ACTIVE_ARCH' => 'NO',
-    'VALID_ARCHS' => 'arm64 x86_64 armv7 armv7s arm64e'
-    # 'VALID_ARCHS[sdk=iphoneos*]' => 'x86_64 armv7 armv7s arm64e i386'
-    # 'VALID_ARCHS[sdk=iphoneos*]' => 'arm64 x86_64 armv7 armv7s arm64e i386'
-  }
+  # spec.user_target_xcconfig = {
+  #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+  #   'ONLY_ACTIVE_ARCH' => 'NO',
+  #   'VALID_ARCHS' => 'arm64 x86_64 armv7 armv7s arm64e'
+  # }
 
   spec.static_framework = true
 
