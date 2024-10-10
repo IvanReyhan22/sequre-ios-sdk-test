@@ -167,72 +167,72 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
-   func setupCaptureSession() {
-       /// get default back camera
-       guard let videoDevice = AVCaptureDevice.default(
-           .builtInWideAngleCamera,
-           for: .video,
-           position: .back
-       ) else { return }
+    func setupCaptureSession() {
+        /// get default back camera
+        guard let videoDevice = AVCaptureDevice.default(
+            .builtInWideAngleCamera,
+            for: .video,
+            position: .back
+        ) else { return }
        
-       guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
+        guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
        
-       /// add video input to session thread
-       guard captureSession.canAddInput(videoDeviceInput) else { return }
-       captureSession.addInput(videoDeviceInput)
+        /// add video input to session thread
+        guard captureSession.canAddInput(videoDeviceInput) else { return }
+        captureSession.addInput(videoDeviceInput)
        
-       let videoOutput = AVCaptureVideoDataOutput()
-       videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
-       videoOutput.alwaysDiscardsLateVideoFrames = true
-       videoOutput.videoSettings = [String(kCVPixelBufferPixelFormatTypeKey): kCMPixelFormat_32BGRA]
+        let videoOutput = AVCaptureVideoDataOutput()
+        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+        videoOutput.alwaysDiscardsLateVideoFrames = true
+        videoOutput.videoSettings = [String(kCVPixelBufferPixelFormatTypeKey): kCMPixelFormat_32BGRA]
        
-       /**
-        /// Adjust Zoom Factor
-        /// Must call lockForConfiguration before and unlockForConfiguration after
-        /// lockForConfiguration prevent other part of the app or other system to make changes
-        /// unlockForConfiguration allow other part of the app or other system to make changes
-        /// this prevent configuration conflic
-        */
-       do {
-           try videoDeviceInput.device.lockForConfiguration()
-       } catch {
-           print("\(error.localizedDescription)")
-       }
+        /**
+         /// Adjust Zoom Factor
+         /// Must call lockForConfiguration before and unlockForConfiguration after
+         /// lockForConfiguration prevent other part of the app or other system to make changes
+         /// unlockForConfiguration allow other part of the app or other system to make changes
+         /// this prevent configuration conflic
+         */
+        do {
+            try videoDeviceInput.device.lockForConfiguration()
        
-       /// 3x zoom
-       if videoDeviceInput.device.maxAvailableVideoZoomFactor > 3 {
-           videoDeviceInput.device.videoZoomFactor = 3
-       }
+            /// 3x zoom
+            if videoDeviceInput.device.maxAvailableVideoZoomFactor > 3 {
+                videoDeviceInput.device.videoZoomFactor = 3
+            }
        
-       videoDeviceInput.device.unlockForConfiguration()
-       /**
-        /// End of Adjust Zoom Factor
-        */
+            videoDeviceInput.device.unlockForConfiguration()
+        } catch {
+            print("\(error.localizedDescription)")
+        }
+        /**
+         /// End of Adjust Zoom Factor
+         */
        
-       if captureSession.canAddOutput(videoOutput) {
-           captureSession.addOutput(videoOutput)
-           videoOutput.connection(with: .video)?.videoOrientation = .portrait
-       } else { return }
+        if captureSession.canAddOutput(videoOutput) {
+            captureSession.addOutput(videoOutput)
+            videoOutput.connection(with: .video)?.videoOrientation = .portrait
+        } else { return }
        
-       /// set screen rect based on device screen
-       screenRect = UIScreen.main.bounds
+        /// set screen rect based on device screen
+        screenRect = UIScreen.main.bounds
        
-       previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-       previewLayer.frame = CGRect(
-           x: screenRect.origin.x,
-           y: screenRect.origin.x,
-           width: screenRect.size.width,
-           height: screenRect.size.height
-       )
-       previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = CGRect(
+            x: screenRect.origin.x,
+            y: screenRect.origin.x,
+            width: screenRect.size.width,
+            height: screenRect.size.height
+        )
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
        
-       DispatchQueue.main.async { [weak self] in
-           self!.view.layer.addSublayer(self!.previewLayer)
-           self!.view.bringSubviewToFront(self!.scanQROverlay)
-           self!.view.bringSubviewToFront(self!.boundingBoxView)
-           self!.view.bringSubviewToFront(self!.labeloverlay)
-       }
-   }
+        DispatchQueue.main.async { [weak self] in
+            self!.view.layer.addSublayer(self!.previewLayer)
+            self!.view.bringSubviewToFront(self!.scanQROverlay)
+            self!.view.bringSubviewToFront(self!.boundingBoxView)
+            self!.view.bringSubviewToFront(self!.labeloverlay)
+        }
+    }
     
     /// check camera permission
     func checkPermission() {
@@ -312,7 +312,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         /// check if device flash availablity
         guard let device = AVCaptureDevice.default(for: .video) else {
             print("error set flash")
-            return 
+            return
         }
         
         if !device.hasTorch {
@@ -337,7 +337,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         } catch {
             print("Error configuring torch: \(error.localizedDescription)")
         }
-    
     }
     
     /// change zoom level
