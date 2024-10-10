@@ -138,7 +138,7 @@ public struct QRScannerPage: View {
         )
         
         if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
                     self.zoomLevel += (distanceResult == .tooFar) ? 0.3 : -0.3
                     // self.zoomLevel += (distanceResult == .tooFar) ? 0.4 : -0.4
