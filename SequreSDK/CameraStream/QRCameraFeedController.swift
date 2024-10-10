@@ -56,11 +56,10 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
             cameraController.changeZoomLevel(zoomLevel: zoomLevel)
             
             /// add auto focus
-            if isCapturing {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    cameraController.doAutoFocus()
-                }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                cameraController.doAutoFocus()
             }
+        
         }
     }
 }

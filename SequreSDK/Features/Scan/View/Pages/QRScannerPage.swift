@@ -24,7 +24,7 @@ public struct QRScannerPage: View {
     /// indicate wether device support flash
     @State private var hasFlash: Bool = true
     
-    @State private var zoomLevel: CGFloat = 4.0
+    @State private var zoomLevel: CGFloat = 3.0
     
     @State private var originalImage: UIImage? = nil
     @State private var croppedImage: UIImage? = nil
@@ -120,7 +120,7 @@ public struct QRScannerPage: View {
             if value {
                 isFlashActive = true
                 capturing = false
-                zoomLevel = 4
+                zoomLevel = 3
                 restartSession = false
             }
         }
@@ -140,7 +140,8 @@ public struct QRScannerPage: View {
         if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
-                    self.zoomLevel += (distanceResult == .tooFar) ? 0.4 : -0.4
+                    self.zoomLevel += (distanceResult == .tooFar) ? 0.3 : -0.3
+                    // self.zoomLevel += (distanceResult == .tooFar) ? 0.4 : -0.4
                 }
             }
             return
@@ -151,7 +152,7 @@ public struct QRScannerPage: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 guard let boundingBox = self.detectedObjectData.detectedObjects.first?.boundingBox else {
                     distanceResult = .notDetected
-                    zoomLevel = 4
+                    zoomLevel = 3
                     capturing = false
                     return
                 }
@@ -171,9 +172,6 @@ public struct QRScannerPage: View {
                                     isFlashActive = false
                                 }
                             ) { dialogStatus in
-                                if dialogStatus == .qrUndetected {
-                                    zoomLevel = 4
-                                }
                                 isImageCropped = false
                                 isLoading = false
                                 onQRResult(dialogStatus)

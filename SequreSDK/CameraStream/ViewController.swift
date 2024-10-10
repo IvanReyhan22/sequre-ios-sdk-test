@@ -167,70 +167,137 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
+//    func setupCaptureSession() {
+//        /// get default back camera
+//        guard let videoDevice = AVCaptureDevice.default(
+//            .builtInWideAngleCamera,
+//            for: .video,
+//            position: .back
+//        ) else { return }
+//        
+//        guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
+//        
+//        /// add video input to session thread
+//        guard captureSession.canAddInput(videoDeviceInput) else { return }
+//        captureSession.addInput(videoDeviceInput)
+//        
+//        let videoOutput = AVCaptureVideoDataOutput()
+//        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+//        videoOutput.alwaysDiscardsLateVideoFrames = true
+//        videoOutput.videoSettings = [String(kCVPixelBufferPixelFormatTypeKey): kCMPixelFormat_32BGRA]
+//        
+//        /**
+//         /// Adjust Zoom Factor
+//         /// Must call lockForConfiguration before and unlockForConfiguration after
+//         /// lockForConfiguration prevent other part of the app or other system to make changes
+//         /// unlockForConfiguration allow other part of the app or other system to make changes
+//         /// this prevent configuration conflic
+//         */
+//        do {
+//            try videoDeviceInput.device.lockForConfiguration()
+//        } catch {
+//            print("\(error.localizedDescription)")
+//        }
+//        
+//        /// 4x zoom
+//        if videoDeviceInput.device.maxAvailableVideoZoomFactor > 4 {
+//            videoDeviceInput.device.videoZoomFactor = 4
+//        }
+//        
+//        videoDeviceInput.device.unlockForConfiguration()
+//        /**
+//         /// End of Adjust Zoom Factor
+//         */
+//        
+//        if captureSession.canAddOutput(videoOutput) {
+//            captureSession.addOutput(videoOutput)
+//            videoOutput.connection(with: .video)?.videoOrientation = .portrait
+//        } else { return }
+//        
+//        /// set screen rect based on device screen
+//        screenRect = UIScreen.main.bounds
+//        
+//        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+//        previewLayer.frame = CGRect(
+//            x: screenRect.origin.x,
+//            y: screenRect.origin.x,
+//            width: screenRect.size.width,
+//            height: screenRect.size.height
+//        )
+//        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//        
+//        DispatchQueue.main.async { [weak self] in
+//            self!.view.layer.addSublayer(self!.previewLayer)
+//            self!.view.bringSubviewToFront(self!.scanQROverlay)
+//            self!.view.bringSubviewToFront(self!.boundingBoxView)
+//            self!.view.bringSubviewToFront(self!.labeloverlay)
+//        }
+//    }
+    
     func setupCaptureSession() {
         /// get default back camera
-        guard let videoDevice = AVCaptureDevice.default(
-            .builtInWideAngleCamera,
-            for: .video,
-            position: .back
-        ) else { return }
-        
-        guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
-        
-        /// add video input to session thread
-        guard captureSession.canAddInput(videoDeviceInput) else { return }
-        captureSession.addInput(videoDeviceInput)
-        
-        let videoOutput = AVCaptureVideoDataOutput()
-        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
-        videoOutput.alwaysDiscardsLateVideoFrames = true
-        videoOutput.videoSettings = [String(kCVPixelBufferPixelFormatTypeKey): kCMPixelFormat_32BGRA]
-        
-        /**
-         /// Adjust Zoom Factor
-         /// Must call lockForConfiguration before and unlockForConfiguration after
-         /// lockForConfiguration prevent other part of the app or other system to make changes
-         /// unlockForConfiguration allow other part of the app or other system to make changes
-         /// this prevent configuration conflic
-         */
         do {
+            guard let videoDevice = AVCaptureDevice.default(
+                .builtInWideAngleCamera,
+                for: .video,
+                position: .back
+            ) else { return }
+        
+            guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
+        
             try videoDeviceInput.device.lockForConfiguration()
+            /// add video input to session thread
+            guard captureSession.canAddInput(videoDeviceInput) else { return }
+            captureSession.addInput(videoDeviceInput)
+        
+            let videoOutput = AVCaptureVideoDataOutput()
+            videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+            videoOutput.alwaysDiscardsLateVideoFrames = true
+            videoOutput.videoSettings = [String(kCVPixelBufferPixelFormatTypeKey): kCMPixelFormat_32BGRA]
+        
+            /**
+             /// Adjust Zoom Factor
+             /// Must call lockForConfiguration before and unlockForConfiguration after
+             /// lockForConfiguration prevent other part of the app or other system to make changes
+             /// unlockForConfiguration allow other part of the app or other system to make changes
+             /// this prevent configuration conflic
+             */
+        
+            /// 4x zoom
+            if videoDeviceInput.device.maxAvailableVideoZoomFactor > 3 {
+                videoDeviceInput.device.videoZoomFactor = 3
+            }
+        
+            videoDeviceInput.device.unlockForConfiguration()
+            /**
+             /// End of Adjust Zoom Factor
+             */
+        
+            if captureSession.canAddOutput(videoOutput) {
+                captureSession.addOutput(videoOutput)
+                videoOutput.connection(with: .video)?.videoOrientation = .portrait
+            } else { return }
+        
+            /// set screen rect based on device screen
+            screenRect = UIScreen.main.bounds
+        
+            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            previewLayer.frame = CGRect(
+                x: screenRect.origin.x,
+                y: screenRect.origin.x,
+                width: screenRect.size.width,
+                height: screenRect.size.height
+            )
+            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        
+            DispatchQueue.main.async { [weak self] in
+                self!.view.layer.addSublayer(self!.previewLayer)
+                self!.view.bringSubviewToFront(self!.scanQROverlay)
+                self!.view.bringSubviewToFront(self!.boundingBoxView)
+                self!.view.bringSubviewToFront(self!.labeloverlay)
+            }
         } catch {
             print("\(error.localizedDescription)")
-        }
-        
-        /// 4x zoom
-        if videoDeviceInput.device.maxAvailableVideoZoomFactor > 4 {
-            videoDeviceInput.device.videoZoomFactor = 4
-        }
-        
-        videoDeviceInput.device.unlockForConfiguration()
-        /**
-         /// End of Adjust Zoom Factor
-         */
-        
-        if captureSession.canAddOutput(videoOutput) {
-            captureSession.addOutput(videoOutput)
-            videoOutput.connection(with: .video)?.videoOrientation = .portrait
-        } else { return }
-        
-        /// set screen rect based on device screen
-        screenRect = UIScreen.main.bounds
-        
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = CGRect(
-            x: screenRect.origin.x,
-            y: screenRect.origin.x,
-            width: screenRect.size.width,
-            height: screenRect.size.height
-        )
-        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        
-        DispatchQueue.main.async { [weak self] in
-            self!.view.layer.addSublayer(self!.previewLayer)
-            self!.view.bringSubviewToFront(self!.scanQROverlay)
-            self!.view.bringSubviewToFront(self!.boundingBoxView)
-            self!.view.bringSubviewToFront(self!.labeloverlay)
         }
     }
     
