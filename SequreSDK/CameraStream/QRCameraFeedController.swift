@@ -48,6 +48,7 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
     
     public func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         if let cameraController = uiViewController as? ViewController {
+            
             /// update torch
             cameraController.toggleFlash(on: isFlashActive)
             

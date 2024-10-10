@@ -309,25 +309,27 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     /// turn flash on / off
     func toggleFlash(on: Bool) {
-        /// check if device flash availablity
-        guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
-        
-        // Check if the current state matches the desired state
-        if (on && device.torchMode == .on) || (!on && device.torchMode == .off) {
-            return
-        }
-        
-        do {
-            /// prevent other part of app or system to make changes
-            try device.lockForConfiguration()
+        if permissionGranted {
+            /// check if device flash availablity
+            guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
             
-            /// toggle flash mode
-            device.torchMode = on ? .on : .off
+            // Check if the current state matches the desired state
+            if (on && device.torchMode == .on) || (!on && device.torchMode == .off) {
+                return
+            }
             
-            /// unlock configuration making other system able to make changes
-            device.unlockForConfiguration()
-        } catch {
-            print("Error configuring torch: \(error.localizedDescription)")
+            do {
+                /// prevent other part of app or system to make changes
+                try device.lockForConfiguration()
+                
+                /// toggle flash mode
+                device.torchMode = on ? .on : .off
+                
+                /// unlock configuration making other system able to make changes
+                device.unlockForConfiguration()
+            } catch {
+                print("Error configuring torch: \(error.localizedDescription)")
+            }
         }
     }
     

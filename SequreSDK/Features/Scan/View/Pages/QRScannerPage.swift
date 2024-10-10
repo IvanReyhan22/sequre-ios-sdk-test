@@ -38,7 +38,6 @@ public struct QRScannerPage: View {
     /// return status dialog scan
     public var onQRResult: (StatusDialogScan) -> Void
     
-    
     @Binding var restartSession: Bool
     @Binding var pauseSession: Bool
     
