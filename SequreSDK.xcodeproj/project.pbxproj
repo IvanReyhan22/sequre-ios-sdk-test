@@ -716,7 +716,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite";
+				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite SequreSDK/TFLite/sequre-combine.tflite";
 				DEVELOPMENT_TEAM = TXK7X2JZ9T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -759,7 +759,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite";
+				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite SequreSDK/TFLite/sequre-combine.tflite";
 				DEVELOPMENT_TEAM = TXK7X2JZ9T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
