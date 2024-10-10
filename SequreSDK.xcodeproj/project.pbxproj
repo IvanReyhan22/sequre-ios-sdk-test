@@ -141,6 +141,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7A2C0E8A2CAA596900267AE8 /* TFLite */ = {
+			isa = PBXGroup;
+			path = TFLite;
+			sourceTree = "<group>";
+		};
 		7A2C0E8B2CAA5B2F00267AE8 /* CameraStream */ = {
 			isa = PBXGroup;
 			children = (
