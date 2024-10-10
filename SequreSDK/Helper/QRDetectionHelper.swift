@@ -30,10 +30,11 @@ public class QRDetectionHelper: NSObject {
         //     print("Failed to run interfence \(error.localizedDescription)")
         // }
 
-        let frameworkBundle = Bundle(for: QRDetectionHelper.self)
+//        let frameworkBundle = Bundle(for: QRDetectionHelper.self)
         
         // guard let modelPath = frameworkBundle.path(forResource: "sequre-v2-od", ofType: "tflite") else {
-        guard let modelPath = frameworkBundle.path(forResource: "sequre-combine", ofType: "tflite") else {
+//        guard let modelPath = frameworkBundle.path(forResource: "sequre-combine", ofType: "tflite") else {
+        guard let modelPath = Bundle.main.path(forResource: "sequre-combine", ofType: "tflite") else {
             fatalError("Failed to load the model file")
         }
         
