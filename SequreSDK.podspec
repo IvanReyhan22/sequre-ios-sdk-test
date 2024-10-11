@@ -18,7 +18,6 @@ Pod::Spec.new do |spec|
   spec.resources = ['SequreSDK/**/*.tflite']
 
   spec.dependency 'TensorFlowLiteTaskVision'
-  spec.dependency 'TensorFlowLiteSwift'
 
   spec.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',

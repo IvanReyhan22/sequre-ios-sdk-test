@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		386FEC249B2F143747E8B9A4 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAB115025BB7AE057157B4B /* Pods_SequreSDK_SequreSDKTests.framework */; };
+		571289F0957ADB094DDB3C86 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6333702619E94B5402ABA1 /* Pods_SequreSDK.framework */; };
 		7A0A36702CABD67D0024637E /* QRCameraFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */; };
 		7A1686E02CA69F4500EC97B4 /* DetectedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */; };
 		7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */; };
@@ -35,7 +35,7 @@
 		7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */; };
 		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
 		84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */; };
-		AB1C8A96670C44A70F2B1A49 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA4F42F1288030FA9DED6EA /* Pods_SequreSDK.framework */; };
+		E4E7491A894CC12237B0F0A2 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96B99E2FDA8AFD9357AB67 /* Pods_SequreSDK_SequreSDKTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D9EDA77F5F2D602B4699F1E /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
-		1776C5A7A7983B717A6EB3D7 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
-		4EAB115025BB7AE057157B4B /* Pods_SequreSDK_SequreSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CA4F42F1288030FA9DED6EA /* Pods_SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A96B99E2FDA8AFD9357AB67 /* Pods_SequreSDK_SequreSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D367846BD931559046E6FD /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		7493A48544442C5E083AAC94 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraFeedController.swift; sourceTree = "<group>"; };
 		7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObjectModel.swift; sourceTree = "<group>"; };
 		7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetectionHelper.swift; sourceTree = "<group>"; };
@@ -86,8 +85,9 @@
 		840667192CAE8D6900AE4156 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8421349F2CB3BD1500838A82 /* SequreSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequreSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-combine.tflite"; sourceTree = "<group>"; };
-		C0D12B7FA53561AE9678D471 /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
-		E157BB7E140D334C7540E158 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D6333702619E94B5402ABA1 /* Pods_SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4BEEA7216791364475E24D /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		E663AA8AADBA200B59CA0098 /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB1C8A96670C44A70F2B1A49 /* Pods_SequreSDK.framework in Frameworks */,
+				571289F0957ADB094DDB3C86 /* Pods_SequreSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,20 +104,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A730E102CA655330039C966 /* SequreSDK.framework in Frameworks */,
-				386FEC249B2F143747E8B9A4 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */,
+				E4E7491A894CC12237B0F0A2 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2D06AA3A9DD856D8DBF79B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D6333702619E94B5402ABA1 /* Pods_SequreSDK.framework */,
+				0A96B99E2FDA8AFD9357AB67 /* Pods_SequreSDK_SequreSDKTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		72C6F3A39FF5D8D9288B86D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0D12B7FA53561AE9678D471 /* Pods-SequreSDK.debug.xcconfig */,
-				0D9EDA77F5F2D602B4699F1E /* Pods-SequreSDK.release.xcconfig */,
-				E157BB7E140D334C7540E158 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
-				1776C5A7A7983B717A6EB3D7 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
+				BC4BEEA7216791364475E24D /* Pods-SequreSDK.debug.xcconfig */,
+				E663AA8AADBA200B59CA0098 /* Pods-SequreSDK.release.xcconfig */,
+				7493A48544442C5E083AAC94 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
+				45D367846BD931559046E6FD /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -167,7 +176,7 @@
 				7A730E062CA655330039C966 /* Products */,
 				72C6F3A39FF5D8D9288B86D5 /* Pods */,
 				840667172CAE823F00AE4156 /* Assets-Fonts */,
-				B7BE40CDFABE6137078766B8 /* Frameworks */,
+				3D2D06AA3A9DD856D8DBF79B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -331,15 +340,6 @@
 			path = Localizations;
 			sourceTree = "<group>";
 		};
-		B7BE40CDFABE6137078766B8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6CA4F42F1288030FA9DED6EA /* Pods_SequreSDK.framework */,
-				4EAB115025BB7AE057157B4B /* Pods_SequreSDK_SequreSDKTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -358,12 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A730E192CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDK" */;
 			buildPhases = (
-				6D77A47CDD22B0E6C4DAEA3A /* [CP] Check Pods Manifest.lock */,
+				794D2AF12C1EFD015BD344C1 /* [CP] Check Pods Manifest.lock */,
 				7A730E002CA655330039C966 /* Headers */,
 				7A730E012CA655330039C966 /* Sources */,
 				7A730E022CA655330039C966 /* Frameworks */,
 				7A730E032CA655330039C966 /* Resources */,
-				8D43CE525A8949DC19D5DBD2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,11 +377,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A730E1C2CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDKTests" */;
 			buildPhases = (
-				14C732EF288323FD5F6077AD /* [CP] Check Pods Manifest.lock */,
+				1ABF690AE5E14D1DA729F0F4 /* [CP] Check Pods Manifest.lock */,
 				7A730E0B2CA655330039C966 /* Sources */,
 				7A730E0C2CA655330039C966 /* Frameworks */,
 				7A730E0D2CA655330039C966 /* Resources */,
-				AF803DDA9CDC1DA354407897 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -453,7 +451,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14C732EF288323FD5F6077AD /* [CP] Check Pods Manifest.lock */ = {
+		1ABF690AE5E14D1DA729F0F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,7 +473,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D77A47CDD22B0E6C4DAEA3A /* [CP] Check Pods Manifest.lock */ = {
+		794D2AF12C1EFD015BD344C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -495,40 +493,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D43CE525A8949DC19D5DBD2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK/Pods-SequreSDK-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK/Pods-SequreSDK-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SequreSDK/Pods-SequreSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF803DDA9CDC1DA354407897 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -710,7 +674,7 @@
 		};
 		7A730E1A2CA655330039C966 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0D12B7FA53561AE9678D471 /* Pods-SequreSDK.debug.xcconfig */;
+			baseConfigurationReference = BC4BEEA7216791364475E24D /* Pods-SequreSDK.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -753,7 +717,7 @@
 		};
 		7A730E1B2CA655330039C966 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D9EDA77F5F2D602B4699F1E /* Pods-SequreSDK.release.xcconfig */;
+			baseConfigurationReference = E663AA8AADBA200B59CA0098 /* Pods-SequreSDK.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -796,7 +760,7 @@
 		};
 		7A730E1D2CA655330039C966 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E157BB7E140D334C7540E158 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
+			baseConfigurationReference = 7493A48544442C5E083AAC94 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -817,7 +781,7 @@
 		};
 		7A730E1E2CA655330039C966 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1776C5A7A7983B717A6EB3D7 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
+			baseConfigurationReference = 45D367846BD931559046E6FD /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
