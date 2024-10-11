@@ -47,6 +47,7 @@ public class QRDetectionHelper: NSObject {
             return Result(inferenceTime: interval, detections: filteredDetectionResult)
             
         } catch {
+             print("Failed to detect: \(error.localizedDescription)")
             return nil
         }
     }
