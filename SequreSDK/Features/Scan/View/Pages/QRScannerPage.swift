@@ -147,9 +147,15 @@ public struct QRScannerPage: View {
             return
         }
         
+        if distanceResult == .notDetected {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                zoomLevel = 3
+            }
+        }
+        
         if distanceResult == DistanceResult.optimal {
             capturing = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 guard let boundingBox = self.detectedObjectData.detectedObjects.first?.boundingBox else {
                     distanceResult = .notDetected
                     zoomLevel = 3

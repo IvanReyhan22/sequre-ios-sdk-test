@@ -35,6 +35,7 @@
 		7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */; };
 		80DD2F53BAB6169BCE437845 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9643D1527EF4149CED3A6BBE /* Pods_SequreSDK_SequreSDKTests.framework */; };
 		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
+		84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */; };
 		84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		8406670F2CAE823F00AE4156 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		840667192CAE8D6900AE4156 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8421349F2CB3BD1500838A82 /* SequreSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequreSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-v2-od.tflite"; sourceTree = "<group>"; };
 		84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-combine.tflite"; sourceTree = "<group>"; };
 		9643D1527EF4149CED3A6BBE /* Pods_SequreSDK_SequreSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		988D5C88F3418BA31BEB36A2 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		7A2C0E8A2CAA596900267AE8 /* TFLite */ = {
 			isa = PBXGroup;
 			children = (
+				84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */,
 				84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */,
 			);
 			path = TFLite;
@@ -438,6 +441,7 @@
 				7A2C0E952CAA7E3C00267AE8 /* SDKAssets.xcassets in Resources */,
 				8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */,
 				84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */,
+				84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
