@@ -6,7 +6,7 @@ target 'SequreSDK' do
   use_frameworks!
 
   # Pods for SequreSDK
-  pod 'TensorFlowLiteTaskVision', '0.4.2'
+  pod 'TensorFlowLiteTaskVision'
 
   target 'SequreSDKTests' do
     # Pods for testing
