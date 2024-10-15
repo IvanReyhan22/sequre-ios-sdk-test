@@ -36,19 +36,22 @@ public struct QRScannerPage: View {
     @StateObject private var viewModel = SDKScanViewModel()
     
     /// return status dialog scan
-    public var onQRResult: (StatusDialogScan) -> Void
-    
+   public var onQRResult: (StatusDialogScan) -> Void
+    public var returnScanModel: ((ScanModel) -> Void)? 
+
     @Binding var restartSession: Bool
     @Binding var pauseSession: Bool
-    
+
     public init(
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
-        onQRResult: @escaping (StatusDialogScan) -> Void
+        onQRResult: @escaping (StatusDialogScan) -> Void,
+        returnScanModel: ((ScanModel) -> Void)? = nil 
     ) {
-        self.onQRResult = onQRResult
-        self._restartSession = restartSession
-        self._pauseSession = pauseSession
+        self._restartSession = restartSession 
+        self._pauseSession = pauseSession 
+        self.onQRResult = onQRResult 
+        self.returnScanModel = returnScanModel 
     }
     
     public var body: some View {

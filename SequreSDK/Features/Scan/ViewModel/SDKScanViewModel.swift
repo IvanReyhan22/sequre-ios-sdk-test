@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 public class SDKScanViewModel: ObservableObject {
-    static let shared = SDKScanViewModel()
+    public static let shared = SDKScanViewModel()
 
     @Published var statusDialog: StatusDialogScan? = nil
     @Published var scanModelSDK: ScanModel? = nil
