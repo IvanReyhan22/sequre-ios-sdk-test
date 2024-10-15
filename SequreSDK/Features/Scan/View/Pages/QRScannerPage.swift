@@ -36,8 +36,8 @@ public struct QRScannerPage: View {
     @StateObject private var viewModel = SDKScanViewModel()
     
     /// return status dialog scan
-   public var onQRResult: (StatusDialogScan) -> Void
-    public var returnScanModel: ((ScanModel) -> Void)? 
+    public var onQRResult: (StatusDialogScan) -> Void
+    public var returnScanModel: ((String) -> Void)?
 
     @Binding var restartSession: Bool
     @Binding var pauseSession: Bool
@@ -46,12 +46,12 @@ public struct QRScannerPage: View {
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
         onQRResult: @escaping (StatusDialogScan) -> Void,
-        returnScanModel: ((ScanModel) -> Void)? = nil 
+        returnScanModel: ((String) -> Void)? = nil
     ) {
-        self._restartSession = restartSession 
-        self._pauseSession = pauseSession 
-        self.onQRResult = onQRResult 
-        self.returnScanModel = returnScanModel 
+        self._restartSession = restartSession
+        self._pauseSession = pauseSession
+        self.onQRResult = onQRResult
+        self.returnScanModel = returnScanModel
     }
     
     public var body: some View {
@@ -86,7 +86,8 @@ public struct QRScannerPage: View {
                                 isFlashActive.toggle()
                             } label: {
                                 if let bundleURL = Bundle(for: SequreSDK.self).url(forResource: "SequreSDKAssets", withExtension: "bundle"),
-                                   let bundle = Bundle(url: bundleURL) {
+                                   let bundle = Bundle(url: bundleURL)
+                                {
                                     // Bundle found, now try to load the image
                                     if let image = UIImage(named: isFlashActive ? "icFlashActive" : "icFlashInactive", in: bundle, compatibleWith: nil) {
                                         Image(uiImage: image)
@@ -102,7 +103,6 @@ public struct QRScannerPage: View {
 
 //                                Image(isFlashActive ? "icFlashActive" : "icFlashInactive", bundle: bundle)
 //                                    .frame(width: 82)
-                                
                             }
                         }
                     }
@@ -179,6 +179,9 @@ public struct QRScannerPage: View {
                                 onPostExecuted: {
                                     distanceResult = .notDetected
                                     isFlashActive = false
+                                },
+                                returnScanModel: { model in
+                                    returnScanModel?(model.displayInfo())
                                 }
                             ) { dialogStatus in
                                 isImageCropped = false

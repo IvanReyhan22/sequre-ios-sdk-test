@@ -13,17 +13,20 @@ public class SDKScanViewModel: ObservableObject {
     public static let shared = SDKScanViewModel()
 
     @Published var statusDialog: StatusDialogScan? = nil
-    @Published var scanModelSDK: ScanModel? = nil
 
     private let repository = ScanUploadRepository()
 
     // Function to upload the image and process the response
-    func uploadImage(imageFile: URL, onPostExecuted: @escaping () -> Void, onCompleted: @escaping (StatusDialogScan) -> Void) {
+    func uploadImage(
+        imageFile: URL, 
+        onPostExecuted: @escaping () -> Void, 
+        returnScanModel: ((ScanModel) -> Void)? = nil,
+        onCompleted: @escaping (StatusDialogScan) -> Void
+    ) {
         onCompleted(.loading)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: onPostExecuted)
         repository.uploadImage(imageFile: imageFile) { [weak self] response, _ in
             guard let self = self else { return }
-            scanModelSDK = response
             DispatchQueue.main.async {
                 if let response = response {
                     self.handleScanModelResponse(response) { result in
