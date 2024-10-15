@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4689E4241E6D1B6A18B0B3D9 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77E83868562DCCDE4F2C6A5 /* Pods_SequreSDK.framework */; };
 		7A0A36702CABD67D0024637E /* QRCameraFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */; };
 		7A1686E02CA69F4500EC97B4 /* DetectedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */; };
 		7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */; };
@@ -97,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4689E4241E6D1B6A18B0B3D9 /* Pods_SequreSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,7 +682,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite SequreSDK/TFLite/sequre-combine.tflite";
+				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite";
 				DEVELOPMENT_TEAM = TXK7X2JZ9T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -727,7 +725,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite SequreSDK/TFLite/sequre-combine.tflite";
+				DEVELOPMENT_ASSET_PATHS = "SequreSDK/TFLite/sequre-v2-od.tflite";
 				DEVELOPMENT_TEAM = TXK7X2JZ9T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

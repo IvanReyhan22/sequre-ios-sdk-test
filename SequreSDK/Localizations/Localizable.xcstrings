@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "Hold Steady" : {
       "comment" : "Hold Steady",
       "localizations" : {
@@ -26,6 +23,9 @@
         }
       }
     },
+    "Image not found in SequreSDKAssets bundle" : {
+
+    },
     "Object out of the area" : {
       "comment" : "Object out of the area",
       "localizations" : {
@@ -47,6 +47,9 @@
           }
         }
       }
+    },
+    "SequreSDKAssets bundle not found" : {
+
     },
     "Too Close" : {
       "comment" : "Too Close",

@@ -53,7 +53,6 @@ public class SDKScanViewModel: ObservableObject {
             } else if isFake == "fake" {
                 statusDialog = .qrUnmatch
             } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
-            } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
                 statusDialog = .qrUnrecognized
             } else {
                 statusDialog = .authenticated
