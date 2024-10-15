@@ -26,6 +26,7 @@ public class SDKScanViewModel: ObservableObject {
         onCompleted(.loading)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: onPostExecuted)
         repository.uploadImage(imageFile: imageFile) { [weak self] response, _ in
+        returnScanModel = response
             guard let self = self else { return }
             DispatchQueue.main.async {
                 if let response = response {
