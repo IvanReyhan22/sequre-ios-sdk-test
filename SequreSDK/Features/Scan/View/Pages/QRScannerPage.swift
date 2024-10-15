@@ -20,7 +20,7 @@ public struct QRScannerPage: View {
     @State private var capturing: Bool = false
     
     /// control to turn on / off flash
-    @State private var isFlashActive: Bool = true
+    @Binding var isFlashActive: Bool
     /// indicate wether device support flash
     @State private var hasFlash: Bool = true
     
@@ -43,11 +43,13 @@ public struct QRScannerPage: View {
     @Binding var pauseSession: Bool
 
     public init(
+        isFlashActive: Binding<Bool> = .constant(true),
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
         onQRResult: @escaping (StatusDialogScan) -> Void,
         returnScanModel: ((String) -> Void)? = nil
     ) {
+        self._isFlashActive = isFlashActive
         self._restartSession = restartSession
         self._pauseSession = pauseSession
         self.onQRResult = onQRResult
