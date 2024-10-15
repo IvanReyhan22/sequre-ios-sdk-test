@@ -13,6 +13,7 @@ public class SDKScanViewModel: ObservableObject {
     static let shared = SDKScanViewModel()
 
     @Published var statusDialog: StatusDialogScan? = nil
+    @Published var scanModelSDK: ScanModel? = nil
 
     private let repository = ScanUploadRepository()
 
@@ -22,6 +23,7 @@ public class SDKScanViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: onPostExecuted)
         repository.uploadImage(imageFile: imageFile) { [weak self] response, _ in
             guard let self = self else { return }
+            scanModelSDK = response
             DispatchQueue.main.async {
                 if let response = response {
                     self.handleScanModelResponse(response) { result in
@@ -46,6 +48,7 @@ public class SDKScanViewModel: ObservableObject {
                 statusDialog = .qrUnreadable
             } else if isFake == "fake" {
                 statusDialog = .qrUnmatch
+            } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
             } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
                 statusDialog = .qrUnrecognized
             } else {

@@ -5,6 +5,39 @@
 //  Created by admin on 18/09/24.
 //
 
+extension ScanModel {
+    func displayInfo() -> String {
+        var result = ""
+        
+        result += "PID: \(pid ?? "N/A")\n"
+        result += "Email Sent: \(emailSent?.description ?? "N/A")\n"
+        
+        if let canvas = canvas {
+            result += "Canvas:\n"
+            result += "  Model Used: \(canvas.modelUsed ?? "N/A")\n"
+            result += "  File Size: \(canvas.fileSize?.description ?? "N/A")\n"
+            result += "  Status: \(canvas.status ?? "N/A")\n"
+        }
+
+        if let classification = classification {
+            result += "Classification:\n"
+            result += "  Label: \(classification.label ?? "N/A")\n"
+            result += "  Model Used: \(classification.modelUsed ?? "N/A")\n"
+            result += "  Score: \(classification.score?.description ?? "N/A")\n"
+            result += "  Status: \(classification.status ?? "N/A")\n"
+        }
+
+        if let qrcode = qrcode {
+            result += "QR Code:\n"
+            result += "  Text: \(qrcode.text ?? "N/A")\n"
+            result += "  Type: \(qrcode.type ?? "N/A")\n"
+            result += "  Status: \(qrcode.status ?? "N/A")\n"
+        }
+
+        return result
+    }
+}
+
 import Foundation
 
 public struct ScanModel: Codable {
