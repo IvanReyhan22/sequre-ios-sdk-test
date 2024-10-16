@@ -94,22 +94,36 @@ public struct QRScannerPage: View {
                                     if let image = UIImage(named: isFlashActive ? "icFlashActive" : "icFlashInactive", in: bundle, compatibleWith: nil) {
                                         Image(uiImage: image)
                                             .frame(width: 82)
-                                    } else {
-                                        Text("Image not found in SequreSDKAssets bundle").foregroundColor(.white)
-//                                        print("Image not found in SequreSDKAssets bundle")
                                     }
-                                } else {
-                                    Text("SequreSDKAssets bundle not found").foregroundColor(.white)
-//                                    print("SequreSDKAssets bundle not found")
                                 }
-
-//                                Image(isFlashActive ? "icFlashActive" : "icFlashInactive", bundle: bundle)
-//                                    .frame(width: 82)
                             }
                         }
                     }
                     .padding(.leading, 18)
                     .padding(.trailing, 0)
+                    
+                    Text("Zoom level: \(zoomLevel)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Text("Restart version: \(restartSession)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Text("Flash Active: \(isFlashActive)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Text("Restart: \(restartSession)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Text("Capturing: \(capturing)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Text("Loading: \(isLoading)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Text("\(distanceResult)")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    
                     Spacer()
                 }
                 .padding(.top, geo.safeAreaInsets.top + 50)
@@ -154,7 +168,14 @@ public struct QRScannerPage: View {
         
         if distanceResult == .notDetected {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                zoomLevel = 3
+                if zoomLevel == 3 {
+                    return
+                }
+                if zoomLevel > 3 {
+                    zoomLevel -= 0.3
+                } else if zoomLevel < 3 {
+                    zoomLevel += 0.3
+                }
             }
         }
         
@@ -163,7 +184,6 @@ public struct QRScannerPage: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 guard let boundingBox = self.detectedObjectData.detectedObjects.first?.boundingBox else {
                     distanceResult = .notDetected
-                    zoomLevel = 3
                     capturing = false
                     return
                 }
@@ -176,20 +196,30 @@ public struct QRScannerPage: View {
                         isImageCropped = true
                         
                         if let imageUrl = saveImageToDocuments(croppedImage) {
-                            viewModel.uploadImage(
-                                imageFile: imageUrl,
-                                onPostExecuted: {
-                                    distanceResult = .notDetected
-                                    isFlashActive = false
-                                },
-                                returnScanModel: { model in
-                                    returnScanModel?(model.displayInfo())
-                                }
-                            ) { dialogStatus in
+                            // debug
+                            isFlashActive = false
+                            distanceResult = .notDetected
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                 isImageCropped = false
                                 isLoading = false
-                                onQRResult(dialogStatus)
+                                restartSession = true
                             }
+                            
+//                            viewModel.uploadImage(
+//                                imageFile: imageUrl,
+//                                onPostExecuted: {
+//                                    distanceResult = .notDetected
+//                                    isFlashActive = false
+//                                },
+//                                returnScanModel: { model in
+//                                    returnScanModel?(model.displayInfo())
+//                                }
+//                            ) { dialogStatus in
+//                                isImageCropped = false
+//                                isLoading = false
+//                                onQRResult(dialogStatus)
+//                            }
                         }
                     }
                 }
