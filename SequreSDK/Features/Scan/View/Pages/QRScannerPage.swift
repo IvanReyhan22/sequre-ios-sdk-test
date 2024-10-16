@@ -43,7 +43,7 @@ public struct QRScannerPage: View {
     @Binding var pauseSession: Bool
 
     public init(
-        isFlashActive: Binding<Bool> = .constant(true),
+        isFlashActive: Binding<Bool>,
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
         onQRResult: @escaping (StatusDialogScan) -> Void,
