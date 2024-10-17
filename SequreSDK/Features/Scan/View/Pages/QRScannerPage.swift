@@ -20,7 +20,6 @@ public struct QRScannerPage: View {
     @State private var capturing: Bool = false
     
     /// control to turn on / off flash
-    // @Binding var isFlashActive: Bool
     @State var isFlashActive: Bool = true
     /// indicate wether device support flash
     @State private var hasFlash: Bool = true
@@ -44,13 +43,11 @@ public struct QRScannerPage: View {
     @Binding var pauseSession: Bool
 
     public init(
-        // isFlashActive: Binding<Bool>,
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
         onQRResult: @escaping (StatusDialogScan) -> Void,
         returnScanModel: ((String) -> Void)? = nil
     ) {
-        // self._isFlashActive = isFlashActive
         self._restartSession = restartSession
         self._pauseSession = pauseSession
         self.onQRResult = onQRResult
@@ -102,28 +99,6 @@ public struct QRScannerPage: View {
                     }
                     .padding(.leading, 18)
                     .padding(.trailing, 0)
-                    
-                    // Text("Zoom level: \(zoomLevel)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
-                    // Text("Restart version: \(restartSession)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
-                    // Text("Flash Active: \(isFlashActive)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
-                    // Text("Restart: \(restartSession)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
-                    // Text("Capturing: \(capturing)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
-                    // Text("Loading: \(isLoading)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
-                    // Text("\(distanceResult)")
-                    //     .foregroundColor(.white)
-                    //     .padding(.top, 10)
                     
                     Spacer()
                 }
