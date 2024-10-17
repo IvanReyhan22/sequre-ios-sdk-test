@@ -103,27 +103,27 @@ public struct QRScannerPage: View {
                     .padding(.leading, 18)
                     .padding(.trailing, 0)
                     
-                    Text("Zoom level: \(zoomLevel)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("Restart version: \(restartSession)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("Flash Active: \(isFlashActive)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("Restart: \(restartSession)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("Capturing: \(capturing)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("Loading: \(isLoading)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("\(distanceResult)")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
+                    // Text("Zoom level: \(zoomLevel)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
+                    // Text("Restart version: \(restartSession)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
+                    // Text("Flash Active: \(isFlashActive)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
+                    // Text("Restart: \(restartSession)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
+                    // Text("Capturing: \(capturing)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
+                    // Text("Loading: \(isLoading)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
+                    // Text("\(distanceResult)")
+                    //     .foregroundColor(.white)
+                    //     .padding(.top, 10)
                     
                     Spacer()
                 }
@@ -198,29 +198,29 @@ public struct QRScannerPage: View {
                         
                         if let imageUrl = saveImageToDocuments(croppedImage) {
                             // debug
-                            isFlashActive = false
-                            distanceResult = .notDetected
+                            // isFlashActive = false
+                            // distanceResult = .notDetected
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                isImageCropped = false
-                                isLoading = false
-                                restartSession = true
-                            }
+                            // DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            //     isImageCropped = false
+                            //     isLoading = false
+                            //     restartSession = true
+                            // }
                             
-//                            viewModel.uploadImage(
-//                                imageFile: imageUrl,
-//                                onPostExecuted: {
-//                                    distanceResult = .notDetected
-//                                    isFlashActive = false
-//                                },
-//                                returnScanModel: { model in
-//                                    returnScanModel?(model.displayInfo())
-//                                }
-//                            ) { dialogStatus in
-//                                isImageCropped = false
-//                                isLoading = false
-//                                onQRResult(dialogStatus)
-//                            }
+                           viewModel.uploadImage(
+                               imageFile: imageUrl,
+                               onPostExecuted: {
+                                   distanceResult = .notDetected
+                                   isFlashActive = false
+                               },
+                               returnScanModel: { model in
+                                   returnScanModel?(model.displayInfo())
+                               }
+                           ) { dialogStatus in
+                               isImageCropped = false
+                               isLoading = false
+                               onQRResult(dialogStatus)
+                           }
                         }
                     }
                 }

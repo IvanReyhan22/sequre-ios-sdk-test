@@ -117,6 +117,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             self.captureSession.startRunning()
         }
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if isFlashActive {
+            toggleFlash(on: false)
+        }
+        
+        stopSession()
+    }
     
     private func setupUI() {
         /// register scanQROverlay to view
