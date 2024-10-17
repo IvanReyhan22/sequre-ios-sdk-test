@@ -33,6 +33,7 @@
 		7AE403B92CAE0B9A0040ED59 /* SpacingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */; };
 		7AE403BC2CAE0C170040ED59 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403BB2CAE0C170040ED59 /* CustomFont.swift */; };
 		7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */; };
+		7AF1E0092CC0F4FC00855058 /* sequre-combine-v2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 7AF1E0082CC0F4FB00855058 /* sequre-combine-v2.tflite */; };
 		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
 		84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */; };
 		84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */; };
@@ -78,6 +79,7 @@
 		7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacingExtension.swift; sourceTree = "<group>"; };
 		7AE403BB2CAE0C170040ED59 /* CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDialogScan.swift; sourceTree = "<group>"; };
+		7AF1E0082CC0F4FB00855058 /* sequre-combine-v2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-combine-v2.tflite"; sourceTree = "<group>"; };
 		8406670B2CAE823F00AE4156 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		8406670C2CAE823F00AE4156 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		8406670D2CAE823F00AE4156 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		7A2C0E8A2CAA596900267AE8 /* TFLite */ = {
 			isa = PBXGroup;
 			children = (
+				7AF1E0082CC0F4FB00855058 /* sequre-combine-v2.tflite */,
 				84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */,
 				84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */,
 			);
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2C0E952CAA7E3C00267AE8 /* SDKAssets.xcassets in Resources */,
+				7AF1E0092CC0F4FC00855058 /* sequre-combine-v2.tflite in Resources */,
 				8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */,
 				84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */,
 				84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */,
