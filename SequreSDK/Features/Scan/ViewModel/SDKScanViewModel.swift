@@ -45,22 +45,35 @@ public class SDKScanViewModel: ObservableObject {
     private func handleScanModelResponse(_ response: ScanModel, onResult: @escaping (StatusDialogScan) -> Void) {
         if let classification = response.classification,
            let object = response.object,
-           let score = object.score,
-           let isFake = classification.label
+           let qrCode = response.qrcode,
+           let canvas = response.canvas,
+           let score = classification.score,
+           let label = classification.label
         {
-            if score < 0.5 {
-                statusDialog = .qrUnreadable
-            } else if isFake == "fake" {
-                statusDialog = .qrUnmatch
-            } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
-                statusDialog = .qrUnrecognized
-            } else {
+            if score >= 0.85,
+               label == "genuine",
+               object.status == "detected",
+               canvas.status == "detected",
+               qrCode.status == "detected",
+               classification.status == "detected"
+            {
                 statusDialog = .authenticated
+            }else {
+                statusDialog = .qrUnrecognized
             }
+//            if score < 0.5 {
+//                statusDialog = .qrUnreadable
+//            } else if isFake == "fake" {
+//                statusDialog = .qrUnmatch
+//            } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
+//                statusDialog = .qrUnrecognized
+//            } else {
+//                statusDialog = .authenticated
+//            }
         } else {
-            statusDialog = .qrUndetected
+            statusDialog = .qrUnrecognized
         }
-
         onResult(statusDialog!)
     }
+
 }
