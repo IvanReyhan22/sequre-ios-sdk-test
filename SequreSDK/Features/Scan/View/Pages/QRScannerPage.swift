@@ -136,7 +136,6 @@ public struct QRScannerPage: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
                     self.zoomLevel += (distanceResult == .tooFar) ? 0.3 : -0.3
-                    // self.zoomLevel += (distanceResult == .tooFar) ? 0.4 : -0.4
                 }
             }
             return
@@ -172,16 +171,6 @@ public struct QRScannerPage: View {
                         isImageCropped = true
                         
                         if let imageUrl = saveImageToDocuments(croppedImage) {
-                            // debug
-                            // isFlashActive = false
-                            // distanceResult = .notDetected
-                            
-                            // DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            //     isImageCropped = false
-                            //     isLoading = false
-                            //     restartSession = true
-                            // }
-                            
                            viewModel.uploadImage(
                                imageFile: imageUrl,
                                onPostExecuted: {
