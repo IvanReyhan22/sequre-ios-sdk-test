@@ -34,7 +34,6 @@
 		7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */; };
 		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
 		84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */; };
-		84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */; };
 		94FE7A32B96106070CE79E9F /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514064C2503C88D276BD4B1D /* Pods_SequreSDK_SequreSDKTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +84,6 @@
 		840667192CAE8D6900AE4156 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8421349F2CB3BD1500838A82 /* SequreSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequreSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-v2-od.tflite"; sourceTree = "<group>"; };
-		84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-combine.tflite"; sourceTree = "<group>"; };
 		B98C0D8FB9EDB6BE505EA1AF /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
 		C3DDFCB6D64C857C31EB025D /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		D77E83868562DCCDE4F2C6A5 /* Pods_SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */,
-				84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */,
 			);
 			path = TFLite;
 			sourceTree = "<group>";
@@ -438,7 +435,6 @@
 			files = (
 				7A2C0E952CAA7E3C00267AE8 /* SDKAssets.xcassets in Resources */,
 				8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */,
-				84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */,
 				84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
