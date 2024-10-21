@@ -70,6 +70,13 @@ class DistanceDetector {
             minThreshold = minSizeThreshold
         }
         
+        let blurDetector = BlurDetector()
+        let isBlurred = blurDetector.isImageBlurred(image: originalImage!)
+        print("blur -> \(isBlurred)")
+        if isBlurred {
+            return DistanceResult.blur
+        }
+        
         // check if the object is not inside the overlay
         if !(convertedBoundingBox.minX >= staticOverlayFrame.minX
             && convertedBoundingBox.minY >= staticOverlayFrame.minY
@@ -86,10 +93,6 @@ class DistanceDetector {
             
             return DistanceResult.notDetected
         }
-        
-        let blurDetector = BlurDetector()
-        let isBlurred = blurDetector.isImageBlurred(image: originalImage!)
-        print("blur -> \(isBlurred)")
         
         if averageRatio < minThreshold {
             return DistanceResult.tooFar

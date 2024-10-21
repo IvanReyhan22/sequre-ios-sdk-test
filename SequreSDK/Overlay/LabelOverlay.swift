@@ -36,6 +36,8 @@ class LabelOverlay: UIView {
                 return NSLocalizedString("Hold Steady", comment: "Hold Steady")
             case .outOfArea:
                 return NSLocalizedString("Object out of the area", comment: "Object out of the area")
+            case .blur:
+                return NSLocalizedString("Object blurry", comment: "Object blurry")
             default:
                 return ""
             }

@@ -48,7 +48,6 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
     
     public func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         if let cameraController = uiViewController as? ViewController {
-            
             /// update torch
             cameraController.toggleFlash(on: isFlashActive)
             
@@ -56,10 +55,11 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
             cameraController.changeZoomLevel(zoomLevel: zoomLevel)
             
             /// add auto focus
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                cameraController.doAutoFocus()
+            if distanceResult == .blur || distanceResult == .notDetected {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    cameraController.doAutoFocus()
+                }
             }
-        
         }
     }
 }

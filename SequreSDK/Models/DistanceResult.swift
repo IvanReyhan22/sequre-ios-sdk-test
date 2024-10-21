@@ -13,4 +13,5 @@ public enum DistanceResult {
     case optimal
     case notDetected
     case outOfArea
+    case blur
 }

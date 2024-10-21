@@ -37,7 +37,7 @@ public struct QRScannerPage: View {
     
     /// return status dialog scan
     public var onQRResult: (StatusDialogScan) -> Void
-    public var returnScanModel: ((String,UIImage) -> Void)?
+    public var returnScanModel: ((String, UIImage) -> Void)?
 
     @Binding var restartSession: Bool
     @Binding var pauseSession: Bool
@@ -46,7 +46,7 @@ public struct QRScannerPage: View {
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
         onQRResult: @escaping (StatusDialogScan) -> Void,
-        returnScanModel: ((String,UIImage) -> Void)? = nil
+        returnScanModel: ((String, UIImage) -> Void)? = nil
     ) {
         self._restartSession = restartSession
         self._pauseSession = pauseSession
@@ -170,20 +170,20 @@ public struct QRScannerPage: View {
                         isLoading = true
 
                         if let imageUrl = saveImageToDocuments(croppedImage) {
-                           viewModel.uploadImage(
-                               imageFile: imageUrl,
-                               onPostExecuted: {
-                                   distanceResult = .notDetected
-                                   isFlashActive = false
-                               },
-                               returnScanModel: { model in
-                                   returnScanModel?(model.displayInfo(),croppedImage)
-                               }
-                           ) { dialogStatus in
-                               isImageCropped = false
-                               isLoading = false
-                               onQRResult(dialogStatus)
-                           }
+                            viewModel.uploadImage(
+                                imageFile: imageUrl,
+                                onPostExecuted: {
+                                    distanceResult = .notDetected
+                                    isFlashActive = false
+                                },
+                                returnScanModel: { model in
+                                    returnScanModel?(model.displayInfo(), croppedImage)
+                                }
+                            ) { dialogStatus in
+                                isImageCropped = false
+                                isLoading = false
+                                onQRResult(dialogStatus)
+                            }
                         }
                     }
                 }
