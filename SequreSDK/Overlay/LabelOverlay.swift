@@ -26,7 +26,7 @@ class LabelOverlay: UIView {
         )
         
         // Text localized for warning message
-        let text: String = {
+        let text: String? = {
             switch qrDistanceResult {
             case .tooClose:
                 return NSLocalizedString("Too Close", comment: "Too Close")
@@ -36,43 +36,47 @@ class LabelOverlay: UIView {
                 return NSLocalizedString("Hold Steady", comment: "Hold Steady")
             case .outOfArea:
                 return NSLocalizedString("Object out of the area", comment: "Object out of the area")
+            case .blur:
+                return nil
             default:
                 return ""
             }
-        } ()
+        }()
         
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 18),
-            .foregroundColor: UIColor.white
-        ]
+        if let text = text {
+            let attributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 18),
+                .foregroundColor: UIColor.white
+            ]
         
-        /// Calculate the size of the text
-        let textSize = (text as NSString).size(withAttributes: attributes)
+            /// Calculate the size of the text
+            let textSize = (text as NSString).size(withAttributes: attributes)
         
-        /// Position the text in the cutout rectangle
-        let textRect = CGRect(
-            x: cutoutRect.midX - textSize.width / 2,
-            y: cutoutRect.maxY - textSize.height - 30,
-            width: textSize.width,
-            height: textSize.height
-        )
+            /// Position the text in the cutout rectangle
+            let textRect = CGRect(
+                x: cutoutRect.midX - textSize.width / 2,
+                y: cutoutRect.maxY - textSize.height - 30,
+                width: textSize.width,
+                height: textSize.height
+            )
         
-        /// Create a background behind the text
-        let backgroundRect = CGRect(
-            x: textRect.origin.x - 10,
-            y: textRect.origin.y - 5,
-            width: textRect.width + 20,
-            height: textRect.height + 10
-        )
+            /// Create a background behind the text
+            let backgroundRect = CGRect(
+                x: textRect.origin.x - 10,
+                y: textRect.origin.y - 5,
+                width: textRect.width + 20,
+                height: textRect.height + 10
+            )
         
-        let cornerRadius: CGFloat = 8
-        let backgroundPath = UIBezierPath(roundedRect: backgroundRect, cornerRadius: cornerRadius)
+            let cornerRadius: CGFloat = 8
+            let backgroundPath = UIBezierPath(roundedRect: backgroundRect, cornerRadius: cornerRadius)
         
-        /// Draw the rounded background
-        UIColor(named: "PrimaryApp",in: bundle,compatibleWith: nil)?.setFill()
-        backgroundPath.fill()
+            /// Draw the rounded background
+            UIColor(named: "PrimaryApp", in: bundle, compatibleWith: nil)?.setFill()
+            backgroundPath.fill()
         
-        /// Draw the text on top of the background
-        (text as NSString).draw(in: textRect, withAttributes: attributes)
+            /// Draw the text on top of the background
+            (text as NSString).draw(in: textRect, withAttributes: attributes)
+        }
     }
 }
