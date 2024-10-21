@@ -75,31 +75,31 @@ class DistanceDetector {
         print("blur -> \(isBlurred)")
         if isBlurred {
             return DistanceResult.blur
-        }
-        
-        // check if the object is not inside the overlay
-        if !(convertedBoundingBox.minX >= staticOverlayFrame.minX
-            && convertedBoundingBox.minY >= staticOverlayFrame.minY
-            && convertedBoundingBox.maxX <= staticOverlayFrame.maxX
-            && convertedBoundingBox.maxY <= staticOverlayFrame.maxY)
-        {
-            if !capturing, convertedBoundingBox.intersects(staticOverlayFrame) {
-                if averageRatio > maxSizeThreshold {
-                    return DistanceResult.tooClose
+        } else {
+            // check if the object is not inside the overlay
+            if !(convertedBoundingBox.minX >= staticOverlayFrame.minX
+                && convertedBoundingBox.minY >= staticOverlayFrame.minY
+                && convertedBoundingBox.maxX <= staticOverlayFrame.maxX
+                && convertedBoundingBox.maxY <= staticOverlayFrame.maxY)
+            {
+                if !capturing, convertedBoundingBox.intersects(staticOverlayFrame) {
+                    if averageRatio > maxSizeThreshold {
+                        return DistanceResult.tooClose
+                    }
+                    
+                    return DistanceResult.outOfArea
                 }
                 
-                return DistanceResult.outOfArea
+                return DistanceResult.notDetected
             }
             
-            return DistanceResult.notDetected
-        }
-        
-        if averageRatio < minThreshold {
-            return DistanceResult.tooFar
-        } else if averageRatio > maxSizeThreshold {
-            return DistanceResult.tooClose
-        } else {
-            return DistanceResult.optimal
+            if averageRatio < minThreshold {
+                return DistanceResult.tooFar
+            } else if averageRatio > maxSizeThreshold {
+                return DistanceResult.tooClose
+            } else {
+                return DistanceResult.optimal
+            }
         }
     }
 }
