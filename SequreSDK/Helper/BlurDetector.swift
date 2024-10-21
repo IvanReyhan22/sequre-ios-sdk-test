@@ -6,15 +6,15 @@ class BlurDetector {
     private let threshold: Double = 50.0
 
     /// Check if the image is blurred
-    // func isImageBlurred(image: UIImage) -> Bool {
-    //     guard let pixelBuffer = image.toPixelBuffer() else { return false }
+     func isImageBlurred(image: UIImage) -> Bool {
+         guard let pixelBuffer = image.toPixelBuffer() else { return false }
         
-    //     let blurScore = calculateBlurScore(pixelBuffer)
-    //     print("Blur score: \(blurScore)")
-    //     return blurScore < threshold
-    // }
+         let blurScore = calculateBlurScore(pixelBuffer)
+         print("Blur score: \(blurScore)")
+         return blurScore < threshold
+     }
 
-    // /// Calculate blur score based on brightness values
+     /// Calculate blur score based on brightness values
     // private func calculateBlurScore(_ pixelBuffer: CVPixelBuffer) -> Double {
     //     let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
     
