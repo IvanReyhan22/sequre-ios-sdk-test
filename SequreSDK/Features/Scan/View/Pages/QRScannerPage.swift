@@ -156,20 +156,19 @@ public struct QRScannerPage: View {
         
         if distanceResult == DistanceResult.optimal {
             capturing = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 guard let boundingBox = self.detectedObjectData.detectedObjects.first?.boundingBox else {
                     distanceResult = .notDetected
                     capturing = false
                     return
                 }
-                
-                isLoading = true
                 if !isImageCropped, let image = originalImage, capturing {
                     croppedImage = cropImage(image: image, boundingBox: boundingBox)
                     
                     if let croppedImage = croppedImage {
                         isImageCropped = true
-                        
+                        isLoading = true
+
                         if let imageUrl = saveImageToDocuments(croppedImage) {
                            viewModel.uploadImage(
                                imageFile: imageUrl,

@@ -87,6 +87,10 @@ class DistanceDetector {
             return DistanceResult.notDetected
         }
         
+        let blurDetector = BlurDetector()
+        let isBlurred = blurDetector.isImageBlurred(image: originalImage!)
+        print("blur -> \(isBlurred)")
+        
         if averageRatio < minThreshold {
             return DistanceResult.tooFar
         } else if averageRatio > maxSizeThreshold {
