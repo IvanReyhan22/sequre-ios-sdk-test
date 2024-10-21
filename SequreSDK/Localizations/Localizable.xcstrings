@@ -12,17 +12,6 @@
         }
       }
     },
-    "Hold tight while we process your QR" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mohon tunggu sebentar sementara kami memproses QR Anda."
-          }
-        }
-      }
-    },
     "Image not found in SequreSDKAssets bundle" : {
 
     },
@@ -33,17 +22,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Objek diluar area"
-          }
-        }
-      }
-    },
-    "Processing your QR..." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Memproses QR Anda..."
           }
         }
       }
