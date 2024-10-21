@@ -19,12 +19,21 @@ class BlurDetector {
         let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
         
         // Apply edge detection filter
-        guard let filter = CIFilter(name: "CISobelEdgeDetection") else { return 0.0 }
+        guard let filter = CIFilter(name: "CISobelEdgeDetection") else { 
+            print("error CISobelEdgeDetection")
+            return 0.0 
+        }
         filter.setValue(ciImage, forKey: kCIInputImageKey)
-        guard let outputImage = filter.outputImage else { return 0.0 }
+        guard let outputImage = filter.outputImage else { 
+            print("error outputImage")
+            return 0.0 
+        }
         
         let context = CIContext(options: nil)
-        guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return 0.0 }
+        guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { 
+            print("error createCGImage")
+            return 0.0 
+        }
         
         // Extract brightness data from the image
         guard let bitmapData = cgImage.dataProvider?.data,
