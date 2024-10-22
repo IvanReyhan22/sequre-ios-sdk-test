@@ -30,21 +30,32 @@ class BoundingBoxView: UIView {
         width: UIScreen.main.bounds.width / 1.8,
         height: UIScreen.main.bounds.height / 2.0
     )
-    
+
     private let colorSuccess = UIColor(named: "Quarternary") ?? UIColor.white
-    
+
+    var isDebugLayout: Bool
+
+    init(isDebugLayout: Bool) {
+        self.isDebugLayout = isDebugLayout
+        super.init(frame: .zero)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func draw(_ rect: CGRect) {
         /// draw corner indicator
         drawBoundingLimitCornerIndicator(objectOverlays: objectOverlays)
 
-        /// draw border and confidence score around detected object
-        /// uncomment for debug
-//        for objectOverlay in objectOverlays {
-//            drawBorders(of: objectOverlay)
-//            drawBackground(of: objectOverlay)
-//            drawName(of: objectOverlay)
-//        }
+        if isDebugLayout {
+            for objectOverlay in objectOverlays {
+                drawBorders(of: objectOverlay)
+                drawBackground(of: objectOverlay)
+                drawName(of: objectOverlay)
+            }
+        }
     }
 
     /**
@@ -118,27 +129,25 @@ class BoundingBoxView: UIView {
         // Corner line length and thickness
         let cornerLength: CGFloat = 31.0
         let cornerThickness: CGFloat = 5.0
-        
-        var cornerColor: UIColor = UIColor(named:"PrimaryApp") ?? .white
+
+        var cornerColor = UIColor(named: "PrimaryApp") ?? .white
         //        let cornerColor:UIColor = isCapturing ?
         //        UIColor(named: "Quarternary", in: bundle, compatibleWith: nil)! :UIColor(named: "Color3E405F", in: bundle, compatibleWith: nil)!
-        
+
         if let bundleURL = Bundle(for: SequreSDK.self).url(forResource: "SequreSDKAssets", withExtension: "bundle"),
-           let bundle = Bundle(url: bundleURL) {
-            
+           let bundle = Bundle(url: bundleURL)
+        {
             let quarternaryColor = UIColor(named: "Quarternary", in: bundle, compatibleWith: nil)
             let color3E405F = UIColor(named: "Color3E405F", in: bundle, compatibleWith: nil)
-            
+
             // Use the colors if found
             if let quarternaryColor = quarternaryColor, let color3E405F = color3E405F {
                 // Apply the colors as needed
-                cornerColor = isCapturing ?  quarternaryColor : color3E405F
+                cornerColor = isCapturing ? quarternaryColor : color3E405F
             } else {
                 print("One or more colors not found in the bundle")
             }
-            
         }
-
 
         let offset: CGFloat = 10.0 // Adjust for better alignment of corners
         let topLeft = CGPoint(x: overlayRect.minX - offset, y: overlayRect.minY - offset)

@@ -33,6 +33,8 @@ public struct QRScannerPage: View {
     /// controll loading sheet
     @State private var isLoading: Bool = false
     
+    var isDebugLayout: Bool
+    
     @StateObject private var viewModel = SDKScanViewModel()
     
     /// return status dialog scan
@@ -46,12 +48,14 @@ public struct QRScannerPage: View {
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
         onQRResult: @escaping (StatusDialogScan) -> Void,
+        isDebugLayout: Bool = false,
         returnScanModel: ((String, UIImage) -> Void)? = nil
     ) {
         self._restartSession = restartSession
         self._pauseSession = pauseSession
         self.onQRResult = onQRResult
         self.returnScanModel = returnScanModel
+        self.isDebugLayout = isDebugLayout
     }
     
     public var body: some View {
@@ -65,7 +69,8 @@ public struct QRScannerPage: View {
                     hasFlash: $hasFlash,
                     isCapturing: $capturing,
                     zoomLevel: $zoomLevel,
-                    distanceResult: $distanceResult
+                    distanceResult: $distanceResult,
+                    isDebugLayout: isDebugLayout
                 )
                 
                 /// flash and version control

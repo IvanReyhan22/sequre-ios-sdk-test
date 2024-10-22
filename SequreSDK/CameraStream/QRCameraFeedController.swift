@@ -11,6 +11,7 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
     @Binding var imageSource: UIImage?
     @Binding var isFlashActive: Bool
     @Binding var hasFlash: Bool
+    var isDebugLayout: Bool
     @Binding var isCapturing: Bool
     @Binding var zoomLevel: CGFloat
     @Binding var distanceResult: DistanceResult
@@ -22,7 +23,8 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
         hasFlash: Binding<Bool>,
         isCapturing: Binding<Bool>,
         zoomLevel: Binding<CGFloat>,
-        distanceResult: Binding<DistanceResult>
+        distanceResult: Binding<DistanceResult>,
+        isDebugLayout: Bool = false
     ) {
         self.detectedObjectData = detectedObjectData
         self._imageSource = imageSource
@@ -31,6 +33,7 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
         self._isCapturing = isCapturing
         self._zoomLevel = zoomLevel
         self._distanceResult = distanceResult
+        self.isDebugLayout = isDebugLayout
     }
     
     public func makeUIViewController(context: Context) -> UIViewController {
