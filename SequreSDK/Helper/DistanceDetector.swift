@@ -81,11 +81,12 @@ class DistanceDetector {
                 && convertedBoundingBox.maxY <= staticOverlayFrame.maxY)
             {
                 if !capturing, convertedBoundingBox.intersects(staticOverlayFrame) {
-                    if averageRatio > maxSizeThreshold {
+                    if averageRatio > minSizeThreshold {
+                    // if averageRatio > maxSizeThreshold {
                         return DistanceResult.tooClose
                     }
                     
-                    return DistanceResult.outOfArea
+                    // return DistanceResult.outOfArea
                 }
                 
                 return DistanceResult.notDetected
