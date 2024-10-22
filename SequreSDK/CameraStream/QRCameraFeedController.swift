@@ -43,7 +43,8 @@ public struct QRCameraFeedController: UIViewControllerRepresentable {
             hasFlash: $hasFlash,
             isFlashActive: $isFlashActive,
             isCapturing: $isCapturing,
-            distanceResult: $distanceResult
+            distanceResult: $distanceResult,
+            isDebugLayout: isDebugLayout
         )
         
         return viewController

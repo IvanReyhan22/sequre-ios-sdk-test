@@ -86,7 +86,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         isFlashActive: Binding<Bool>,
         isCapturing: Binding<Bool>,
         distanceResult: Binding<DistanceResult>,
-        isDebugLayout: Bool = false
+        isDebugLayout: Bool
     ) {
         self._imageSource = imageSource
         self.detectedObjectData = detectedObjectData

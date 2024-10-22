@@ -3,7 +3,7 @@ import TensorFlowLiteTaskVision
 import UIKit
 
 class BlurDetector {
-    private let maxThreshold: Double = 100.0
+    private let maxThreshold: Double = 180.0
     private let minThreshold: Double = 30.0
 
     /// Check if the image is blurred
