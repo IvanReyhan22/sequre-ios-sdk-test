@@ -3,7 +3,8 @@ import TensorFlowLiteTaskVision
 import UIKit
 
 class BlurDetector {
-    private let threshold: Double = 100.0
+    private let maxThreshold: Double = 100.0
+    private let minThreshold: Double = 30.0
 
     /// Check if the image is blurred
     func isImageBlurred(image: UIImage) -> Bool {
@@ -11,7 +12,7 @@ class BlurDetector {
 
         let blurScore = calculateBlurScore(pixelBuffer)
         print("Blur score: \(blurScore)")
-        return blurScore < threshold
+        return blurScore < maxThreshold && blurScore > minThreshold
     }
 
     /// Calculate blur score based on brightness values

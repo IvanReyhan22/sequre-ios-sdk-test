@@ -64,15 +64,13 @@ class DistanceDetector {
         switch deviceType {
         case .pad:
             minThreshold = minIpadSizeThreshold
-        case .phone:
-            minThreshold = minSizeThreshold
         default:
             minThreshold = minSizeThreshold
         }
         
         let blurDetector = BlurDetector()
         let isBlurred = blurDetector.isImageBlurred(image: originalImage!)
-        print("blur -> \(isBlurred)")
+        
         if isBlurred {
             return DistanceResult.blur
         } else {
