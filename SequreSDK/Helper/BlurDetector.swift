@@ -12,7 +12,7 @@ class BlurDetector {
 
         let blurScore = calculateBlurScore(pixelBuffer)
         print("Blur score: \(blurScore)")
-        return blurScore < maxThreshold && blurScore > minThreshold
+        return blurScore > maxThreshold && blurScore < minThreshold
     }
 
     /// Calculate blur score based on brightness values
