@@ -48,24 +48,20 @@ public class SDKScanViewModel: ObservableObject {
     ) {
         onCompleted(.loading)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: onPostExecuted)
-        let isInvalid = checkInvalidQrImage(from: imageFile)
-        if isInvalid {
-            onCompleted(.qrUnrecognized)
-        } else {
-            repository.uploadImage(imageFile: imageFile) { [weak self] response, _ in
-                guard let self = self else { return }
-                DispatchQueue.main.async {
-                    if let response = response {
-                        returnScanModel?(response)
-                        self.handleScanModelResponse(response) { result in
-                            onCompleted(result)
-                        }
-                    } else {
-                        onCompleted(.qrUnrecognized)
+        repository.uploadImage(imageFile: imageFile) { [weak self] response, _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                if let response = response {
+                    returnScanModel?(response)
+                    self.handleScanModelResponse(response) { result in
+                        onCompleted(result)
                     }
+                } else {
+                    onCompleted(.qrUnrecognized)
                 }
             }
         }
+//        }
     }
 
     /// Logic to handle the response
@@ -85,7 +81,7 @@ public class SDKScanViewModel: ObservableObject {
                classification.status == "detected"
             {
                 statusDialog = .authenticated
-            }else {
+            } else {
                 statusDialog = .qrUnrecognized
             }
             //            if score < 0.5 {

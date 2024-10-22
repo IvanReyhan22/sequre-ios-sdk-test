@@ -172,22 +172,29 @@ public struct QRScannerPage: View {
                     
                     if let croppedImage = croppedImage {
                         isImageCropped = true
-                        isLoading = true
 
                         if let imageUrl = saveImageToDocuments(croppedImage) {
-                            viewModel.uploadImage(
-                                imageFile: imageUrl,
-                                onPostExecuted: {
-                                    distanceResult = .notDetected
-                                    isFlashActive = false
-                                },
-                                returnScanModel: { model in
-                                    returnScanModel?(model.displayInfo(), croppedImage)
-                                }
-                            ) { dialogStatus in
+                            let isInvalid = viewModel.checkInvalidQrImage(from: imageUrl)
+                            if isInvalid {
+                                capturing = false
+                                distanceResult = .blur
                                 isImageCropped = false
-                                isLoading = false
-                                onQRResult(dialogStatus)
+                            } else {
+                                isLoading = true
+                                viewModel.uploadImage(
+                                    imageFile: imageUrl,
+                                    onPostExecuted: {
+                                        distanceResult = .notDetected
+                                        isFlashActive = false
+                                    },
+                                    returnScanModel: { model in
+                                        returnScanModel?(model.displayInfo(), croppedImage)
+                                    }
+                                ) { dialogStatus in
+                                    isImageCropped = false
+                                    isLoading = false
+                                    onQRResult(dialogStatus)
+                                }
                             }
                         }
                     }
