@@ -147,7 +147,7 @@ public struct QRScannerPage: View {
         
         if distanceResult == DistanceResult.tooClose {
             if maxZoom > zoomLevel {
-                zoomLevel = max(zoomLevel - 0.1, minZoom)
+                zoomLevel -= 0.1
             } else if countMaxLimit > 0 {
                 showMaxLimit = true
                 countMaxLimit += 1
@@ -159,7 +159,7 @@ public struct QRScannerPage: View {
         
         if distanceResult == DistanceResult.tooFar {
             if minZoom > zoomLevel {
-                zoomLevel = min(zoomLevel + 0.1, maxZoom)
+                zoomLevel += 0.1
             } else if countMinLimit > 0 {
                 showMinLimit = true
                 countMinLimit += 1
