@@ -8,7 +8,7 @@
 extension ScanModel {
     func displayInfo() -> String {
         let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted // Agar JSON terformat dengan baik
+        encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes] // Menghindari escape character
         
         do {
             let jsonData = try encoder.encode(self)
@@ -22,6 +22,7 @@ extension ScanModel {
         }
     }
 }
+
 
 
 import Foundation
