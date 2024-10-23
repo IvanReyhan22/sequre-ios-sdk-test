@@ -44,6 +44,17 @@
         }
       }
     },
+    "Network Error! Please check your connection." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Network Error! Please check your connection."
+          }
+        }
+      }
+    },
     "Object out of the area" : {
       "comment" : "Object out of the area",
       "localizations" : {

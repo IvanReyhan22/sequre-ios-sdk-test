@@ -46,8 +46,19 @@ class NetworkingService {
 
         // Create the upload task
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                completion(nil, error)
+            // Handle network errors
+            if let error = error as NSError? {
+                // Check for common network errors
+                switch error.code {
+                case NSURLErrorNotConnectedToInternet:
+                    completion(nil, NSError(domain: "NetworkError", code: error.code, userInfo: [NSLocalizedDescriptionKey: "No internet connection."]))
+                case NSURLErrorTimedOut:
+                    completion(nil, NSError(domain: "NetworkError", code: error.code, userInfo: [NSLocalizedDescriptionKey: "The request timed out."]))
+                case NSURLErrorCannotConnectToHost:
+                    completion(nil, NSError(domain: "NetworkError", code: error.code, userInfo: [NSLocalizedDescriptionKey: "Cannot connect to the host."]))
+                default:
+                    completion(nil, error) // Handle other errors normally
+                }
                 return
             }
 

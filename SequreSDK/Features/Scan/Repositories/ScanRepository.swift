@@ -5,8 +5,8 @@
 //  Created by admin on 18/09/24.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 /// repository for upload qr image
 public class ScanUploadRepository {
@@ -20,11 +20,12 @@ public class ScanUploadRepository {
         networkingService.uploadFile(
             url: url, fileURL: imageFile, fileName: "imagefile", mimeType: "image/jpeg", responseType: ScanModel.self
         ) { response, error in
-            if let response = response {
-                completion(response, nil)
-            } else {
+            if let error = error {
                 completion(nil, error)
+                return
             }
+
+            completion(response, nil)
         }
     }
 }

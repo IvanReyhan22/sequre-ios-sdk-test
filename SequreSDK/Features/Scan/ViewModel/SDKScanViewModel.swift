@@ -44,11 +44,11 @@ public class SDKScanViewModel: ObservableObject {
         imageFile: URL,
         onPostExecuted: @escaping () -> Void,
         returnScanModel: ((ScanModel) -> Void)? = nil,
-        onCompleted: @escaping (StatusDialogScan) -> Void
+        onCompleted: @escaping (StatusDialogScan?) -> Void
     ) {
         onCompleted(.loading)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: onPostExecuted)
-        repository.uploadImage(imageFile: imageFile) { [weak self] response, _ in
+        repository.uploadImage(imageFile: imageFile) { [weak self] response, error in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 if let response = response {
@@ -57,7 +57,16 @@ public class SDKScanViewModel: ObservableObject {
                         onCompleted(result)
                     }
                 } else {
-                    onCompleted(.qrUnrecognized)
+                    if let nsError = error as NSError? {
+                        switch nsError.domain {
+                        case "NetworkError":
+                            onCompleted(nil)
+                        default:
+                            onCompleted(.qrUnrecognized)
+                        }
+                    } else {
+                        onCompleted(.qrUnrecognized)
+                    }
                 }
             }
         }

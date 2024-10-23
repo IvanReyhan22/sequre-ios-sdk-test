@@ -39,12 +39,13 @@ public struct QRScannerPage: View {
     @StateObject private var viewModel = SDKScanViewModel()
     
     /// return status dialog scan
-    public var onQRResult: (StatusDialogScan) -> Void
+    public var onQRResult: (StatusDialogScan?) -> Void
     public var returnScanModel: ((String, UIImage) -> Void)?
 
     @Binding var restartSession: Bool
     @Binding var pauseSession: Bool
 
+    @State var showNetworkError: Bool = false
     @State var showMaxLimit: Bool = false
     @State var showMinLimit: Bool = false
     @State var countMaxLimit: Int8 = 0
@@ -53,7 +54,7 @@ public struct QRScannerPage: View {
     public init(
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
-        onQRResult: @escaping (StatusDialogScan) -> Void,
+        onQRResult: @escaping (StatusDialogScan?) -> Void,
         isDebugLayout: Bool = false,
         returnScanModel: ((String, UIImage) -> Void)? = nil
     ) {
@@ -134,6 +135,7 @@ public struct QRScannerPage: View {
         }
         .toast("Max zoom reached", isShowing: $showMaxLimit)
         .toast("Min zoom reached", isShowing: $showMinLimit)
+        .toast("Network Error! Please check your connection.", isShowing: $showNetworkError)
     }
     
     private func handleZoomLevel() {
@@ -192,14 +194,14 @@ public struct QRScannerPage: View {
         }
         
         if distanceResult == .notDetected {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 if zoomLevel == 3 {
                     return
                 }
                 if zoomLevel > 3 {
-                    handleZoomLevel()
+                    zoomLevel -= 0.1
                 } else if zoomLevel < 3 {
-                    handleZoomLevel()
+                    zoomLevel += 0.1
                 }
             }
         }
@@ -236,6 +238,10 @@ public struct QRScannerPage: View {
                                         returnScanModel?(model.displayInfo(), croppedImage)
                                     }
                                 ) { dialogStatus in
+                                    if dialogStatus == nil {
+                                        showNetworkError = true
+                                        restartSession = true
+                                    }
                                     isImageCropped = false
                                     isLoading = false
                                     onQRResult(dialogStatus)
