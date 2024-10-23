@@ -60,7 +60,9 @@ public class SDKScanViewModel: ObservableObject {
                     if let nsError = error as NSError? {
                         switch nsError.domain {
                         case "NetworkError":
-                            onCompleted(nil)
+                            DispatchSerialQueue.main.asyncAfter(deadline: .now() + 1) {
+                                onCompleted(nil)
+                            }
                         default:
                             onCompleted(.qrUnrecognized)
                         }
