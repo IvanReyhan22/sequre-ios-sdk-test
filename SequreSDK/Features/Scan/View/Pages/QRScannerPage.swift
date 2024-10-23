@@ -239,8 +239,10 @@ public struct QRScannerPage: View {
                                     }
                                 ) { dialogStatus in
                                     if dialogStatus == nil {
-                                        showNetworkError = true
-                                        restartSession = true
+                                        withAnimation {
+                                            showNetworkError = true
+                                            restartSession = true
+                                        }
                                     }
                                     isImageCropped = false
                                     isLoading = false
