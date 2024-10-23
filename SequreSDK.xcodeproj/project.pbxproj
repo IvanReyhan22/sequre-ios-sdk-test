@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B72D16ED0BE3269C9799F51 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5759B367EF303F6BB2216BCD /* Pods_SequreSDK_SequreSDKTests.framework */; };
 		7A0A36702CABD67D0024637E /* QRCameraFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */; };
 		7A1686E02CA69F4500EC97B4 /* DetectedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */; };
 		7A2C0E882CAA53A700267AE8 /* QRDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */; };
@@ -32,12 +33,11 @@
 		7AE403B92CAE0B9A0040ED59 /* SpacingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */; };
 		7AE403BC2CAE0C170040ED59 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403BB2CAE0C170040ED59 /* CustomFont.swift */; };
 		7AE403C42CAE17440040ED59 /* StatusDialogScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE403C32CAE17440040ED59 /* StatusDialogScan.swift */; };
+		80431C2F01466C524BA2E4CD /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F02D3152D8E5CFDEAD355 /* Pods_SequreSDK.framework */; };
 		8406671A2CAE8D6900AE4156 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 840667192CAE8D6900AE4156 /* Localizable.xcstrings */; };
 		843856092CC60BC700E286EE /* BlurDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843856082CC60BC700E286EE /* BlurDetector.swift */; };
 		84386F622CBCBC0200B843EA /* sequre-v2-od.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */; };
-		84F4E7712CB78E52003C82E2 /* sequre-combine.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */; };
-		A2E3567BF4F3B50AB81CCE76 /* Pods_SequreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE379BDFEBA928F026D2608E /* Pods_SequreSDK.framework */; };
-		DA54C6E4C73E8F5AB6DEBB01 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E5DF5A1A7A37EE422C376C /* Pods_SequreSDK_SequreSDKTests.framework */; };
+		849934B62CC8D4E700B1608C /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849934B52CC8D4E700B1608C /* ToastExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BBD231BDBB98E4C45962B1A /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
-		13662158A918A1FEA5D61BE0 /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
-		2C69167127BDE59E2BAB2FA4 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		208387E0B361470A5DE89394 /* Pods-SequreSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		232A665FBA708E4A6CBC51E1 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B6A762DA9CD93DDB88346DB /* Pods-SequreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK/Pods-SequreSDK.release.xcconfig"; sourceTree = "<group>"; };
+		5759B367EF303F6BB2216BCD /* Pods_SequreSDK_SequreSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		624F02D3152D8E5CFDEAD355 /* Pods_SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0A366F2CABD67D0024637E /* QRCameraFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraFeedController.swift; sourceTree = "<group>"; };
 		7A1686DF2CA69F4500EC97B4 /* DetectedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObjectModel.swift; sourceTree = "<group>"; };
 		7A2C0E872CAA53A700267AE8 /* QRDetectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRDetectionHelper.swift; sourceTree = "<group>"; };
@@ -88,10 +90,8 @@
 		8421349F2CB3BD1500838A82 /* SequreSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequreSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843856082CC60BC700E286EE /* BlurDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurDetector.swift; sourceTree = "<group>"; };
 		84386F612CBCBC0200B843EA /* sequre-v2-od.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-v2-od.tflite"; sourceTree = "<group>"; };
-		84E5DF5A1A7A37EE422C376C /* Pods_SequreSDK_SequreSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK_SequreSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84F4E7702CB78E52003C82E2 /* sequre-combine.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sequre-combine.tflite"; sourceTree = "<group>"; };
-		AE379BDFEBA928F026D2608E /* Pods_SequreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SequreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C032B089F357BD4F75C0C200 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		849934B52CC8D4E700B1608C /* ToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
+		B3B4F8DC506306FA50BDD2BC /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SequreSDK-SequreSDKTests.release.xcconfig"; path = "Target Support Files/Pods-SequreSDK-SequreSDKTests/Pods-SequreSDK-SequreSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2E3567BF4F3B50AB81CCE76 /* Pods_SequreSDK.framework in Frameworks */,
+				80431C2F01466C524BA2E4CD /* Pods_SequreSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A730E102CA655330039C966 /* SequreSDK.framework in Frameworks */,
-				DA54C6E4C73E8F5AB6DEBB01 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */,
+				0B72D16ED0BE3269C9799F51 /* Pods_SequreSDK_SequreSDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,10 +118,10 @@
 		72C6F3A39FF5D8D9288B86D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				13662158A918A1FEA5D61BE0 /* Pods-SequreSDK.debug.xcconfig */,
-				0BBD231BDBB98E4C45962B1A /* Pods-SequreSDK.release.xcconfig */,
-				2C69167127BDE59E2BAB2FA4 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
-				C032B089F357BD4F75C0C200 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
+				208387E0B361470A5DE89394 /* Pods-SequreSDK.debug.xcconfig */,
+				4B6A762DA9CD93DDB88346DB /* Pods-SequreSDK.release.xcconfig */,
+				232A665FBA708E4A6CBC51E1 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */,
+				B3B4F8DC506306FA50BDD2BC /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 				7A730E062CA655330039C966 /* Products */,
 				72C6F3A39FF5D8D9288B86D5 /* Pods */,
 				840667172CAE823F00AE4156 /* Assets-Fonts */,
-				F0CD2C7BE203EF203EB1675A /* Frameworks */,
+				E82C9DA23425AE64CBEB243F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -288,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE403B82CAE0B9A0040ED59 /* SpacingExtension.swift */,
+				849934B52CC8D4E700B1608C /* ToastExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,11 +337,11 @@
 			path = Localizations;
 			sourceTree = "<group>";
 		};
-		F0CD2C7BE203EF203EB1675A /* Frameworks */ = {
+		E82C9DA23425AE64CBEB243F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE379BDFEBA928F026D2608E /* Pods_SequreSDK.framework */,
-				84E5DF5A1A7A37EE422C376C /* Pods_SequreSDK_SequreSDKTests.framework */,
+				624F02D3152D8E5CFDEAD355 /* Pods_SequreSDK.framework */,
+				5759B367EF303F6BB2216BCD /* Pods_SequreSDK_SequreSDKTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,7 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A730E192CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDK" */;
 			buildPhases = (
-				520F846A7CD721145B0A187D /* [CP] Check Pods Manifest.lock */,
+				57E1D964AC817B9E971CDD08 /* [CP] Check Pods Manifest.lock */,
 				7A730E002CA655330039C966 /* Headers */,
 				7A730E012CA655330039C966 /* Sources */,
 				7A730E022CA655330039C966 /* Frameworks */,
@@ -382,7 +383,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A730E1C2CA655330039C966 /* Build configuration list for PBXNativeTarget "SequreSDKTests" */;
 			buildPhases = (
-				61AED3505FC530B86D855C11 /* [CP] Check Pods Manifest.lock */,
+				C0E3DAA0629616FB3BE88BDC /* [CP] Check Pods Manifest.lock */,
 				7A730E0B2CA655330039C966 /* Sources */,
 				7A730E0C2CA655330039C966 /* Frameworks */,
 				7A730E0D2CA655330039C966 /* Resources */,
@@ -456,7 +457,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		520F846A7CD721145B0A187D /* [CP] Check Pods Manifest.lock */ = {
+		57E1D964AC817B9E971CDD08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -478,7 +479,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		61AED3505FC530B86D855C11 /* [CP] Check Pods Manifest.lock */ = {
+		C0E3DAA0629616FB3BE88BDC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -530,6 +531,7 @@
 				7AE4038C2CAE04EB0040ED59 /* NetworkServices.swift in Sources */,
 				7AE4038E2CAE05590040ED59 /* QRScannerPage.swift in Sources */,
 				7A730E882CA669010039C966 /* SequreSDK.swift in Sources */,
+				849934B62CC8D4E700B1608C /* ToastExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +682,7 @@
 		};
 		7A730E1A2CA655330039C966 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13662158A918A1FEA5D61BE0 /* Pods-SequreSDK.debug.xcconfig */;
+			baseConfigurationReference = 208387E0B361470A5DE89394 /* Pods-SequreSDK.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -723,7 +725,7 @@
 		};
 		7A730E1B2CA655330039C966 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BBD231BDBB98E4C45962B1A /* Pods-SequreSDK.release.xcconfig */;
+			baseConfigurationReference = 4B6A762DA9CD93DDB88346DB /* Pods-SequreSDK.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -766,7 +768,7 @@
 		};
 		7A730E1D2CA655330039C966 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C69167127BDE59E2BAB2FA4 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
+			baseConfigurationReference = 232A665FBA708E4A6CBC51E1 /* Pods-SequreSDK-SequreSDKTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -787,7 +789,7 @@
 		};
 		7A730E1E2CA655330039C966 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C032B089F357BD4F75C0C200 /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
+			baseConfigurationReference = B3B4F8DC506306FA50BDD2BC /* Pods-SequreSDK-SequreSDKTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

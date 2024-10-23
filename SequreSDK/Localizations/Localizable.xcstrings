@@ -13,7 +13,36 @@
       }
     },
     "Image not found in SequreSDKAssets bundle" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image not found in SequreSDKAssets bundle"
+          }
+        }
+      }
+    },
+    "Max zoom reached" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembesaran maksimum tercapai"
+          }
+        }
+      }
+    },
+    "Min zoom reached" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembesaran minimum tercapai"
+          }
+        }
+      }
     },
     "Object out of the area" : {
       "comment" : "Object out of the area",
@@ -27,7 +56,14 @@
       }
     },
     "SequreSDKAssets bundle not found" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SequreSDKAssets bundle not found"
+          }
+        }
+      }
     },
     "Too Close" : {
       "comment" : "Too Close",

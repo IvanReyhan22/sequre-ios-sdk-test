@@ -5,6 +5,7 @@
 //  Created by IceQwen on 03/10/24.
 //
 
+import AVFoundation
 import Foundation
 import SwiftUI
 import TensorFlowLiteTaskVision
@@ -44,6 +45,11 @@ public struct QRScannerPage: View {
     @Binding var restartSession: Bool
     @Binding var pauseSession: Bool
 
+    @State var showMaxLimit: Bool = false
+    @State var showMinLimit: Bool = false
+    @State var countMaxLimit: Int8 = 0
+    @State var countMinLimit: Int8 = 0
+    
     public init(
         restartSession: Binding<Bool>,
         pauseSession: Binding<Bool>,
@@ -122,6 +128,44 @@ public struct QRScannerPage: View {
                 capturing = false
                 zoomLevel = 3
                 restartSession = false
+                countMaxLimit = 0
+                countMinLimit = 0
+            }
+        }
+        .toast("Max zoom reached", isShowing: $showMaxLimit)
+        .toast("Min zoom reached", isShowing: $showMinLimit)
+    }
+    
+    private func handleZoomLevel() {
+        var maxZoom: CGFloat = 5
+        var minZoom: CGFloat = 1
+        
+        if let deviceIn = AVCaptureDevice.default(for: .video) {
+            maxZoom = deviceIn.maxAvailableVideoZoomFactor
+            minZoom = deviceIn.minAvailableVideoZoomFactor
+        }
+        
+        if distanceResult == DistanceResult.tooClose {
+            if maxZoom > zoomLevel {
+                zoomLevel = max(zoomLevel - 0.1, minZoom)
+            } else if countMaxLimit > 0 {
+                showMaxLimit = true
+                countMaxLimit += 1
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    countMaxLimit = 0
+                }
+            }
+        }
+        
+        if distanceResult == DistanceResult.tooFar {
+            if minZoom > zoomLevel {
+                zoomLevel = min(zoomLevel + 0.1, maxZoom)
+            } else if countMinLimit > 0 {
+                showMinLimit = true
+                countMinLimit += 1
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    countMinLimit = 0
+                }
             }
         }
     }
@@ -139,9 +183,10 @@ public struct QRScannerPage: View {
         
         if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
-                    self.zoomLevel += (distanceResult == .tooFar) ? 0.3 : -0.3
-                }
+//                if distanceResult == DistanceResult.tooClose || distanceResult == DistanceResult.tooFar {
+//                    self.zoomLevel += (distanceResult == .tooFar) ? 0.1 : -0.1
+//                }
+                handleZoomLevel()
             }
             return
         }
@@ -152,9 +197,9 @@ public struct QRScannerPage: View {
                     return
                 }
                 if zoomLevel > 3 {
-                    zoomLevel -= 0.3
+                    handleZoomLevel()
                 } else if zoomLevel < 3 {
-                    zoomLevel += 0.3
+                    handleZoomLevel()
                 }
             }
         }

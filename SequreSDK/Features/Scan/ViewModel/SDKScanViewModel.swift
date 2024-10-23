@@ -61,7 +61,6 @@ public class SDKScanViewModel: ObservableObject {
                 }
             }
         }
-//        }
     }
 
     /// Logic to handle the response
@@ -84,15 +83,6 @@ public class SDKScanViewModel: ObservableObject {
             } else {
                 statusDialog = .qrUnrecognized
             }
-            //            if score < 0.5 {
-            //                statusDialog = .qrUnreadable
-            //            } else if isFake == "fake" {
-            //                statusDialog = .qrUnmatch
-            //            } else if response.qrcode?.text == nil || response.qrcode?.text?.isEmpty == true {
-            //                statusDialog = .qrUnrecognized
-            //            } else {
-            //                statusDialog = .authenticated
-            //            }
         } else {
             statusDialog = .qrUnrecognized
         }

@@ -7,101 +7,22 @@
 
 extension ScanModel {
     func displayInfo() -> String {
-            var result = ""
-            
-            result += "PID: \(pid ?? "N/A")\n"
-            result += "Email Sent: \(emailSent?.description ?? "N/A")\n"
-            
-            // Canvas Section
-            if let canvas = canvas {
-                result += "Canvas:\n"
-                result += "  Model Used: \(canvas.modelUsed ?? "N/A")\n"
-                result += "  File Size: \(canvas.fileSize?.description ?? "N/A")\n"
-                result += "  Status: \(canvas.status ?? "N/A")\n"
-                
-                if let boundingBox = canvas.boundingBox {
-                    result += "  Bounding Box:\n"
-                    result += "    Bottom Right: \(boundingBox.bottomRight?.description ?? "N/A")\n"
-                    result += "    Top Left: \(boundingBox.topLeft?.description ?? "N/A")\n"
-                }
-                if let dimensions = canvas.dimensions {
-                    result += "  Dimensions:\n"
-                    result += "    Height: \(dimensions.height?.description ?? "N/A")\n"
-                    result += "    Width: \(dimensions.width?.description ?? "N/A")\n"
-                }
-                result += "  Score: \(canvas.score?.description ?? "N/A")\n"
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted // Agar JSON terformat dengan baik
+        
+        do {
+            let jsonData = try encoder.encode(self)
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                return jsonString
+            } else {
+                return "Error encoding JSON"
             }
-            
-            // Classification Section
-            if let classification = classification {
-                result += "Classification:\n"
-                result += "  Label: \(classification.label ?? "N/A")\n"
-                result += "  File Size: \(String(describing: classification.fileSize))\n"
-                result += "  Model Used: \(classification.modelUsed ?? "N/A")\n"
-                result += "  Score: \(classification.score?.description ?? "N/A")\n"
-                result += "  Status: \(classification.status ?? "N/A")\n"
-                
-                if let dimensions = classification.dimensions {
-                    result += "  Dimensions:\n"
-                    result += "    Height: \(dimensions.height?.description ?? "N/A")\n"
-                    result += "    Width: \(dimensions.width?.description ?? "N/A")\n"
-                }
-                result += "  File Path: \(classification.filePath ?? "N/A")\n"
-                result += "  Label Index: \(classification.labelIndex?.description ?? "N/A")\n"
-            }
-            
-            // Object Section (This seems to be a duplicate of Canvas, so it can be added conditionally or removed if redundant)
-            if let object = object {
-                result += "Object:\n"
-                result += "  File Size: \(String(describing: object.fileSize))\n"
-                result += "  Score: \(object.score?.description ?? "N/A")\n"
-                result += "  Status: \(object.status ?? "N/A")\n"
-                
-                if let boundingBox = object.boundingBox {
-                    result += "  Bounding Box:\n"
-                    result += "    Bottom Right: \(boundingBox.bottomRight?.description ?? "N/A")\n"
-                    result += "    Top Left: \(boundingBox.topLeft?.description ?? "N/A")\n"
-                }
-                if let dimensions = object.dimensions {
-                    result += "  Dimensions:\n"
-                    result += "    Height: \(dimensions.height?.description ?? "N/A")\n"
-                    result += "    Width: \(dimensions.width?.description ?? "N/A")\n"
-                }
-            }
-
-            // Originals Section
-            if let originals = originals {
-                result += "Originals:\n"
-                result += "  File Path: \(originals.filePath ?? "N/A")\n"
-                result += "  File Size: \(String(describing: originals.fileSize))\n"
-                result += "  Format: \(originals.format ?? "N/A")\n"
-                
-                if let dimensions = originals.dimensions {
-                    result += "  Dimensions:\n"
-                    result += "    Height: \(dimensions.height?.description ?? "N/A")\n"
-                    result += "    Width: \(dimensions.width?.description ?? "N/A")\n"
-                }
-            }
-            
-            // QR Code Section
-            if let qrcode = qrcode {
-                result += "QR Code:\n"
-                result += "  Text: \(qrcode.text ?? "N/A")\n"
-                result += "  Type: \(qrcode.type ?? "N/A")\n"
-                result += "  Status: \(qrcode.status ?? "N/A")\n"
-                
-                if let rect = qrcode.rect {
-                    result += "  Rect:\n"
-                    result += "    Height: \(rect.height?.description ?? "N/A")\n"
-                    result += "    Left: \(rect.rectLeft?.description ?? "N/A")\n"
-                    result += "    Top: \(rect.top?.description ?? "N/A")\n"
-                    result += "    Width: \(rect.width?.description ?? "N/A")\n"
-                }
-            }
-
-            return result
+        } catch {
+            return "Error encoding ScanModel: \(error.localizedDescription)"
         }
+    }
 }
+
 
 import Foundation
 
