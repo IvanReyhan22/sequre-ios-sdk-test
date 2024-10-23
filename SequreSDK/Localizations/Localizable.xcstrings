@@ -13,6 +13,7 @@
       }
     },
     "Image not found in SequreSDKAssets bundle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -67,6 +68,7 @@
       }
     },
     "SequreSDKAssets bundle not found" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
